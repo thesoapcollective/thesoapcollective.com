@@ -7,8 +7,13 @@ $font-size: 14px;
 
 $page-max-width: 900px;
 $page-gutter: 100px;
-$mobile-page-gutter: 12px;
-$header-margin: 40px;
+$mobile-page-gutter: 25px;
+$mobile-content-max-width: 372px;
+
+$logo-width: 792px;
+$logo-height: 321px;
+$logo-fixed-width: 270px;
+$logo-fixed-height: 128px;
 
 $bio-container-padding: 12px;
 $bio-image-margin: 24px;
@@ -37,11 +42,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   @include text-overflow;
-  width: 280px;
-  height: 217px;
+  width: $logo-fixed-height * ($logo-width / $logo-height);
+  height: $logo-fixed-height;
   margin: 0 auto;
   display: block;
   background: image-url('soap_logo.svg') no-repeat center center;
+
+  @include respond-to(phone) {
+    width: $logo-fixed-width;
+    height: $logo-fixed-width * ($logo-height / $logo-width);
+  }
 }
 
 h2 {
@@ -50,6 +60,11 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 14px;
   text-align: center;
+
+  @include respond-to(phone) {
+    margin-left: -$mobile-page-gutter;
+    margin-right: -$mobile-page-gutter;
+  }
 }
 
 #page-container {
@@ -64,15 +79,20 @@ h2 {
 }
 
 #page-header {
-  margin: $header-margin 0;
+  margin-top: 70px;
   text-align: center;
 }
 
 #company-intro {
-  margin-bottom: 90px;
+  margin: 90px auto;
   text-align: center;
 
+  @include respond-to(tablet-small) {
+    max-width: $mobile-content-max-width;
+  }
+
   @include respond-to(phone) {
+    margin-top: 70px;
     margin-bottom: 70px;
   }
 }
@@ -105,7 +125,10 @@ h2 {
   }
 
   @include respond-to(tablet-small) {
+    max-width: $mobile-content-max-width;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     float: none;
 
     &:first-child,
