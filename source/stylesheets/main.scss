@@ -3,12 +3,10 @@ $font-family: 'futura-pt', Helvetica, sans-serif;
 $font-size: 14px;
 
 $page-max-width: 900px;
-$page-top-padding: 72px;
 $page-gutter: 100px;
+$mobile-page-gutter: 12px;
+$header-margin: 40px;
 
-$company-intro-margin: 90px;
-
-$bios-margin: 48px;
 $bio-container-padding: 12px;
 $bio-image-margin: 24px;
 $bio-image-size: 95px;
@@ -36,11 +34,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   @include text-overflow;
-  width: 335px;
-  height: 144px;
+  width: 280px;
+  height: 217px;
   margin: 0 auto;
   display: block;
-  background-image: image-url('soap_logo.svg');
+  background: image-url('soap_logo.svg') no-repeat center center;
 }
 
 h2 {
@@ -53,27 +51,43 @@ h2 {
 
 #page-container {
   max-width: $page-max-width;
-  padding: $page-top-padding $page-gutter 0;
   margin: 0 auto;
+  padding: 0 $page-gutter;
+
+  @include respond-to(phone) {
+    padding-left: $mobile-page-gutter;
+    padding-right: $mobile-page-gutter;
+  }
 }
 
 #page-header {
+  margin: $header-margin 0;
   text-align: center;
 }
 
 #company-intro {
-  margin: $company-intro-margin 0;
+  margin-bottom: 90px;
   text-align: center;
+
+  @include respond-to(phone) {
+    margin-bottom: 70px;
+  }
 }
 
 #bios {
   @include alt-clearfix;
-  margin: $bios-margin 0;
+  margin: 48px 0;
+
+  @include respond-to(phone) {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
 }
 
 .bio-container {
   @include alt-clearfix;
   width: 50%;
+  display: block;
   float: left;
   color: $font-color;
   text-decoration: none;
@@ -85,6 +99,25 @@ h2 {
 
   &:last-child {
     padding-left: $bio-container-padding;
+  }
+
+  @include respond-to(tablet-small) {
+    width: 100%;
+    float: none;
+
+    &:first-child,
+    &:last-child {
+      text-align: center;
+    }
+
+    &:first-child {
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+
+    &:last-child {
+      padding-left: 0;
+    }
   }
 }
 
@@ -111,6 +144,17 @@ h2 {
   .bio-container:hover &,
   .bio-container:focus & {
     background-position: 0 $bio-image-size-inverted;
+  }
+
+  @include respond-to(tablet-small) {
+    margin-bottom: 10px;
+
+    .bio-container:first-child &,
+    .bio-container:last-child & {
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
   }
 }
 

@@ -6,15 +6,14 @@
     %meta{name: 'description', content: "We're a company of storytellers."}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
 
-    / %meta{property: 'og:url', content: 'http://www.ianhirschfeld.com'}
-    / %meta{property: 'og:type', content: 'website'}
-    / %meta{property: 'og:title', content: 'Ian N. Hirschfeld'}
-    / %meta{property: 'og:description', content: 'Portfolio of Ian N. Hirschfeld'}
-    / %meta{property: 'og:image', content: 'http://www.ianhirschfeld.com/images/ianhirschfeld.jpg'}
+    %meta{property: 'og:title', content: 'The Soap Collective'}
+    %meta{property: 'og:site_name', content: 'The Soap Collective'}
+    %meta{property: 'og:url', content: 'http://www.thesoapcollective.com'}
+    %meta{property: 'og:description', content: "We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways."}
+    %meta{property: 'og:image', content: 'http://www.thesoapcollective.com/images/soap_open_graph.jpg'}
+    %meta{property: 'fb:app_id', content: '158186024916'}
 
-    / %link{rel: 'apple-touch-icon', href: '/images/apple-touch-icon.png'}
-    / %link{rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon'}
-    / %link{rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}
+    %link{rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon'}
 
     %title #{"#{current_page.data.title} | " if current_page.data.title} The Soap Collective
 
@@ -23,7 +22,7 @@
   %body{class: page_classes}
     #page-container= yield
 
-    %script{type: 'text/javascript', src: 'https://use.typekit.net/kkx8ntm.js'}
+    %script{type: 'text/javascript', src: '//use.typekit.net/dhn8nfe.js'}
     :javascript
       // Typekit
       try{Typekit.load();}catch(e){}
