@@ -1,0 +1,119 @@
+$font-color: #333;
+$font-family: 'futura-pt', Helvetica, sans-serif;
+$font-size: 14px;
+
+$page-max-width: 900px;
+$page-top-padding: 72px;
+$page-gutter: 100px;
+
+$company-intro-margin: 90px;
+
+$bios-margin: 48px;
+$bio-container-padding: 12px;
+$bio-image-margin: 24px;
+$bio-image-size: 95px;
+$bio-image-size-inverted: -$bio-image-size;
+$bio-sprite-height: $bio-image-size * 2;
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 1.29;
+}
+
+body {
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  @include text-overflow;
+  width: 335px;
+  height: 144px;
+  margin: 0 auto;
+  display: block;
+  background-image: image-url('soap_logo.svg');
+}
+
+h2 {
+  font-size: 1.29rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  text-align: center;
+}
+
+#page-container {
+  max-width: $page-max-width;
+  padding: $page-top-padding $page-gutter 0;
+  margin: 0 auto;
+}
+
+#page-header {
+  text-align: center;
+}
+
+#company-intro {
+  margin: $company-intro-margin 0;
+  text-align: center;
+}
+
+#bios {
+  @include alt-clearfix;
+  margin: $bios-margin 0;
+}
+
+.bio-container {
+  @include alt-clearfix;
+  width: 50%;
+  float: left;
+  color: $font-color;
+  text-decoration: none;
+
+  &:first-child {
+    padding-right: $bio-container-padding;
+    text-align: right;
+  }
+
+  &:last-child {
+    padding-left: $bio-container-padding;
+  }
+}
+
+.bio-image {
+  @include border-radius($bio-image-size);
+  width: $bio-image-size;
+  height: $bio-image-size;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: $bio-image-size $bio-sprite-height;
+
+  .bio-container:first-child & {
+    margin-left: $bio-image-margin;
+    float: right;
+    background-image: image-url('ian_hirschfeld.jpg');
+  }
+
+  .bio-container:last-child & {
+    margin-right: $bio-image-margin;
+    float: left;
+    background-image: image-url('logan_dwight.jpg');
+  }
+
+  .bio-container:hover &,
+  .bio-container:focus & {
+    background-position: 0 $bio-image-size-inverted;
+  }
+}
+
+.bio-content {
+  overflow: hidden;
+}

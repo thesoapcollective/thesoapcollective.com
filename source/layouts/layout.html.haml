@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{content: 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible'}
+    %meta{name: 'description', content: "We're a company of storytellers."}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
+
+    / %meta{property: 'og:url', content: 'http://www.ianhirschfeld.com'}
+    / %meta{property: 'og:type', content: 'website'}
+    / %meta{property: 'og:title', content: 'Ian N. Hirschfeld'}
+    / %meta{property: 'og:description', content: 'Portfolio of Ian N. Hirschfeld'}
+    / %meta{property: 'og:image', content: 'http://www.ianhirschfeld.com/images/ianhirschfeld.jpg'}
+
+    / %link{rel: 'apple-touch-icon', href: '/images/apple-touch-icon.png'}
+    / %link{rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon'}
+    / %link{rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}
+
+    %title #{"#{current_page.data.title} | " if current_page.data.title} The Soap Collective
+
+    = stylesheet_link_tag 'all'
+
+  %body{class: page_classes}
+    #page-container= yield
+
+    %script{type: 'text/javascript', src: 'https://use.typekit.net/kkx8ntm.js'}
+    :javascript
+      // Typekit
+      try{Typekit.load();}catch(e){}
+    = javascript_include_tag 'all'
+    :javascript
+      // Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-11359166-1', 'auto');
+      ga('send', 'pageview');

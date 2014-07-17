@@ -1,4 +1,4 @@
 thesoapcollective.com
 =====================
 
-The Soap Collective - http://thesoapcollective.com
+Company site for The Soap Collective.
