@@ -55,6 +55,7 @@ h1 {
 }
 
 h2 {
+  margin-left: 14px; // Needed to offset weird Future custom letter spacing issue
   font-size: 1.29rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -62,7 +63,7 @@ h2 {
   text-align: center;
 
   @include respond-to(phone) {
-    margin-left: -$mobile-page-gutter;
+    margin-left: -$mobile-page-gutter + 14px; // Needed to offset weird Future custom letter spacing issue
     margin-right: -$mobile-page-gutter;
   }
 }
