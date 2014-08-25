@@ -28,25 +28,38 @@
       <header id='page-header'>
         <h1>The Soap Collective</h1>
       </header>
+
       <article id='page-content'>
-        <p id='company-intro'>We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways.</p>
-        <h2>Who are we?</h2>
-        <div id='bios'>
-          <a class='bio-container' href='https://twitter.com/ianhirschfeld' target='_blank' title="Go to Ian's Twitter page">
-            <div class='bio-image'></div>
-            <div class='bio-content'>
-              <h3>Ian Hirschfeld</h3>
-              <p>A builder and obsessive filmmaker who considers himself both engineer and artist. Invested in both telling the story and knowing how to best bring it to life.</p>
-            </div>
+        <section>
+          <p class='centered-paragraph'>We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways.</p>
+        </section>
+
+        <section>
+          <h2>Our Projects</h2>
+          <a id='role' class='project-wrapper' href='http://www.roleapp.com' target='_blank' title='Go to the Role website.'>
+            <p class='centered-paragraph'>We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways.</p>
           </a>
-          <a class='bio-container' href='https://twitter.com/logandwight' target='_blank' title="Go to Logan's Twitter page">
-            <div class='bio-image'></div>
-            <div class='bio-content'>
-              <h3>Logan Dwight</h3>
-              <p>Experience designer, writer, and visual artist. Searching for the next narrative leap, beyond the interaction of video games and the synesthesia of film.</p>
-            </div>
-          </a>
-        </div>
+        </section>
+
+        <section>
+          <h2>Who are we?</h2>
+          <div id='bios'>
+            <a class='bio-container' href='https://twitter.com/ianhirschfeld' target='_blank' title="Go to Ian's Twitter page">
+              <div class='bio-image'></div>
+              <div class='bio-content'>
+                <h3>Ian Hirschfeld</h3>
+                <p>A builder and obsessive filmmaker who considers himself both engineer and artist. Invested in both telling the story and knowing how to best bring it to life.</p>
+              </div>
+            </a>
+            <a class='bio-container' href='https://twitter.com/logandwight' target='_blank' title="Go to Logan's Twitter page">
+              <div class='bio-image'></div>
+              <div class='bio-content'>
+                <h3>Logan Dwight</h3>
+                <p>Experience designer, writer, and visual artist. Searching for the next narrative leap, beyond the interaction of video games and the synesthesia of film.</p>
+              </div>
+            </a>
+          </div>
+        </section>
       </article>
     </div>
 

@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-  margin-left: 14px; // Needed to offset weird Future custom letter spacing issue
+  margin: 0 0 48px 14px; // Left margin needed to offset weird Future custom letter spacing issue
   font-size: 1.29rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -46,8 +46,31 @@ h2 {
   text-align: center;
 
   @include respond-to(phone) {
-    margin-left: -$mobile-page-gutter + 14px; // Needed to offset weird Future custom letter spacing issue
-    margin-right: -$mobile-page-gutter;
+    margin: 0 (-$mobile-page-gutter) 36px (-$mobile-page-gutter + 14px);
+  }
+}
+
+section {
+  margin: 0 0 90px;
+
+  &:first-child {
+    margin-top: 90px;
+  }
+
+  &:last-child {
+    margin-bottom: 45px;
+  }
+
+  @include respond-to(phone) {
+    margin-bottom: 70px;
+
+    &:first-child {
+      margin-top: 70px;
+    }
+
+    &:last-child {
+      margin-bottom: 45px;
+    }
   }
 }
 
@@ -67,28 +90,29 @@ h2 {
   text-align: center;
 }
 
-#company-intro {
-  margin: 90px auto;
+.centered-paragraph {
+  margin: 0 auto;
   text-align: center;
 
   @include respond-to(tablet-small) {
     max-width: $mobile-content-max-width;
   }
+}
 
-  @include respond-to(phone) {
-    margin-top: 70px;
-    margin-bottom: 70px;
-  }
+.project-wrapper {
+  text-decoration: none;
+  color: $font-color;
+}
+
+#role {
+  padding-top: 110px;
+  display: block;
+  background: image-url('role_logo.png') no-repeat center 0;
+  background-size: 190px 70px;
 }
 
 #bios {
   @include alt-clearfix;
-  margin: 48px 0;
-
-  @include respond-to(phone) {
-    margin-top: 36px;
-    margin-bottom: 36px;
-  }
 }
 
 .bio-container {
