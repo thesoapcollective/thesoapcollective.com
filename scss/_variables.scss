@@ -1,0 +1,19 @@
+$font-color: #333;
+$font-family: 'futura-pt', Helvetica, sans-serif;
+$font-size: 14px;
+
+$page-max-width: 900px;
+$page-gutter: 100px;
+$mobile-page-gutter: 25px;
+$mobile-content-max-width: 372px;
+
+$logo-width: 792px;
+$logo-height: 321px;
+$logo-fixed-width: 270px;
+$logo-fixed-height: 128px;
+
+$bio-container-padding: 12px;
+$bio-image-margin: 24px;
+$bio-image-size: 95px;
+$bio-image-size-inverted: -$bio-image-size;
+$bio-sprite-height: $bio-image-size * 2;
