@@ -105,10 +105,21 @@ section {
 }
 
 #role {
-  padding-top: 110px;
   display: block;
-  background: image-url('role_logo.png') no-repeat center 0;
-  background-size: 190px 70px;
+}
+
+#role-logo {
+  @include text-overflow;
+  width: 190px;
+  height: 70px;
+  margin: 0 auto 40px;
+  background: image-url('role_logo.png') no-repeat center -70px;
+  background-size: 190px 140px;
+
+  #role:hover &,
+  #role:focus & {
+    background-position: center 0;
+  }
 }
 
 #bios {
@@ -173,6 +184,11 @@ section {
     margin-right: $bio-image-margin;
     float: left;
     background-image: image-url('logan_dwight.jpg');
+  }
+
+  .bio-container:hover &,
+  .bio-container:focus & {
+    background-position: 0 0;
   }
 
   @include respond-to(tablet-small) {

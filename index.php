@@ -37,6 +37,7 @@
         <section>
           <h2>Our Projects</h2>
           <a id='role' class='project-wrapper' href='http://www.roleapp.com' target='_blank' title='Go to the Role website.'>
+            <div id='role-logo'>Role</div>
             <p class='centered-paragraph'>We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways.</p>
           </a>
         </section>
