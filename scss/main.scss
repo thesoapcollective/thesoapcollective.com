@@ -19,8 +19,19 @@ body {
   background: #fff;
 }
 
+a {
+  color: $font-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  font-size: 1rem;
 }
 
 h1 {
@@ -38,16 +49,20 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 48px 14px; // Left margin needed to offset weird Future custom letter spacing issue
+  margin: 0 0 48px $font-futura-spacing; // Left margin needed to offset weird Futura custom letter spacing issue
   font-size: 1.29rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 14px;
+  letter-spacing: $font-futura-spacing;
   text-align: center;
 
   @include respond-to(phone) {
-    margin: 0 (-$mobile-page-gutter) 36px (-$mobile-page-gutter + 14px);
+    margin: 0 (-$mobile-page-gutter) 36px (-$mobile-page-gutter + $font-futura-spacing);
   }
+}
+
+h3 {
+  font-size: 2.14rem;
 }
 
 section {
@@ -59,6 +74,11 @@ section {
 
   &:last-child {
     margin-bottom: 45px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 18px;
+    }
   }
 
   @include respond-to(phone) {
@@ -72,6 +92,21 @@ section {
       margin-bottom: 45px;
     }
   }
+}
+
+.centered-paragraph {
+  margin: 0 auto;
+  text-align: center;
+
+  @include respond-to(tablet-small) {
+    max-width: $mobile-content-max-width;
+  }
+}
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #page-container {
@@ -90,22 +125,17 @@ section {
   text-align: center;
 }
 
-.centered-paragraph {
-  margin: 0 auto;
-  text-align: center;
-
-  @include respond-to(tablet-small) {
-    max-width: $mobile-content-max-width;
-  }
-}
-
 .project-wrapper {
   text-decoration: none;
-  color: $font-color;
 }
 
 #role {
   display: block;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 #role-logo {
@@ -131,8 +161,12 @@ section {
   width: 50%;
   display: block;
   float: left;
-  color: $font-color;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 
   &:first-child {
     padding-right: $bio-container-padding;
@@ -205,4 +239,120 @@ section {
 
 .bio-content {
   overflow: hidden;
+}
+
+.post-header {
+  @include alt-clearfix;
+  margin-bottom: 14px;
+}
+
+.post-title {
+  display: inline-block;
+}
+
+.post-date {
+  padding-top: 14px;
+  float: right;
+  font-weight: bold;
+}
+
+.post-body {
+  p {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: $font-color-light;
+  }
+}
+
+.post-footer {
+  @include alt-clearfix;
+}
+
+.post-tags {
+  float: left;
+
+  li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  a {
+    @include border-radius(1rem);
+    padding: 0 8px;
+    display: block;
+    border: 1px solid $font-color;
+
+    &:hover,
+    &:focus {
+      border-color: $font-color-light;
+      text-decoration: none;
+    }
+  }
+}
+
+.post-social {
+  float: right;
+
+  li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  a {
+    @include text-overflow;
+    width: 22px;
+    height: 22px;
+    display: block;
+    background-image: image-url('icons_tumblr.png');
+    background-repeat: no-repeat;
+    background-size: 66px 44px;
+
+    &.post-social-share {
+      background-position: 0 0;
+    }
+
+    &.post-social-reblog {
+      background-position: -22px 0;
+    }
+
+    &.post-social-like {
+      background-position: -44px 0;
+    }
+
+    &:hover,
+    &:focus {
+      &.post-social-share {
+        background-position: 0 -22px;
+      }
+
+      &.post-social-reblog {
+        background-position: -22px -22px;
+      }
+
+      &.post-social-like {
+        background-position: -44px -22px;
+      }
+    }
+  }
+}
+
+#blog-button {
+  @include border-radius(10px);
+  padding: 16px 40px;
+  display: inline-block;
+  border: 1px solid $font-color;
+  font-size: 1.29rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: $font-futura-spacing;
+  text-align: center;
+  text-decoration: none;
+  text-indent:  $font-futura-spacing; // Left margin needed to offset weird Futura custom letter spacing issue
+
+  &:hover,
+  &:focus {
+    border-color: $font-color-light;
+  }
 }

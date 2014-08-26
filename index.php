@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,7 +18,7 @@
 
     <title> The Soap Collective</title>
 
-    <link href='stylesheets/normailze.css' rel='stylesheet' type='text/css' />
+    <link href='stylesheets/normalize.css' rel='stylesheet' type='text/css' />
     <link href='stylesheets/main.css' rel='stylesheet' type='text/css' />
   </head>
 
@@ -61,6 +60,36 @@
             </a>
           </div>
         </section>
+
+        <section>
+          <h2>From Our Blog</h2>
+          <header class='post-header'>
+            <a class='post-title' href='#' target='_blank'><h3></h3></a>
+            <a class='post-date' href='#' target='_blank'></a>
+          </header>
+          <article class='post-body'></article>
+          <footer>
+            <ul class='post-tags plain-list'>
+              <li><strong>Tags:</strong></li>
+            </ul>
+            <ul class='post-social plain-list'>
+              <!-- <li>
+                <a class='post-social-share' href='#' target='_blank'>Share</a>
+              </li> -->
+              <li>
+                <a class='post-social-reblog' href='#' target='_blank'>Reblog</a>
+              </li>
+              <li>
+                <a class='post-social-like' href='#' target='_blank'>Like</a>
+              </li>
+            </ul>
+          </footer>
+        </section>
+
+        <section>
+          <h2>Read More On</h2>
+          <a id="blog-button" href='http://blog.thesoapcollective.com'>Our Blog</a>
+        </section>
       </article>
     </div>
 
@@ -68,6 +97,31 @@
     <script>
       // Typekit
       try{Typekit.load();}catch(e){}
+    </script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='js/moment.js'></script>
+    <script src='//blog.thesoapcollective.com/api/read/json?type=text&start=0&num=1'></script>
+    <script>
+      // Setup blog
+      $(document).ready(function(){
+        console.log(tumblr_api_read);
+        var post = tumblr_api_read.posts[0];
+        console.log(post);
+        $('.post-title')
+          .attr('href', post['url-with-slug'])
+          .find('h3').text(post['regular-title']);
+        $('.post-date')
+          .attr('href', post['url-with-slug'])
+          .text(moment.unix(post['unix-timestamp']).format('MMMM D, YYYY'));
+        $('.post-body').html(post['regular-body']);
+        $.each(post['tags'], function(_, tag) {
+          var $li = $('<li/>')
+          var $a = $('<a/>').attr('href', 'http://blog.thesoapcollective.com/tagged/' + tag).text('#' + tag)
+          $('.post-tags').append($li.append($a));
+        });
+        $('.post-social-reblog').attr('href', 'https://www.tumblr.com/reblog/' + post['id'] + '/' + post['reblog-key'])
+        $('.post-social-like').attr('href', post['url-with-slug'] + '?like=1')
+      });
 
       // Google Analytics
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
