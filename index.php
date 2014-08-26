@@ -68,7 +68,7 @@
             <a class='post-date' href='#' target='_blank'></a>
           </header>
           <article class='post-body'></article>
-          <footer>
+          <footer class='post-footer'>
             <ul class='post-tags plain-list'>
               <li><strong>Tags:</strong></li>
             </ul>

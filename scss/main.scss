@@ -264,6 +264,10 @@ section {
   a {
     color: $font-color-light;
   }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .post-footer {
