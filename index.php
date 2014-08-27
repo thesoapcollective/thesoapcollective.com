@@ -79,9 +79,9 @@
               <li>
                 <a class='post-social-reblog' href='#' target='_blank'>Reblog</a>
               </li>
-              <li>
+              <!-- <li>
                 <a class='post-social-like' href='#' target='_blank'>Like</a>
-              </li>
+              </li> -->
             </ul>
           </footer>
         </section>
