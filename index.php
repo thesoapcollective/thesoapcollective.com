@@ -13,8 +13,8 @@
     <meta content='http://www.thesoapcollective.com/images/soap_open_graph.jpg' property='og:image'>
     <meta content='158186024916' property='fb:app_id'>
 
-    <link href='favicon.ico' type='image/x-icon' rel='shortcut icon'>
-    <link href='favicon.ico' type='image/x-icon' rel='icon'>
+    <link href='http://www.thesoapcollective.com/favicon.png' rel='shortcut icon'>
+    <link href='http://www.thesoapcollective.com/favicon.png' rel='apple-touch-icon'>
 
     <title> The Soap Collective</title>
 
