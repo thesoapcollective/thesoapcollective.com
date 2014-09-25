@@ -105,9 +105,7 @@
     <script>
       // Setup blog
       $(document).ready(function(){
-        console.log(tumblr_api_read);
         var post = tumblr_api_read.posts[0];
-        console.log(post);
         $('.post-title')
           .attr('href', post['url-with-slug'])
           .find('h3').text(post['regular-title']);
