@@ -37,7 +37,6 @@
           <h2>Our Projects</h2>
           <a id='role' class='project-wrapper' href='http://www.roleapp.com' target='_blank' title='Go to the Role website.'>
             <div id='role-logo'>Role</div>
-            <p class='centered-paragraph'>We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways.</p>
           </a>
         </section>
 
@@ -61,6 +60,7 @@
           </div>
         </section>
 
+        <?php /*
         <section>
           <h2>From Our Blog</h2>
           <header class='post-header'>
@@ -90,6 +90,7 @@
           <h2>Read More On</h2>
           <a id="blog-button" href='http://blog.thesoapcollective.com'>Our Blog</a>
         </section>
+        */ ?>
       </article>
     </div>
 
