@@ -18,7 +18,6 @@
 
     <title> The Soap Collective</title>
 
-    <link href='stylesheets/normalize.css' rel='stylesheet' type='text/css' />
     <link href='stylesheets/main.css' rel='stylesheet' type='text/css' />
   </head>
 
@@ -87,12 +86,24 @@
           </footer>
         </section>
 
-        <section>
+        <section class="blog-section">
           <h2>Read More On</h2>
           <a id="blog-button" href='http://blog.thesoapcollective.com'>Our Blog</a>
         </section>
-        */ ?>
+        */
+        ?>
       </article>
+
+      <footer id='page-footer'>
+        <ul class='social-list plain-list'>
+          <li>
+            <a class='icon-twitter-circled social-icon' href='https://twitter.com/soapcollective' target='_blank'></a>
+          </li>
+          <li>
+            <a class='icon-facebook-circled social-icon' href='https://facebook.com/thesoapcollective' target='_blank'></a>
+          </li>
+        </ul>
+      </footer>
     </div>
 
     <script src='//use.typekit.net/dhn8nfe.js' type='text/javascript'></script>

@@ -3,6 +3,8 @@
 @import "compass";
 @import "variables";
 @import "mixins";
+@import "normalize";
+@import "fontello";
 
 * {
   @include box-sizing(border-box);
@@ -69,7 +71,7 @@ section {
   }
 
   &:last-child {
-    margin-bottom: 45px;
+    margin-bottom: 70px;
     // text-align: center;
 
     // h2 {
@@ -342,6 +344,10 @@ section {
   }
 }
 
+.blog-section {
+  text-align: center;
+}
+
 #blog-button {
   @include border-radius(10px);
   padding: 16px 40px;
@@ -358,5 +364,33 @@ section {
   &:hover,
   &:focus {
     border-color: $font-color-light;
+  }
+}
+
+.social-list {
+  margin-bottom: 45px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+.social-icon {
+  @include opacity(1);
+  @include transition(opacity 0.25s);
+  display: inline-block;
+  color: $font-color;
+  font-size: 35px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    @include opacity(0.65);
+    text-decoration: none !important;
   }
 }
