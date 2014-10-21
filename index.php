@@ -11,7 +11,7 @@
     <meta content='http://www.thesoapcollective.com' property='og:url'>
     <meta content="We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways." property='og:description'>
     <meta content='http://www.thesoapcollective.com/images/soap_open_graph.jpg' property='og:image'>
-    <meta content='158186024916' property='fb:app_id'>
+    <meta property="fb:admins" content="1325850192,682837756" />
 
     <link href='http://www.thesoapcollective.com/favicon.png' rel='shortcut icon'>
     <link href='http://www.thesoapcollective.com/favicon.png' rel='apple-touch-icon'>
@@ -37,6 +37,7 @@
           <h2>Our Projects</h2>
           <a id='role' class='project-wrapper' href='http://www.roleapp.com' target='_blank' title='Go to the Role website.'>
             <div id='role-logo'>Role</div>
+            <p class='centered-paragraph'>A group storytelling adventure game for iOS and tabletop. Designed around the idea that role playing games should be simple and fun, Role is a fast-paced cooperative game that rewards creativity and social interaction. Gather your friends, become fantastic characters, and go on wild adventures. The only limit is your imagination.</p>
           </a>
         </section>
 

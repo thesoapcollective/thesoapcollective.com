@@ -136,11 +136,11 @@ section {
 
 #role-logo {
   @include text-overflow;
-  width: 190px;
-  height: 70px;
+  width: 241px;
+  height: 54px;
   margin: 0 auto 40px;
-  background: image-url('role_logo.png') no-repeat center -70px;
-  background-size: 190px 140px;
+  background: image-url('role_logo.png') no-repeat center -54px;
+  background-size: 241px 108px;
 
   #role:hover &,
   #role:focus & {
