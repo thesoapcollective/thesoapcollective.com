@@ -11,7 +11,8 @@
     <meta content='http://www.thesoapcollective.com' property='og:url'>
     <meta content="We're a company of storytellers. Following the tradition that began with spoken word and evolved into books, film, and games, Soap is building new ways for people to share narrative experiences. We believe in leveraging the latest technology to imagine better worlds and connect people in meaningful ways." property='og:description'>
     <meta content='http://www.thesoapcollective.com/images/soap_open_graph.jpg' property='og:image'>
-    <meta property="fb:admins" content="1325850192,682837756" />
+    <meta property="fb:admins" content="1325850192" />
+    <meta property="fb:admins" content="682837756" />
 
     <link href='http://www.thesoapcollective.com/favicon.png' rel='shortcut icon'>
     <link href='http://www.thesoapcollective.com/favicon.png' rel='apple-touch-icon'>
