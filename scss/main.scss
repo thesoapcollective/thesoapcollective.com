@@ -281,8 +281,9 @@ section {
   float: left;
 
   li {
-    display: inline-block;
     margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
   }
 
   a {
@@ -347,6 +348,10 @@ section {
 
 .blog-section {
   text-align: center;
+
+  h2 {
+    margin-bottom: 18px;
+  }
 }
 
 #blog-button {

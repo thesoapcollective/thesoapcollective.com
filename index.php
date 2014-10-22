@@ -61,7 +61,6 @@
           </div>
         </section>
 
-        <?php /*
         <section>
           <h2>From Our Blog</h2>
           <header class='post-header'>
@@ -91,8 +90,6 @@
           <h2>Read More On</h2>
           <a id="blog-button" href='http://blog.thesoapcollective.com'>Our Blog</a>
         </section>
-        */
-        ?>
       </article>
 
       <footer id='page-footer'>
