@@ -44,14 +44,14 @@
         <section>
           <h2>Who are we?</h2>
           <div id='bios'>
-            <a class='bio-container' href='https://twitter.com/ianhirschfeld' target='_blank' title="Go to Ian's Twitter page">
+            <a class='bio-container' href='http://www.ianhirschfeld.com' target='_blank' title="Go to Ian's Twitter page">
               <div class='bio-image'></div>
               <div class='bio-content'>
                 <h3>Ian Hirschfeld</h3>
                 <p>A builder and obsessive filmmaker who considers himself both engineer and artist. Invested in both telling the story and knowing how to best bring it to life.</p>
               </div>
             </a>
-            <a class='bio-container' href='https://twitter.com/logandwight' target='_blank' title="Go to Logan's Twitter page">
+            <a class='bio-container' href='http://www.logandwight.com' target='_blank' title="Go to Logan's Twitter page">
               <div class='bio-image'></div>
               <div class='bio-content'>
                 <h3>Logan Dwight</h3>
