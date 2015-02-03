@@ -1,3 +1,4 @@
+isHome = false
 $win = null
 $pageNav = null
 $pageFooter = null
@@ -9,6 +10,7 @@ $contact = null
 $gotoContact = null
 
 $(document).ready ->
+  isHome = $('body.index').length
   $win = $(window)
   $pageNav = $('#page-nav')
   $pageFooter = $('#page-footer')
@@ -23,55 +25,73 @@ $(document).ready ->
   refreshNavbar()
 
   $('.logo').click (event) ->
-    event.preventDefault()
-    if window.history.pushState
-      window.history.pushState null, '', '/'
-    $('html, body').animate
-      scrollTop: 0
-    , 500
+    if isHome
+      event.preventDefault()
+      if window.history.pushState
+        window.history.pushState null, '', '/'
+      $('html, body').animate
+        scrollTop: 0
+      , 500
 
   $('.goto-work').click (event) ->
-    event.preventDefault()
-    if window.history.pushState
-      window.history.pushState null, '', '/work'
-    $('html, body').animate
-      scrollTop: Math.floor($work.offset().top)
-    , 500
+    if isHome
+      event.preventDefault()
+      if window.history.pushState
+        window.history.pushState null, '', '/work'
+      $('html, body').animate
+        scrollTop: Math.floor($work.offset().top)
+      , 500
 
   $('.goto-projects').click (event) ->
-    event.preventDefault()
-    if window.history.pushState
-      window.history.pushState null, '', '/work'
-    $('html, body').animate
-      scrollTop: Math.floor($work.offset().top)
-    , 500
+    if isHome
+      event.preventDefault()
+      if window.history.pushState
+        window.history.pushState null, '', '/work'
+      $('html, body').animate
+        scrollTop: Math.floor($work.offset().top)
+      , 500
 
   $('.goto-about').click (event) ->
-    event.preventDefault()
-    if window.history.pushState
-      window.history.pushState null, '', '/about'
-    $('html, body').animate
-      scrollTop: Math.floor($about.offset().top)
-    , 500
+    if isHome
+      event.preventDefault()
+      if window.history.pushState
+        window.history.pushState null, '', '/about'
+      $('html, body').animate
+        scrollTop: Math.floor($about.offset().top)
+      , 500
 
   $('.goto-contact').click (event) ->
-    event.preventDefault()
-    if window.history.pushState
-      window.history.pushState null, '', '/contact'
-    $('html, body').animate
-      scrollTop: Math.floor($contact.offset().top)
-    , 500
+    if isHome
+      event.preventDefault()
+      if window.history.pushState
+        window.history.pushState null, '', '/contact'
+      $('html, body').animate
+        scrollTop: Math.floor($contact.offset().top)
+      , 500
+
+  if $('.role-list').length
+    $pageNav.addClass 'not-fixed'
+
+    $('.project-image img').unveil 100
+
+    $('.project-image a').magnificPopup
+      type: 'image'
+      gallery:
+        enabled: true
+      zoom:
+        enabled: true
 
 refreshNavbar = ->
   $pageNav.toggleClass 'is-scrolling', $win.scrollTop() > 0
 
-  isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight
-  isAtWork = $win.scrollTop() >= Math.floor($work.offset().top) and $win.scrollTop() < Math.floor($about.offset().top)
-  isAtAbout = $win.scrollTop() >= Math.floor($about.offset().top) and $win.scrollTop() < Math.floor($contact.offset().top) and not isAtBottom
-  isAtContact = $win.scrollTop() >= Math.floor($contact.offset().top) or isAtBottom
+  if $work.length or $about.length or $contact.length
+    isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight
+    isAtWork = $win.scrollTop() >= Math.floor($work.offset().top) and $win.scrollTop() < Math.floor($about.offset().top)
+    isAtAbout = $win.scrollTop() >= Math.floor($about.offset().top) and $win.scrollTop() < Math.floor($contact.offset().top) and not isAtBottom
+    isAtContact = $win.scrollTop() >= Math.floor($contact.offset().top) or isAtBottom
 
-  $gotoWork.toggleClass 'is-selected', isAtWork
-  $gotoAbout.toggleClass 'is-selected', isAtAbout
-  $gotoContact.toggleClass 'is-selected', isAtContact
+    $gotoWork.toggleClass 'is-selected', isAtWork
+    $gotoAbout.toggleClass 'is-selected', isAtAbout
+    $gotoContact.toggleClass 'is-selected', isAtContact
 
   $('a').blur()

@@ -63,6 +63,12 @@ h3 {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: $font-futura-spacing;
+
+  &.normal {
+    margin-left: 0;
+    text-transform: none;
+    letter-spacing: normal;
+  }
 }
 
 h4 {
@@ -126,6 +132,11 @@ h4 {
   background-position: 0 -41px;
 }
 
+.website {
+  color: $text-color;
+  font-family: $futura-font-family;
+}
+
 /*=============================================================================
   PAGE NAV
 =============================================================================*/
@@ -138,8 +149,13 @@ h4 {
   z-index: 2;
   background: transparent;
 
-  &.is-scrolling {
+  &.is-scrolling,
+  &.not-fixed {
     background: #fff;
+  }
+
+  &.not-fixed {
+    position: relative;
   }
 }
 
@@ -164,7 +180,7 @@ h4 {
     @extend h2;
     @include transition(opacity $fade-speed, color $color-speed);
     display: block;
-    color: #fff;
+    color: $image-text-color;
 
     &.is-selected {
       @include opacity($fade-opacity);
@@ -191,13 +207,14 @@ h4 {
   }
 }
 
-.is-scrolling {
+.is-scrolling,
+.not-fixed {
   .main-nav {
     @include translateX(0);
     left: 0;
 
     a {
-      color: #000;
+      color: $text-color;
     }
   }
 
@@ -227,7 +244,7 @@ h4 {
 
 .goto-projects {
   display: inline-block;
-  color: #fff;
+  color: $image-text-color;
 
   .arrow-container {
     margin-top: 16px;
@@ -269,7 +286,7 @@ h4 {
   }
 
   a {
-    color: #000;
+    color: $text-color;
   }
 
 }
@@ -327,7 +344,7 @@ h4 {
   padding-right: 41px;
   display: block;
   position: relative;
-  color: #fff;
+  color: $image-text-color;
   text-align: right;
 
   .arrow-container {
@@ -354,7 +371,7 @@ h4 {
 
   a {
     font-weight: normal;
-    color: #000;
+    color: $text-color;
   }
 }
 
@@ -379,6 +396,56 @@ h4 {
   margin-top: 30px;
   padding: 20px 60px;
   display: inline-block;
-  color: #fff;
-  border: 2px solid #fff;
+  color: $image-text-color;
+  border: 2px solid $image-text-color;
+}
+
+/*=============================================================================
+  PROJECTS
+=============================================================================*/
+.project-list {}
+
+.project-description {
+  p {
+    margin-top: 18px;
+    font-size: 0.75rem;
+  }
+}
+
+.mfp-figure:after {
+  @include box-shadow(none);
+  background-color: transparent;
+}
+
+/*=============================================================================
+  ROLE
+=============================================================================*/
+.video-container {
+  height: 400px;
+  margin: 72px 0;
+  background: #ff0000;
+}
+
+.role-list {
+  li {
+    width: 33%;
+    margin-bottom: 72px;
+    padding: 0 13px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:nth-child(3n+1) {
+      padding-left: 0;
+      padding-right: 26px;
+    }
+
+    &:nth-child(3n+3) {
+      padding-left: 26px;
+      padding-right: 0;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
 }

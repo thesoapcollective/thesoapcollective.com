@@ -24,6 +24,16 @@
     = stylesheet_link_tag 'all'
 
   %body{class: page_classes}
+    #page-nav
+      .section
+        %ul.list-reset.main-nav
+          %li
+            %a.goto-work{href: '/work'} Work
+          %li
+            %a.goto-about{href: '/about'} About
+          %li
+            %a.goto-contact{href: '/contact'} Contact
+        %a.logo{href: '/'} The Soap Collective
     = yield
 
     %script{src: '//use.typekit.net/dhn8nfe.js', type: 'text/javascript'}

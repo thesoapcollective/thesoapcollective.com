@@ -1,0 +1,20 @@
+{
+  "images": [
+    {"path": "role/Role_00_HomeScreen.png", "title": "Home"},
+    {"path": "role/Role_01_Welcome.png", "title": "Welcome"},
+    {"path": "role/Role_02_SelectChar.png", "title": "Select Character"},
+    {"path": "role/Role_03_NameChar.png", "title": "Name Character"},
+    {"path": "role/Role_04_Char1.png", "title": "Character 1"},
+    {"path": "role/Role_05_Char2.png", "title": "Character 2"},
+    {"path": "role/Role_06_CharArt.png", "title": "Character Art"},
+    {"path": "role/Role_07_SelectAdv.png", "title": "Select Adventure"},
+    {"path": "role/Role_08_CustomAdv.png", "title": "Custom Adventure"},
+    {"path": "role/Role_09_ViewAdv.png", "title": "View Adventure"},
+    {"path": "role/Role_10_AdvArt.png", "title": "Adventure Art"},
+    {"path": "role/Role_11_Difficulty.png", "title": "Select Difficulty"},
+    {"path": "role/Role_12_Rolling.png", "title": "Rolling"},
+    {"path": "role/Role_13_Success.png", "title": "Roll Success"},
+    {"path": "role/Role_14_LevelUp.png", "title": "Level Up"},
+    {"path": "role/Role_15_CharPack.png", "title": "Character Pack"}
+  ]
+}
