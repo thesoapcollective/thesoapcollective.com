@@ -1,0 +1,375 @@
+* {
+  @include box-sizing(border-box);
+  outline: none;
+}
+
+/*=============================================================================
+  TAGS
+=============================================================================*/
+html {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 300;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  background: #fff;
+}
+
+a {
+  @include opacity(1);
+  @include transition(opacity $fade-speed);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    @include opacity($fade-opacity);
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h1 {
+  @include text-overflow;
+  width: $logo-fixed-width;
+  height: $logo-fixed-width * ($logo-height / $logo-width);
+  margin: 0 auto 36px;
+  display: block;
+  background: image-url('soap_logo_white.svg') no-repeat center center;
+
+  @include respond-to(phone) {
+    width: $logo-fixed-width-phone;
+    height: $logo-fixed-width-phone * ($logo-height / $logo-width);
+  }
+}
+
+h2,
+h3 {
+  margin-left: $font-futura-spacing; // Left margin needed to offset weird Futura custom letter spacing issue
+  font-family: $futura-font-family;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: $font-futura-spacing;
+}
+
+h4 {
+  font-family: $lato-font-family;
+  font-weight: 300;
+}
+
+/*=============================================================================
+  HELPERS
+=============================================================================*/
+.section {
+  max-width: $max-page-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.center {
+  text-align: center;
+}
+
+.image-text {
+  color: $image-text-color;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arrow-container {
+  width: 41px;
+  height: 41px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.arrow-outlined,
+.arrow-filled {
+  @include transition(opacity $fade-speed);
+  width: 41px;
+  height: 41px;
+  background: image-url('arrow_down.png') no-repeat;
+  background-size: 41px 82px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.point-right {
+    @include rotate(-90deg);
+  }
+}
+
+.arrow-outlined {
+  @include opacity(1);
+  background-position: 0 0;
+}
+
+.arrow-filled {
+  @include opacity(0);
+  background-position: 0 -41px;
+}
+
+/*=============================================================================
+  PAGE NAV
+=============================================================================*/
+#page-nav {
+  @include transition(background-color $color-speed);
+  width: 100%;
+  height: 72px;
+  line-height: 72px;
+  position: fixed;
+  z-index: 2;
+  background: transparent;
+
+  &.is-scrolling {
+    background: #fff;
+  }
+}
+
+.main-nav {
+  @include translateX(50%);
+  @include transition(transform $shift-speed);
+  display: inline-block;
+
+  li {
+    margin-right: 35px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    @extend h2;
+    @include transition(opacity $fade-speed, color $color-speed);
+    display: block;
+    color: #fff;
+
+    &.is-selected {
+      @include opacity($fade-opacity);
+    }
+  }
+}
+
+.logo {
+  @include text-overflow;
+  @include opacity(0);
+  @include transition(opacity $fade-speed);
+  width: 90px;
+  height: 90px * ($logo-height / $logo-width);
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  background: image-url('soap_logo_black.svg') no-repeat center center;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    @include opacity(0);
+  }
+}
+
+.is-scrolling {
+  .main-nav {
+    @include translateX(0%);
+
+    a {
+      color: #000;
+    }
+  }
+
+  .logo {
+    @include opacity(1);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      @include opacity($fade-opacity);
+    }
+  }
+}
+
+/*=============================================================================
+  PAGE HEADER
+=============================================================================*/
+#page-header {
+  padding: 234px 0 190px;
+  background: #fff image-url('background.jpg') fixed no-repeat top center;
+  background-size: cover;
+
+  h4 {
+    margin-bottom: 60px;
+  }
+}
+
+.goto-projects {
+  display: inline-block;
+  color: #fff;
+
+  .arrow-container {
+    margin-top: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    .arrow-outlined {
+      @include opacity(0);
+    }
+
+    .arrow-filled {
+      @include opacity(1);
+    }
+  }
+}
+
+/*=============================================================================
+  PAGE FOOTER
+=============================================================================*/
+#page-footer {
+  padding-top: 16px;
+  height: 72px;
+  background: #fff;
+  font-family: $futura-font-family;
+  font-size: 0.75rem;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &.social-icons {
+      float: right;
+    }
+  }
+
+  a {
+    color: #000;
+  }
+
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 35px;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+
+/*=============================================================================
+  PAGE CONTENT
+=============================================================================*/
+.page-bar {
+  height: 72px;
+  background: #fff;
+  line-height: 72px;
+}
+
+.project-section {
+  padding: 125px 0;
+}
+
+.project-role {
+  // TEMP: Until we get final image
+  background: #fff image-url('background.jpg') no-repeat top center;
+}
+
+.role-logo {
+  @include text-overflow;
+  width: 230px;
+  height: 120px;
+  margin: 0 auto 35px;
+  display: block;
+  background: image-url('role_logo.png') no-repeat 0 0;
+  background-size: 230px 120px;
+}
+
+.download-app-store {
+  @include text-overflow;
+  width: 135px;
+  height: 40px;
+  margin: 25px auto 0;
+  display: block;
+  background: image-url('app_store_badge.svg') no-repeat 0 0;
+}
+
+.learn-more {
+  @extend h2;
+  width: 171px;
+  margin: 25px auto 0;
+  padding-right: 41px;
+  display: block;
+  position: relative;
+  color: #fff;
+  text-align: right;
+
+  .arrow-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    .arrow-outlined {
+      @include opacity(0);
+    }
+
+    .arrow-filled {
+      @include opacity(1);
+    }
+  }
+}
+
+.about-section {
+  padding: 72px 0;
+  background: #fff;
+
+  a {
+    font-weight: normal;
+    color: #000;
+  }
+}
+
+.headshots {
+  @include text-overflow;
+  width: 306px;
+  height: 162px;
+  margin: 0 auto 36px;
+  background: image-url('headshots.jpg') no-repeat 0 0;
+  background-size: 306px 162px;
+}
+
+.contact-section {
+  padding: 144px 0;
+  background: #fff image-url('background.jpg') fixed no-repeat bottom center;
+  background-size: cover;
+}
+
+.contact-us {
+  @extend h2;
+  margin-left: 0;
+  margin-top: 30px;
+  padding: 20px 60px;
+  display: inline-block;
+  color: #fff;
+  border: 2px solid #fff;
+}
