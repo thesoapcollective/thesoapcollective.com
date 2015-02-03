@@ -138,9 +138,11 @@ h4 {
 }
 
 .main-nav {
-  @include translateX(50%);
-  @include transition(transform $shift-speed);
+  @include translateX(-50%);
+  @include transition(transform $shift-speed, left $shift-speed);
   display: inline-block;
+  position: relative;
+  left: 50%;
 
   li {
     margin-right: 35px;
@@ -185,7 +187,8 @@ h4 {
 
 .is-scrolling {
   .main-nav {
-    @include translateX(0%);
+    @include translateX(0);
+    left: 0;
 
     a {
       color: #000;
