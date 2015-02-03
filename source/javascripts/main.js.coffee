@@ -63,3 +63,5 @@ refreshNavbar = ->
   $gotoWork.toggleClass 'is-selected', isAtWork
   $gotoAbout.toggleClass 'is-selected', isAtAbout
   $gotoContact.toggleClass 'is-selected', isAtContact
+
+  $('a').blur()
