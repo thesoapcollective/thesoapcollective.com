@@ -24,30 +24,40 @@ $(document).ready ->
 
   $('.logo').click (event) ->
     event.preventDefault()
+    if window.history.pushState
+      window.history.pushState null, '', '/'
     $('html, body').animate
       scrollTop: 0
     , 500
 
   $('.goto-work').click (event) ->
     event.preventDefault()
+    if window.history.pushState
+      window.history.pushState null, '', '/work'
     $('html, body').animate
       scrollTop: Math.floor($work.offset().top)
     , 500
 
   $('.goto-projects').click (event) ->
     event.preventDefault()
+    if window.history.pushState
+      window.history.pushState null, '', '/work'
     $('html, body').animate
       scrollTop: Math.floor($work.offset().top)
     , 500
 
   $('.goto-about').click (event) ->
     event.preventDefault()
+    if window.history.pushState
+      window.history.pushState null, '', '/about'
     $('html, body').animate
       scrollTop: Math.floor($about.offset().top)
     , 500
 
   $('.goto-contact').click (event) ->
     event.preventDefault()
+    if window.history.pushState
+      window.history.pushState null, '', '/contact'
     $('html, body').animate
       scrollTop: Math.floor($contact.offset().top)
     , 500
