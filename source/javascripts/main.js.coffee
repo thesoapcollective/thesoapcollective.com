@@ -1,4 +1,5 @@
 isHome = false
+isSmall = false
 $win = null
 $pageNav = null
 $pageFooter = null
@@ -10,8 +11,9 @@ $contact = null
 $gotoContact = null
 
 $(document).ready ->
-  isHome = $('body.index').length
   $win = $(window)
+  isHome = $('body.index').length
+  isSmall = $win.width() <= 767 # Should match respond-to mixin
   $pageNav = $('#page-nav')
   $pageFooter = $('#page-footer')
   $work = $('#work')
@@ -74,12 +76,13 @@ $(document).ready ->
 
     $('.project-image img').unveil 100
 
-    $('.project-image a').magnificPopup
-      type: 'image'
-      gallery:
-        enabled: true
-      zoom:
-        enabled: true
+    if not isSmall
+      $('.project-image a').magnificPopup
+        type: 'image'
+        gallery:
+          enabled: true
+        zoom:
+          enabled: true
 
 refreshNavbar = ->
   $pageNav.toggleClass 'is-scrolling', $win.scrollTop() > 0

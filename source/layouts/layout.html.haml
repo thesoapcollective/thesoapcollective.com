@@ -34,7 +34,24 @@
           %li
             %a.goto-contact{href: '/contact'} Contact
         %a.logo{href: '/'} The Soap Collective
+
     = yield
+
+    #page-footer
+      .section
+        %ul.list-reset
+          %li
+            %strong The Soap Collective
+            %br
+            2618B Sacramento St. San Francisco, CA 94115
+          %li
+            %a{href: 'mailto:info@thesoapcollective.com?subject=Hey%20Soap!'} info@thesoapcollective.com
+            %br
+            857.203.1004
+          %li.social-icons
+            %a.social-icon.icon-twitter-circled{href: 'https://twitter.com/soapcollective', target: '_blank'}
+            %a.social-icon.icon-facebook-circled{href: 'https://www.facebook.com/thesoapcollective', target: '_blank'}
+
 
     %script{src: '//use.typekit.net/dhn8nfe.js', type: 'text/javascript'}
     %script{src: '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', type: 'text/javascript'}
