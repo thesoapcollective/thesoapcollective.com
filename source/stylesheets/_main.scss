@@ -1,0 +1,634 @@
+* {
+  @include box-sizing(border-box);
+  outline: none;
+}
+
+/*=============================================================================
+  TAGS
+=============================================================================*/
+html {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 300;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  background: #fff;
+}
+
+a {
+  @include opacity(1);
+  @include transition(opacity $fade-speed);
+  text-decoration: none;
+  outline: none;
+
+  &:active {
+    outline: none;
+  }
+
+  body:not(.is-touch) & {
+    &:hover,
+    &:focus {
+      @include opacity($fade-opacity);
+      outline: none;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h1 {
+  @include text-overflow;
+  width: $logo-fixed-width;
+  height: $logo-fixed-width * ($logo-height / $logo-width);
+  margin: 0 auto 36px;
+  display: block;
+  background: image-url('soap_logo_white.svg') no-repeat center center;
+}
+
+h2,
+h3 {
+  margin-left: $font-futura-spacing; // Left margin needed to offset weird Futura custom letter spacing issue
+  font-family: $futura-font-family;
+  font-weight: bold;
+  font-size: $font-size-secondary;
+  text-transform: uppercase;
+  letter-spacing: $font-futura-spacing;
+
+  &.normal {
+    margin-left: 0;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+
+h4 {
+  font-family: $lato-font-family;
+  font-weight: 300;
+}
+
+/*=============================================================================
+  HELPERS
+=============================================================================*/
+.section {
+  max-width: $max-page-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.center {
+  text-align: center;
+}
+
+.image-text {
+  color: $image-text-color;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arrow-container {
+  width: 41px;
+  height: 41px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.arrow-outlined,
+.arrow-filled {
+  @include transition(opacity $fade-speed);
+  width: 41px;
+  height: 41px;
+  background: image-url('arrow_down.png') no-repeat;
+  background-size: 41px 82px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.point-right {
+    @include rotate(-90deg);
+  }
+}
+
+.arrow-outlined {
+  @include opacity(1);
+  background-position: 0 0;
+}
+
+.arrow-filled {
+  @include opacity(0);
+  background-position: 0 -41px;
+}
+
+.website {
+  color: $text-color;
+  font-family: $futura-font-family;
+}
+
+/*=============================================================================
+  PAGE NAV
+=============================================================================*/
+#page-nav {
+  @include transition(background-color $color-speed);
+  width: 100%;
+  height: $page-bar-height;
+  line-height: $page-bar-height;
+  position: fixed;
+  z-index: 2;
+  background: transparent;
+
+  &.is-scrolling,
+  &.not-fixed {
+    background: #fff;
+  }
+
+  &.not-fixed {
+    position: relative;
+  }
+}
+
+.main-nav {
+  @include translateX(-50%);
+  @include transition(transform $shift-speed, left $shift-speed);
+  display: inline-block;
+  position: relative;
+  left: 50%;
+
+  li {
+    margin-right: 35px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    @extend h2;
+    @include transition(opacity $fade-speed, color $color-speed);
+    display: block;
+    color: $image-text-color;
+
+    &.is-selected {
+      @include opacity($fade-opacity);
+    }
+  }
+}
+
+.logo {
+  @include text-overflow;
+  @include opacity(0);
+  @include transition(opacity $fade-speed);
+  width: 90px;
+  height: 90px * ($logo-height / $logo-width);
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  background: image-url('soap_logo_black.svg') no-repeat center center;
+  cursor: default;
+
+  body:not(.is-touch) & {
+    &:hover,
+    &:focus {
+      @include opacity(0);
+    }
+  }
+}
+
+.is-scrolling,
+.not-fixed {
+  .main-nav {
+    @include translateX(0);
+    left: 0;
+
+    a {
+      color: $text-color;
+    }
+  }
+
+  .logo {
+    @include opacity(1);
+    cursor: pointer;
+
+    body:not(.is-touch) & {
+      &:hover,
+      &:focus {
+        @include opacity($fade-opacity);
+      }
+    }
+  }
+}
+
+/*=============================================================================
+  PAGE HEADER
+=============================================================================*/
+#page-header {
+  padding: 234px 0 190px;
+  background: #fff image-url('background.jpg') fixed no-repeat center top;
+  background-size: cover;
+
+  h4 {
+    margin-bottom: 60px;
+  }
+}
+
+.goto-projects {
+  display: inline-block;
+  color: $image-text-color;
+
+  .arrow-container {
+    margin-top: 16px;
+  }
+
+  body:not(.is-touch) & {
+    &:hover,
+    &:focus {
+      .arrow-outlined {
+        @include opacity(0);
+      }
+
+      .arrow-filled {
+        @include opacity(1);
+      }
+    }
+  }
+}
+
+/*=============================================================================
+  PAGE FOOTER
+=============================================================================*/
+#page-footer {
+  padding-top: 16px;
+  height: $page-bar-height;
+  position: relative;
+  background: #fff;
+  font-family: $futura-font-family;
+  font-size: $font-size-secondary;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &.social-icons {
+      position: absolute;
+      top: 1px;
+      right: 0;
+    }
+  }
+
+  a {
+    color: $text-color;
+  }
+
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 35px;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+
+/*=============================================================================
+  PAGE CONTENT
+=============================================================================*/
+.page-bar {
+  height: $page-bar-height;
+  background: #fff;
+  line-height: $page-bar-height;
+}
+
+.project-section {
+  padding: 125px 0;
+}
+
+.project-role {
+  background: #fff image-url('role_background.jpg') no-repeat center top;
+  background-size: cover;
+}
+
+.role-logo {
+  @include text-overflow;
+  width: 230px;
+  height: 120px;
+  margin: 0 auto 35px;
+  display: block;
+  background: image-url('role_logo.png') no-repeat 0 0;
+  background-size: 230px 120px;
+}
+
+.download-app-store {
+  @include text-overflow;
+  width: 135px;
+  height: 40px;
+  margin: 25px auto 0;
+  display: block;
+  background: image-url('app_store_badge.svg') no-repeat 0 0;
+}
+
+.learn-more {
+  @extend h2;
+  width: 171px;
+  margin: 25px auto 0;
+  padding-right: 41px;
+  display: block;
+  position: relative;
+  color: $image-text-color;
+  text-align: right;
+
+  .arrow-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  body:not(.is-touch) & {
+    &:hover,
+    &:focus {
+      .arrow-outlined {
+        @include opacity(0);
+      }
+
+      .arrow-filled {
+        @include opacity(1);
+      }
+    }
+  }
+}
+
+.about-section {
+  padding: 72px 0;
+  background: #fff;
+
+  a {
+    font-weight: normal;
+    color: $text-color;
+  }
+
+  p {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+}
+
+.headshots {
+  @include text-overflow;
+  max-width: 306px;
+  height: 162px;
+  margin: 0 auto 36px;
+  background: image-url('headshots.jpg') no-repeat 0 0;
+  background-size: contain;
+}
+
+.contact-section {
+  padding: 144px 0;
+  background: #fff image-url('background.jpg') fixed no-repeat center bottom;
+  background-size: cover;
+
+  h4 {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.contact-us {
+  @extend h2;
+  margin-left: 0;
+  margin-top: 30px;
+  padding: 20px 54px 20px 66px;
+  display: inline-block;
+  color: $image-text-color;
+  border: 2px solid $image-text-color;
+}
+
+/*=============================================================================
+  PROJECTS
+=============================================================================*/
+.project-list {}
+
+.project-description {
+  p {
+    margin-top: 18px;
+    font-size: $font-size-secondary;
+  }
+}
+
+.mfp-figure:after {
+  @include box-shadow(none);
+  background-color: transparent;
+}
+
+/*=============================================================================
+  ROLE
+=============================================================================*/
+.video-container {
+  height: 400px;
+  margin: 72px 0 0;
+  background: #ff0000;
+}
+
+.role-list {
+  margin-top: 72px;
+
+  li {
+    width: 33%;
+    margin-bottom: 72px;
+    padding: 0 13px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:nth-child(3n+1) {
+      padding-left: 0;
+      padding-right: 26px;
+    }
+
+    &:nth-child(3n+3) {
+      padding-left: 26px;
+      padding-right: 0;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/*=============================================================================
+  RESPONSIVENESS
+=============================================================================*/
+@include respond-to('desktop') {
+  .section {
+    padding-left: $page-gutter;
+    padding-right: $page-gutter;
+  }
+
+  .logo {
+    right: $page-gutter;
+  }
+
+  #page-footer {
+    li {
+      &.social-icons {
+        right: $page-gutter;
+      }
+    }
+  }
+}
+
+@include respond-to('tablet-small') {
+  html {
+    font-size: $font-size-tablet-small;
+  }
+
+  #page-header,
+  .contact-section {
+    background-attachment: scroll;
+  }
+
+  #page-nav {
+    height: $page-bar-height-tablet-small;
+    line-height: $page-bar-height-tablet-small;
+  }
+
+  #page-footer {
+    height: $page-bar-height-tablet-small;
+
+    li {
+      &.social-icons {
+        top: -3px;
+      }
+    }
+  }
+
+  .page-bar {
+    height: $page-bar-height-tablet-small;
+    line-height: $page-bar-height-tablet-small;
+  }
+
+  .learn-more {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding-left: $page-gutter-tablet-small;
+    padding-right: $page-gutter-tablet-small;
+  }
+
+  .logo {
+    top: 12px;
+    right: $page-gutter-tablet-small;
+  }
+
+  .role-list {
+    li {
+      width: 50%;
+      margin-bottom: 20px;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+}
+
+@include respond-to('phone') {
+  html,
+  h4 {
+    font-weight: normal;
+  }
+
+  h1 {
+    width: $logo-fixed-width-phone;
+    height: $logo-fixed-width-phone * ($logo-height / $logo-width);
+  }
+
+  .section{
+    &.no-gutter {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  #page-header,
+  .project-section,
+  .about-section,
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .video-container {
+    margin-top: 50px;
+  }
+
+  .about-section {
+    a {
+      font-weight: bold;
+    }
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .logo {
+    @include translateX(-50%);
+    left: 50%;
+    right: auto;
+  }
+
+  .contact-us {
+    padding-left: 26px;
+    padding-right: 14px;
+  }
+
+  #page-footer {
+    height: auto;
+
+    li {
+      margin-bottom: 10px;
+      display: block;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &.social-icons {
+        position: relative;
+        top: auto;
+        right: auto
+      }
+    }
+  }
+
+  .role-list {
+    margin-top: 50px;
+
+    li {
+      width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+      &:first-child {
+        margin-bottom: 50px;
+        padding-left: $page-gutter-tablet-small !important;
+        padding-right: $page-gutter-tablet-small !important;
+      }
+    }
+  }
+}
