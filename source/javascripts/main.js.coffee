@@ -1,5 +1,6 @@
 isHome = false
-isSmall = false
+isPhone = false
+isTablet = false
 $win = null
 $pageNav = null
 $pageFooter = null
@@ -13,7 +14,8 @@ $gotoContact = null
 $(document).ready ->
   $win = $(window)
   isHome = $('body.index').length
-  isSmall = $win.width() <= 767 # Should match respond-to mixin
+  isTablet = $win.width() <= 767 # Should match respond-to mixin
+  isPhone = $win.width() <= 459 # Should match respond-to mixin
   $pageNav = $('#page-nav')
   $pageFooter = $('#page-footer')
   $work = $('#work')
@@ -74,15 +76,27 @@ $(document).ready ->
   if $('.role-list').length
     $pageNav.addClass 'not-fixed'
 
-    $('.project-image img').unveil 100
-
-    if not isSmall
+    if not isTablet and not isPhone
       $('.project-image a').magnificPopup
         type: 'image'
         gallery:
           enabled: true
         zoom:
           enabled: true
+
+    if isPhone
+      $('.project-image').each (i) ->
+        $this = $(this)
+        $a = $this.find('a')
+        $img = $this.find('img')
+        currentSrc = $a.attr 'href'
+        newSrc = currentSrc.slice(0, 13) + 'plain/' + currentSrc.slice(13, -3) + 'jpg'
+
+        $img.attr 'src', $img.attr('src').replace('phone_', 'plain_')
+        $img.attr 'data-src', newSrc
+        $a.attr 'href', newSrc
+
+    $('.project-image img').unveil 100
 
 refreshNavbar = ->
   $pageNav.toggleClass 'is-scrolling', $win.scrollTop() > 0

@@ -555,6 +555,13 @@ h4 {
     height: $logo-fixed-width-phone * ($logo-height / $logo-width);
   }
 
+  .section{
+    &.no-gutter {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   #page-header,
   .project-section,
   .about-section,
@@ -609,6 +616,11 @@ h4 {
       width: 100%;
       padding-left: 0 !important;
       padding-right: 0 !important;
+
+      &:first-child {
+        padding-left: $page-gutter-tablet-small !important;
+        padding-right: $page-gutter-tablet-small !important;
+      }
     }
   }
 }
