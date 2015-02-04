@@ -90,7 +90,8 @@ $(document).ready ->
         $a = $this.find('a')
         $img = $this.find('img')
         currentSrc = $a.attr 'href'
-        newSrc = currentSrc.slice(0, 13) + 'plain/' + currentSrc.slice(13, -3) + 'jpg'
+        newSrc = currentSrc.replace('/role/', '/role/plain/')
+        newSrc = newSrc.replace('.png', '.jpg')
 
         $img.attr 'src', $img.attr('src').replace('phone_', 'plain_')
         $img.attr 'data-src', newSrc
