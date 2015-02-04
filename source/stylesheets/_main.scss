@@ -320,8 +320,8 @@ h4 {
 }
 
 .project-role {
-  // TEMP: Until we get final image
-  background: #fff image-url('background.jpg') no-repeat center top;
+  background: #fff image-url('role_background.jpg') no-repeat center top;
+  background-size: cover;
 }
 
 .role-logo {
@@ -440,11 +440,13 @@ h4 {
 =============================================================================*/
 .video-container {
   height: 400px;
-  margin: 72px 0;
+  margin: 72px 0 0;
   background: #ff0000;
 }
 
 .role-list {
+  margin-top: 72px;
+
   li {
     width: 33%;
     margin-bottom: 72px;
@@ -570,12 +572,15 @@ h4 {
     padding-bottom: 50px;
   }
 
+  .video-container {
+    margin-top: 50px;
+  }
+
   .about-section {
     a {
       font-weight: bold;
     }
   }
-
 
   .main-nav {
     display: none;
@@ -612,12 +617,15 @@ h4 {
   }
 
   .role-list {
+    margin-top: 50px;
+
     li {
       width: 100%;
       padding-left: 0 !important;
       padding-right: 0 !important;
 
       &:first-child {
+        margin-bottom: 50px;
         padding-left: $page-gutter-tablet-small !important;
         padding-right: $page-gutter-tablet-small !important;
       }
