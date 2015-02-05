@@ -25,6 +25,21 @@ $(document).ready ->
   $contact = $('#contact')
   $gotoContact = $('.goto-contact')
 
+  # If hitting a deep link, take us there
+  if isHome
+    if window.location.pathname == '/work' and $work.length
+      $('html, body').animate
+        scrollTop: Math.floor($work.offset().top)
+      , 500
+    else if window.location.pathname == '/about' and $about.length
+      $('html, body').animate
+        scrollTop: Math.floor($about.offset().top)
+      , 500
+    else if window.location.pathname == '/contact' and $contact.length
+      $('html, body').animate
+        scrollTop: Math.floor($contact.offset().top)
+      , 500
+
   $win.scroll $.throttle(250, refreshNavbar)
   refreshNavbar()
 
