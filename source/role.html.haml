@@ -1,13 +1,18 @@
 .project-section.project-role
-  %h2.role-logo Role - Imagine Together
-  %h4.image-text.center
-    Group storytelling and adventure at
-    %br
-    your fingertips, everywhere you go.
-  -#%a.download-app-store{href: '#'} Download Role on the App Store!
+  .project-inner
+    %h2.role-logo Role - Imagine Together
+    %h4.image-text.center
+      Group storytelling and adventure at
+      %br
+      your fingertips, everywhere you go.
+    %a.download-app-store{href: 'https://itunes.apple.com/us/app/role-a-role-playing-party-game/id933599454?mt=8'} Download Role on the App Store!
+  .video-overlay.mobile-hide.touch-hide
+  %video.video-background.mobile-hide.touch-hide{src: image_path('role_background_video.mp4'), autoplay: true, loop: true, muted: true}
 
 .section.no-gutter
-  -#.video-container
+  .video-container
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/_h4W4kjlCmU?rel=0" frameborder="0" allowfullscreen></iframe>
+
   %ul.list-reset.project-list.role-list
     %li.project-description
       %h3.normal A Storytelling Party Game
