@@ -88,9 +88,10 @@ $(document).ready ->
         scrollTop: Math.floor($contact.offset().top)
       , 500
 
-  if $('.role-list').length
+  if $('.role-list').length || $('.weirdcatalog-list').length
     $pageNav.addClass 'not-fixed'
 
+  if $('.role-list').length
     if not isTablet and not isPhone
       $('.project-image a').magnificPopup
         type: 'image'
