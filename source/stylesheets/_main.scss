@@ -545,6 +545,12 @@ body.is-touch .touch-hide {
   img {
     width: 100%;
   }
+
+  .project-description {
+    p:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 /*=============================================================================

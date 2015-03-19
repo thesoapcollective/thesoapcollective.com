@@ -1,3 +1,6 @@
+# Uses .env in the root of the project
+activate :dotenv
+
 ###
 # Compass
 ###
@@ -72,4 +75,13 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method   = :ftp
+  deploy.host     = ENV['FTP_HOST']
+  deploy.port     = ENV['FTP_PORT']
+  deploy.path     = ENV['FTP_PATH']
+  deploy.user     = ENV['FTP_USER']
+  deploy.password = ENV['FTP_PASSWORD']
 end
