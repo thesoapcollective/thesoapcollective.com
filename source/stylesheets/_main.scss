@@ -532,17 +532,15 @@ body.is-touch .touch-hide {
   WEIRDCATALOG
 =============================================================================*/
 .weirdcatalog-list {
-  margin-top: 54px;
+  margin: 72px 0;
   text-align: center;
-  margin-bottom: 72px;
 
   li {
     width: 70%;
-    padding: 0 26px;
+    padding: 0 10px;
     display: inline-block;
     vertical-align: top;
-
-    }
+  }
 
   img {
     width: 100%;
@@ -716,6 +714,9 @@ body.is-touch .touch-hide {
   }
 
   .weirdcatalog-list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
     li {
       width: 100%;
     }
