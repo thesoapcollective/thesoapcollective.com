@@ -355,6 +355,11 @@ body.is-touch .touch-hide {
   background-size: cover;
 }
 
+.project-weirdcatalog {
+  background: #fff image-url('wc_background.jpg') no-repeat center;
+  background-size: cover;
+}
+
 .role-logo {
   @include text-overflow;
   width: 255px;
@@ -363,6 +368,16 @@ body.is-touch .touch-hide {
   display: block;
   background: image-url('role_logo.png') no-repeat 0 0;
   background-size: 255px 108px;
+}
+
+.weirdcatalog-logo {
+  @include text-overflow;
+  width: 255px;
+  height: 90px;
+  margin: 0 auto 35px;
+  display: block;
+  background: image-url('wc_logo.png') no-repeat 0 0;
+  background-size: 255px 90px;
 }
 
 .download-app-store {
@@ -507,6 +522,27 @@ body.is-touch .touch-hide {
       padding-right: 0;
     }
   }
+
+  img {
+    width: 100%;
+  }
+}
+
+/*=============================================================================
+  WEIRDCATALOG
+=============================================================================*/
+.weirdcatalog-list {
+  margin-top: 54px;
+  text-align: center;
+  margin-bottom: 72px;
+
+  li {
+    width: 70%;
+    padding: 0 26px;
+    display: inline-block;
+    vertical-align: top;
+
+    }
 
   img {
     width: 100%;
@@ -676,6 +712,12 @@ body.is-touch .touch-hide {
         padding-left: $page-gutter-tablet-small !important;
         padding-right: $page-gutter-tablet-small !important;
       }
+    }
+  }
+
+  .weirdcatalog-list {
+    li {
+      width: 100%;
     }
   }
 }
