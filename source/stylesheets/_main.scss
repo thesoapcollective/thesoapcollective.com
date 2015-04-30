@@ -360,24 +360,38 @@ body.is-touch .touch-hide {
   background-size: cover;
 }
 
-.role-logo {
+.project-atlas {
+  background: #fff image-url('atlas_background.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.project-logo {
   @include text-overflow;
-  width: 255px;
-  height: 108px;
   margin: 0 auto 35px;
   display: block;
-  background: image-url('role_logo.png') no-repeat 0 0;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.role-logo {
+  width: 255px;
+  height: 108px;
+  background-image: image-url('role_logo.png');
   background-size: 255px 108px;
 }
 
 .weirdcatalog-logo {
-  @include text-overflow;
   width: 255px;
   height: 90px;
-  margin: 0 auto 35px;
-  display: block;
-  background: image-url('wc_logo.png') no-repeat 0 0;
+  background-image: image-url('wc_logo.png');
   background-size: 255px 90px;
+}
+
+.atlas-logo {
+  width: 300px;
+  height: 300px * 119px / 600px;
+  background-image: image-url('atlas_logo.png');
+  background-size: 300px (300px * 119px / 600px);
 }
 
 .download-app-store {
@@ -529,8 +543,9 @@ body.is-touch .touch-hide {
 }
 
 /*=============================================================================
-  WEIRDCATALOG
+  ATLAS / WEIRDCATALOG
 =============================================================================*/
+.atlas-list,
 .weirdcatalog-list {
   margin: 72px 0;
   text-align: center;
@@ -719,6 +734,7 @@ body.is-touch .touch-hide {
     }
   }
 
+  .atlas-list,
   .weirdcatalog-list {
     margin-top: 50px;
     margin-bottom: 50px;

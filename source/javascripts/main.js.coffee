@@ -88,7 +88,7 @@ $(document).ready ->
         scrollTop: Math.floor($contact.offset().top)
       , 500
 
-  if $('.role-list').length || $('.weirdcatalog-list').length
+  if $('.role-list').length || $('.weirdcatalog-list').length || $('.atlas-list').length
     $pageNav.addClass 'not-fixed'
 
   if $('.role-list').length
