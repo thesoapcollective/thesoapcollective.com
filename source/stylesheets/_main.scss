@@ -479,6 +479,48 @@ body.is-touch .touch-hide {
   border: 2px solid $image-text-color;
 }
 
+.clients-section {
+  padding: 27px 0 8px;
+  background: #000;
+  color: #939393;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+
+.clients-list {
+  li,
+  a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  li {
+    padding: 18px;
+  }
+
+  a {
+    @include text-overflow;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.client-mightybell {
+  width: 154px;
+  height: 36px;
+  background-image: image-url('clients/mightybell.png');
+  background-size: 154px 36px;
+}
+
+.client-ethereum {
+  width: 143px;
+  height: 36px;
+  background-image: image-url('clients/ethereum.png');
+  background-size: 143px 36px;
+}
+
 /*=============================================================================
   PROJECTS
 =============================================================================*/
