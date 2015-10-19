@@ -563,7 +563,7 @@ body.is-touch .touch-hide {
 }
 
 .pillars-list {
-  margin-bottom: 150px;
+  margin-bottom: 35px;
   text-align: center;
 
   li {
@@ -726,6 +726,10 @@ body.is-touch .touch-hide {
     li {
       width: 50%;
       margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -859,8 +863,6 @@ body.is-touch .touch-hide {
   }
 
   .pillars-list {
-    margin-bottom: 72px;
-
     li {
       width: 100%;
     }
