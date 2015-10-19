@@ -398,10 +398,11 @@ body.is-touch .touch-hide {
 }
 
 .atlas-logo {
+  $atlasLogoHeight: ceil(300px * 119px / 600px);
   width: 300px;
-  height: 300px * 119px / 600px;
+  height: $atlasLogoHeight;
   background-image: image-url('atlas_logo.png');
-  background-size: 300px (300px * 119px / 600px);
+  background-size: 300px $atlasLogoHeight;
 }
 
 .download-app-store {
