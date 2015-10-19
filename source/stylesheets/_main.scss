@@ -375,6 +375,11 @@ body.is-touch .touch-hide {
   background-size: cover;
 }
 
+.project-ced {
+  background: #fff image-url('ced_background.jpg') no-repeat center;
+  background-size: cover;
+}
+
 .project-logo {
   @include text-overflow;
   margin: 0 auto 35px;
@@ -403,6 +408,13 @@ body.is-touch .touch-hide {
   height: $atlasLogoHeight;
   background-image: image-url('atlas_logo.png');
   background-size: 300px $atlasLogoHeight;
+}
+
+.ced-logo {
+  width: 255px;
+  height: 255px;
+  background-image: image-url('ced_logo.png');
+  background-size: 255px 255px;
 }
 
 .download-app-store {
@@ -626,9 +638,10 @@ body.is-touch .touch-hide {
 }
 
 /*=============================================================================
-  ATLAS / WEIRDCATALOG
+  CED / ATLAS / WEIRDCATALOG
 =============================================================================*/
 .atlas-list,
+.ced-list,
 .weirdcatalog-list {
   margin: 72px 0;
   text-align: center;
@@ -648,6 +661,33 @@ body.is-touch .touch-hide {
     p:first-child {
       margin-top: 0;
     }
+  }
+}
+
+.ced-list {
+  li {
+    padding: 0;
+  }
+
+  .image-spacer {
+    display: block;
+    margin-top: 72px;
+  }
+
+  .project-image {
+    width: 50%;
+    vertical-align: top;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.ced-image-header {
+  margin: 72px 0;
+  img {
+    width: 100%;
   }
 }
 
@@ -818,6 +858,7 @@ body.is-touch .touch-hide {
   }
 
   .atlas-list,
+  .ced-list,
   .weirdcatalog-list {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -825,5 +866,20 @@ body.is-touch .touch-hide {
     li {
       width: 100%;
     }
+  }
+
+  .ced-list {
+    .image-spacer {
+      margin-top: 50px;
+    }
+
+    .project-image {
+      width: 100%;
+    }
+  }
+
+  .ced-image-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
