@@ -67,6 +67,10 @@ h3 {
     letter-spacing: normal;
   }
 
+  &.no-fix {
+    margin-left: 0;
+  }
+
   &.lato {
     margin-left: 0;
     margin-bottom: 30px !important;
@@ -713,6 +717,19 @@ body.is-touch .touch-hide {
   }
 }
 
+@include respond-to('tablet') {
+  h3.no-fix {
+    margin-left: $font-futura-spacing;
+  }
+
+  .pillars-list {
+    li {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 @include respond-to('tablet-small') {
   html {
     font-size: $font-size-tablet-small;
@@ -838,6 +855,14 @@ body.is-touch .touch-hide {
         top: auto;
         right: auto
       }
+    }
+  }
+
+  .pillars-list {
+    margin-bottom: 72px;
+
+    li {
+      width: 100%;
     }
   }
 
