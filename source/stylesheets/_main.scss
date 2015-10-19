@@ -66,6 +66,16 @@ h3 {
     text-transform: none;
     letter-spacing: normal;
   }
+
+  &.lato {
+    margin-left: 0;
+    margin-bottom: 30px !important;
+    font-family: $lato-font-family;
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: normal;
+    font-size: $font-size;
+  }
 }
 
 h4 {
@@ -521,11 +531,34 @@ body.is-touch .touch-hide {
   background-size: 154px 36px;
 }
 
+.client-commonsense {
+  width: 182px;
+  height: 27px;
+  background-image: image-url('clients/common_sense.png');
+  background-size: 182px 27px;
+}
+
 .client-ethereum {
   width: 143px;
   height: 36px;
   background-image: image-url('clients/ethereum.png');
   background-size: 143px 36px;
+}
+
+.pillars-list {
+  margin-bottom: 150px;
+  text-align: center;
+
+  li {
+    width: 25%;
+    padding: 0 15px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  p {
+    font-size: $font-size-secondary;
+  }
 }
 
 /*=============================================================================
