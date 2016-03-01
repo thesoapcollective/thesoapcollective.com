@@ -374,6 +374,11 @@ body.is-touch .touch-hide {
   background-size: cover;
 }
 
+.project-phoodie {
+  background: #fff image-url('phoodie_background.jpg') no-repeat center top;
+  background-size: cover;
+}
+
 .project-weirdcatalog {
   background: #fff image-url('wc_background.jpg') no-repeat center;
   background-size: cover;
@@ -409,6 +414,13 @@ body.is-touch .touch-hide {
   height: 108px;
   background-image: image-url('role_logo.png');
   background-size: 255px 108px;
+}
+
+.phoodie-logo {
+  width: 228px;
+  height: 198px;
+  background-image: image-url('phoodie_logo.png');
+  background-size: 228px 198px;
 }
 
 .weirdcatalog-logo {

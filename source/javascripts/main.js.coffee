@@ -106,7 +106,11 @@ $(document).ready ->
         $a = $this.find('a')
         $img = $this.find('img')
         currentSrc = $a.attr 'href'
-        newSrc = currentSrc.replace('/role/', '/role/plain/')
+
+        if currentSrc.indexOf('/role/') > -1
+          newSrc = currentSrc.replace('/role/', '/role/plain/')
+        else
+          newSrc = currentSrc.replace('/phoodie/', '/phoodie/plain/')
         newSrc = newSrc.replace('.png', '.jpg')
 
         $img.attr 'src', $img.attr('src').replace('phone_', 'plain_')

@@ -1,0 +1,20 @@
+.project-section.project-phoodie
+  .project-inner
+    %h2.project-logo.phoodie-logo Phoodie
+    %h4.image-text.center Don't just post your food, share it!
+
+.section.no-gutter
+  %ul.list-reset.project-list.role-list
+    %li.project-description
+      %h3.normal A Social Network Built Exclusively for Foodies
+      %p We collaborated with Phoodie to bring you a social media experience that pairs best with a good meal.
+      %p Phoodie was already a great idea, we just helped make it better. Coming on board early in the process, Soap helped Phoodie take their production prototype and make it consumer-ready.
+      %p We developed a scalable backend, mobile API, and worked closely with their team on app design touch-ups. We also designed and built the Phoodie web page!
+      %p Our partnership with Phoodie continues, with Soap stepping in to assist with development updates and feature releases.
+      %p Come dine with us! Let’s share in the Phoodie Life together:
+      %p
+        %strong
+          %a.website{href: 'https://www.phoodielife.com', target: '_blank'} https://www.phoodielife.com
+    - data.phoodie.images.each do |image|
+      %li.project-image>
+        %a{href: image_path(image.path)}= image_tag image_path('phone_loading.png'), data: {src: image_path(image.path)}, alt: image.title
