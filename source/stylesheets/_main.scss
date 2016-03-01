@@ -364,6 +364,11 @@ body.is-touch .touch-hide {
   background: #000;
 }
 
+.project-vrll {
+  background: #fff image-url('vrll_background.jpg') no-repeat center top;
+  background-size: cover;
+}
+
 .project-role {
   background: #fff image-url('role_background.jpg') no-repeat center top;
   background-size: cover;
@@ -390,6 +395,13 @@ body.is-touch .touch-hide {
   display: block;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.vrll-logo {
+  width: 205px;
+  height: 205px;
+  background-image: image-url('vrll_logo.png');
+  background-size: 205px 205px;
 }
 
 .role-logo {
