@@ -7,6 +7,12 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "bf09b1c6561dc0ced707476e2cd83d29",
+      "css": "medium",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
       "uid": "ccf7ed45e7f05a89376f38abaa9d7d13",
       "css": "twitter-circled",
       "code": 59393,

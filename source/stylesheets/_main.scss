@@ -13,6 +13,7 @@ html {
   font-weight: 300;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body{
@@ -316,11 +317,16 @@ body.is-touch .touch-hide {
 }
 
 .social-icon {
+  margin-right: 10px;
   display: inline-block;
   font-size: 35px;
 
-  &:first-child {
-    margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.icon-medium {
+    font-size: 32px;
   }
 }
 
@@ -746,6 +752,12 @@ body.is-touch .touch-hide {
     margin-left: $font-futura-spacing;
   }
 
+  .main-nav {
+    li {
+      margin-right: 15px;
+    }
+  }
+
   .pillars-list {
     li {
       width: 50%;
@@ -786,6 +798,12 @@ body.is-touch .touch-hide {
   .page-bar {
     height: $page-bar-height-tablet-small;
     line-height: $page-bar-height-tablet-small;
+  }
+
+  .main-nav {
+    li {
+      margin-right: 8px;
+    }
   }
 
   .learn-more {
