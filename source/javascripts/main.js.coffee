@@ -109,6 +109,8 @@ $(document).ready ->
 
         if currentSrc.indexOf('/role/') > -1
           newSrc = currentSrc.replace('/role/', '/role/plain/')
+        else if currentSrc.indexOf('/profile/') > -1
+          newSrc = currentSrc.replace('/profile/', '/profile/plain/')
         else
           newSrc = currentSrc.replace('/phoodie/', '/phoodie/plain/')
         newSrc = newSrc.replace('.png', '.jpg')

@@ -103,6 +103,10 @@ h4 {
 
 .image-text {
   color: $image-text-color;
+
+  &.dark-text {
+    color: $text-color;
+  }
 }
 
 .list-reset {
@@ -128,6 +132,10 @@ h4 {
   position: absolute;
   top: 0;
   left: 0;
+
+  .dark-text & {
+    background-image: image-url('arrow_down_dark.png');
+  }
 
   &.point-right {
     @include rotate(-90deg);
@@ -375,6 +383,11 @@ body.is-touch .touch-hide {
   background-size: cover;
 }
 
+.project-profile {
+  background: #fff image-url('profile_background.jpg') no-repeat center top;
+  background-size: cover;
+}
+
 .project-role {
   background: #fff image-url('role_background.jpg') no-repeat center top;
   background-size: cover;
@@ -413,6 +426,13 @@ body.is-touch .touch-hide {
   height: 205px;
   background-image: image-url('vrll_logo.png');
   background-size: 205px 205px;
+}
+
+.profile-logo {
+  width: 330px;
+  height: 100px;
+  background-image: image-url('profile_logo.png');
+  background-size: 330px 100px;
 }
 
 .role-logo {
@@ -470,6 +490,10 @@ body.is-touch .touch-hide {
   position: relative;
   color: $image-text-color;
   text-align: right;
+
+  &.dark-text {
+    color: $text-color;
+  }
 
   .arrow-container {
     position: absolute;
@@ -908,6 +932,12 @@ body.is-touch .touch-hide {
     li {
       width: 100%;
     }
+  }
+
+  .profile-logo {
+    width: 280px;
+    height: 85px;
+    background-size: 280px 85px;
   }
 
   .role-list {

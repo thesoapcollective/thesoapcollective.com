@@ -1,0 +1,20 @@
+.project-section.project-profile
+  .project-inner
+    %h2.project-logo.profile-logo Profile
+    %h4.image-text.center.dark-text
+      Interactive lookbook featuring
+      %br
+      the Soap team's favorite styles.
+    %a.download-app-store{href: 'https://itunes.apple.com/us/app/profile-soap-collective-interactive/id1076481308', target: '_blank'} Download Profile on the App Store!
+
+.section.no-gutter
+  %ul.list-reset.project-list.role-list
+    %li.project-description
+      %h3.normal Go Behind the Scenes with the Soap Team
+      %p We wanted to capture a little piece of ourselves and share it with the world. One part lookbook, one part portfolio, one part interactive business card; Profile is our personal showpiece.
+      %p Dive in and check out a selection of our favorite styles, breakdowns of our team’s  skills, and selections of our best work.
+      %p Dig through it once, then flip your phone upside-down to reveal our secret “B-Side” experience. Get a behind-the-schenes glimpse at our personalities, our favorite media, and trivia about our creative process.
+      %p Come hang out with the Soap team, load up Profile today!
+    - data.profile.images.each do |image|
+      %li.project-image>
+        %a{href: image_path(image.path)}= image_tag image_path('phone_loading.png'), data: {src: image_path(image.path)}, alt: image.title
