@@ -1,19 +1,15 @@
-.project-section.project-role
+.project-section.project-nbu
   .project-inner.center
-    %h2.project-logo.role-logo Role - Imagine Together
-    %h4.image-text.center
-      Group storytelling and adventure at
-      %br
-      your fingertips, everywhere you go.
-    %a.download-app-store{href: 'https://itunes.apple.com/us/app/role-a-role-playing-party-game/id933599454?mt=8', target: '_blank'} Download Role on the App Store!
-  .video-overlay.mobile-hide.touch-hide
-  %video.video-background.mobile-hide.touch-hide{src: image_path('role_background_video.mp4'), autoplay: true, loop: true, muted: true}
+    %h2.project-logo.nbu-logo{href: '/never_bout_us'} Never Bout Us
+    %h4.image-text.center VR Music Video Experience
+    %a.download-app-store{href: 'https://itunes.apple.com/us/app/cameron-grey-never-bout-us-vr/id1104816970', target: '_blank'}<> Download Never Bout Us on the App Store!
+    %a.download-google-play{href: 'https://play.google.com/store/apps/details?id=com.thesoapcollective.CameronGreyNeverBoutUs', target: '_blank'}<> Download Never Bout Us on Google Play!
 
 .section.no-gutter
   .video-container
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/_h4W4kjlCmU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/_dw-Q6seOOk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-  %ul.list-reset.project-list.role-list
+  %ul.list-reset.project-list.nbu-list
     %li.project-description
       %h3.normal A Storytelling Party Game
       %p It started with a question: How can we bring the limitless adventure of tabletop role playing to more people?
@@ -23,7 +19,10 @@
       %p We focused on that, gutted the rest, and put it on an iPhone. The result was Role: a game that anyone can carry with them and play any time, with anyone.
       %p
         %strong
-          %a.website{href: 'http://www.roleapp.com', target: '_blank'} http://www.roleapp.com
-    - data.role.images.each do |image|
+          %a.website{href: 'http://www.camerongrey.com', target: '_blank'} http://www.camerongrey.com
+    - data.nbu.images.each do |image|
       %li.project-image>
-        %a{href: image_path(image.path)}= image_tag image_path('phone_loading.png'), data: {src: image_path(image.path)}, alt: image.title
+        - if image.title.include? 'Press Kit'
+          %a{href: image_path(image.path)}= image_tag image_path('rect_loading.png'), data: {src: image_path(image.path)}, alt: image.title
+        - else
+          %a{href: image_path(image.path)}= image_tag image_path('phone_loading_landscape.png'), data: {src: image_path(image.path)}, alt: image.title

@@ -379,6 +379,11 @@ body.is-touch .touch-hide {
   background: #000;
 }
 
+.project-nbu {
+  background: #fff image-url('nbu_background.jpg') no-repeat center top;
+  background-size: cover;
+}
+
 .project-vrll {
   background: #fff image-url('vrll_background.jpg') no-repeat center top;
   background-size: cover;
@@ -420,6 +425,13 @@ body.is-touch .touch-hide {
   display: block;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.nbu-logo {
+  width: 338px;
+  height: 54px;
+  background-image: image-url('nbu_logo.png');
+  background-size: 338px 54px;
 }
 
 .vrll-logo {
@@ -474,11 +486,21 @@ body.is-touch .touch-hide {
 
 .download-app-store {
   @include text-overflow;
-  width: 222px;
-  height: 222px * 40px / 135px;
+  width: 242px;
+  height: 72px;
   margin: 25px auto 0;
-  display: block;
+  display: inline-block;
   background: image-url('app_store_badge.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.download-google-play {
+  @include text-overflow;
+  width: 242px;
+  height: 72px;
+  margin: 25px 0 0 18px;
+  display: inline-block;
+  background: image-url('google_play_badge.png') no-repeat center center;
   background-size: contain;
 }
 
@@ -696,6 +718,31 @@ body.is-touch .touch-hide {
   }
 }
 
+.nbu-list {
+  margin-top: 72px;
+
+  li {
+    width: 50%;
+    margin-bottom: 36px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:nth-child(even) {
+      padding-left: 13px;
+      padding-right: 0;
+    }
+
+    &:nth-child(odd) {
+      padding-left: 0;
+      padding-right: 13px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 /*=============================================================================
   CED / ATLAS / WEIRDCATALOG
 =============================================================================*/
@@ -853,6 +900,15 @@ body.is-touch .touch-hide {
       padding-right: 10px !important;
     }
   }
+
+
+  .nbu-list {
+    li {
+      margin-bottom: 20px;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
 }
 
 @include respond-to('phone') {
@@ -942,6 +998,22 @@ body.is-touch .touch-hide {
   }
 
   .role-list {
+    margin-top: 50px;
+
+    li {
+      width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+      &:first-child {
+        margin-bottom: 50px;
+        padding-left: $page-gutter-tablet-small !important;
+        padding-right: $page-gutter-tablet-small !important;
+      }
+    }
+  }
+
+  .nbu-list {
     margin-top: 50px;
 
     li {

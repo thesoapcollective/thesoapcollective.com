@@ -88,7 +88,7 @@ $(document).ready ->
         scrollTop: Math.floor($contact.offset().top)
       , 500
 
-  if $('.role-list').length || $('.weirdcatalog-list').length || $('.atlas-list').length || $('.ced-list').length
+  if $('.project-list').length
     $pageNav.addClass 'not-fixed'
 
   if $('.role-list').length
@@ -118,6 +118,17 @@ $(document).ready ->
         $img.attr 'src', $img.attr('src').replace('phone_', 'plain_')
         $img.attr 'data-src', newSrc
         $a.attr 'href', newSrc
+
+    $('.project-image img').unveil 100
+
+  if $('.nbu-list').length
+    if not isTablet and not isPhone
+      $('.project-image a').magnificPopup
+        type: 'image'
+        gallery:
+          enabled: true
+        zoom:
+          enabled: true
 
     $('.project-image img').unveil 100
 
