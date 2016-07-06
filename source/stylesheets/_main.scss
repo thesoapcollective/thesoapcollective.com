@@ -719,20 +719,25 @@ body.is-touch .touch-hide {
 }
 
 .nbu-list {
+  @include alt-clearfix;
   margin-top: 72px;
 
   li {
     width: 50%;
     margin-bottom: 36px;
     display: inline-block;
+    float: left;
     vertical-align: top;
 
-    &:nth-child(even) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(2n+5) {
       padding-left: 13px;
       padding-right: 0;
     }
 
-    &:nth-child(odd) {
+    &:nth-child(1),
+    &:nth-child(2n+4) {
       padding-left: 0;
       padding-right: 13px;
     }
@@ -840,6 +845,18 @@ body.is-touch .touch-hide {
       }
     }
   }
+
+  .nbu-list {
+    li {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        padding-left: 13px;
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 @include respond-to('tablet-small') {
@@ -901,12 +918,18 @@ body.is-touch .touch-hide {
     }
   }
 
-
   .nbu-list {
     li {
-      margin-bottom: 20px;
+      width: 100%;
       padding-left: 10px !important;
       padding-right: 10px !important;
+      float: none;
+
+      &:first-child {
+        margin-bottom: 50px;
+        padding-left: $page-gutter-tablet-small !important;
+        padding-right: $page-gutter-tablet-small !important;
+      }
     }
   }
 }
