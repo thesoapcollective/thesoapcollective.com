@@ -65,7 +65,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash, ignore: 'favicon.png|open_graph.jpg|apple-touch-icon.png|phone_loading.png|plain_loading.png|images/role/|images/phoodie/|images/profile/|images/nbu/'
+  activate :asset_hash, ignore: 'favicon.png|open_graph.jpg|apple-touch-icon.png|phone_loading.png|phone_loading_landscape.png|plain_loading.png|plain_loading_landscape.png|rect_loading.png|images/role/|images/phoodie/|images/profile/|images/nbu/'
 
   # Use relative URLs
   activate :relative_assets
