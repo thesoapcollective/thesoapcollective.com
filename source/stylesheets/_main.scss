@@ -989,6 +989,11 @@ body.is-touch .touch-hide {
     padding-right: 14px;
   }
 
+  .download-google-play {
+    display: block;
+    margin: 18px auto 0;
+  }
+
   #page-footer {
     height: auto;
 
@@ -1018,6 +1023,12 @@ body.is-touch .touch-hide {
     width: 280px;
     height: 85px;
     background-size: 280px 85px;
+  }
+
+  .nbu-logo {
+    width: 280px;
+    height: 45px;
+    background-size: 280px 45px;
   }
 
   .role-list {
