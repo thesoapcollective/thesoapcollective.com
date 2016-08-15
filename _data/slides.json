@@ -1,0 +1,24 @@
+[
+  {
+    "theme": "light",
+    "background": "mountains_slide.jpg",
+    "title": "We build meaningful experiences that connect people and fuel emotion",
+    "description": "The Soap Collective is a next-generation creative agency. Using the latest immersive technology, we build elevated storytelling experiences for brands and consumers."
+  },
+  {
+    "theme": "light",
+    "background": "nbu_slide.jpg",
+    "logo": "nbu_logo.png",
+    "class": "nbu",
+    "title": "Never Bout Us",
+    "description": "VR Music Video Experience"
+  },
+  {
+    "theme": "dark",
+    "background": "profile_slide.jpg",
+    "logo": "profile_logo.png",
+    "class": "profile",
+    "title": "Profile",
+    "description": "Interactive lookbook featuring the Soap team’s favorite styles."
+  }
+]

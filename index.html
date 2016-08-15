@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<article class="slide-container full-w full-h">
+  {% assign total = site.data.slides.size | minus: 1 %}
+  {% for i in (0..total) %}
+    {% assign slide = site.data.slides[i] %}
+    <section class="slide full-w full-h" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
+      <div class="slide-content-container">
+        <div class="slide-content is-fadeable {% if i == 0 %}is-opaque{% endif %}">
+          {% if i == 0 %}
+            <h2 class="slide-title font-futura-700 font-futura-normal">{{ slide.title }}</h2>
+          {% else %}
+            <h2 class="slide-logo slide-logo-{{ slide.class }}"><a href="">{{ slide.title }}</a></h2>
+          {% endif %}
+          <p class="slide-copy font-lato-300">{{ slide.description }}</p>
+
+          {% if i == 0 %}
+            <a class="learn-more-btn font-futura-700 text-upper" href="#">Watch reel
+              <div class="arrow-container" data-theme="{{ slide.theme }}">
+                <div class="arrow-outlined"></div>
+                <div class="arrow-filled"></div>
+              </div>
+            </a>
+          {% else %}
+            <a class="learn-more-btn font-futura-700 text-upper" href="/{{ slide.class }}">Learn more
+              <div class="arrow-container" data-theme="{{ slide.theme }}">
+                <div class="arrow-outlined"></div>
+                <div class="arrow-filled"></div>
+              </div>
+            </a>
+          {% endif %}
+        </div>
+
+        {% if i == 0 %}
+          <ul class="slide-nav-list list-reset is-opaque is-fadeable-fast">
+            {% for i in (0..total) %}
+              <li class="slide-nav-list-item"><a class="slide-nav-link {% if i == 0 %}is-opaque{% endif %}" href="#"><span class="slide-nav-bar"></span></a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </section>
+  {% endfor %}
+
+  <section class="services-container">
+    <h3 class="font-futura-700 text-upper">Our Services</h3>
+    <ul class="services-list list-reset font-lato-500">
+      <li class="services-list-item">
+        <div class="services-icon-small services-icon-small-vr-black is-fadeable"></div>
+        <div class="services-icon-small services-icon-small-vr-white is-fadeable"></div>
+        <p>Virtual Reality</p>
+      </li><!--
+      --><li class="services-list-item">
+        <div class="services-icon-small services-icon-small-ux-black is-fadeable"></div>
+        <div class="services-icon-small services-icon-small-ux-white is-fadeable"></div>
+        <p>Experience Design</p>
+      </li><!--
+      --><li class="services-list-item">
+        <div class="services-icon-small services-icon-small-branding-black is-fadeable"></div>
+        <div class="services-icon-small services-icon-small-branding-white is-fadeable"></div>
+        <p>Branding</p>
+      </li><!--
+      --><li class="services-list-item">
+        <div class="services-icon-small services-icon-small-dev-black is-fadeable"></div>
+        <div class="services-icon-small services-icon-small-dev-white is-fadeable"></div>
+        <p>Development</p>
+      </li><!--
+      --><li class="services-list-item">
+        <div class="services-icon-small services-icon-small-strategy-black is-fadeable"></div>
+        <div class="services-icon-small services-icon-small-strategy-white is-fadeable"></div>
+        <p>Content Strategy</p>
+      </li>
+    </ul>
+  </section>
+</article>
