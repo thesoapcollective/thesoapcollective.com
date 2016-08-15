@@ -33,6 +33,29 @@ var goToSlide = function(newIndex, currentIndex) {
   // Wait times are based off css transition speeds.
   setTimeout(function() {
     $body.attr('data-active-slide', newIndex);
+
+    $('.slide-background-container').removeClass('is-active is-previous is-next')
+    $('.slide-background-container').each(function(index) {
+      if (index < newIndex) {
+        $(this).addClass('is-previous');
+      } else if (index > newIndex) {
+        $(this).addClass('is-next');
+      } else {
+        $(this).addClass('is-active');
+      }
+    });
+
+    $('.slide').removeClass('is-active is-previous is-next')
+    $('.slide').each(function(index) {
+      if (index < newIndex) {
+        $(this).addClass('is-previous');
+      } else if (index > newIndex) {
+        $(this).addClass('is-next');
+      } else {
+        $(this).addClass('is-active');
+      }
+    });
+
     $body.removeClass('theme-light theme-dark').addClass('theme-' + $newSlide.attr('data-theme'));
     $currentSlideContent.removeClass('is-opaque');
 

@@ -6,7 +6,7 @@ layout: default
   {% assign total = site.data.slides.size | minus: 1 %}
   {% for i in (0..total) %}
     {% assign slide = site.data.slides[i] %}
-    <section class="slide full-w full-h" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
+    <section class="slide full-w full-h {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
       <div class="slide-content-container">
         <div class="slide-content is-fadeable {% if i == 0 %}is-opaque{% endif %}">
           {% if i == 0 %}
@@ -24,7 +24,7 @@ layout: default
               </div>
             </a>
           {% else %}
-            <a class="learn-more-btn font-futura-700 text-upper" href="/{{ slide.class }}">Learn more
+            <a class="learn-more-btn font-futura-700 text-upper" href="/{{ slide.url }}">Learn more
               <div class="arrow-container" data-theme="{{ slide.theme }}">
                 <div class="arrow-outlined"></div>
                 <div class="arrow-filled"></div>
