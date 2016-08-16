@@ -6,15 +6,15 @@ layout: default
   {% assign total = site.data.slides.size | minus: 1 %}
   {% for i in (0..total) %}
     {% assign slide = site.data.slides[i] %}
-    <section class="slide full-w full-h {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
+    <section class="slide project-container full-w full-h {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
       <div class="slide-content-container">
         <div class="slide-content is-fadeable {% if i == 0 %}is-opaque{% endif %}">
           {% if i == 0 %}
-            <h2 class="slide-title font-futura-700 font-futura-normal">{{ slide.title }}</h2>
+            <h2 class="project-title font-futura-700 font-futura-normal">{{ slide.title }}</h2>
           {% else %}
-            <h2 class="slide-logo slide-logo-{{ slide.class }}"><a href="">{{ slide.title }}</a></h2>
+            <h2 class="project-logo project-logo-{{ slide.class }}"><a href="/work/{{ slide.url }}">{{ slide.title }}</a></h2>
           {% endif %}
-          <p class="slide-copy font-lato-300">{{ slide.description }}</p>
+          <p class="project-copy font-lato-300">{{ slide.description }}</p>
 
           {% if i == 0 %}
             <a class="learn-more-btn font-futura-700 text-upper" href="#">Watch reel
@@ -24,7 +24,7 @@ layout: default
               </div>
             </a>
           {% else %}
-            <a class="learn-more-btn font-futura-700 text-upper" href="/{{ slide.url }}">Learn more
+            <a class="learn-more-btn font-futura-700 text-upper" href="/work/{{ slide.url }}">Learn more
               <div class="arrow-container" data-theme="{{ slide.theme }}">
                 <div class="arrow-outlined"></div>
                 <div class="arrow-filled"></div>
@@ -44,7 +44,7 @@ layout: default
     </section>
   {% endfor %}
 
-  <section class="services-container">
+  <section class="services-container is-max-width">
     <h3 class="font-futura-700 text-upper">Our Services</h3>
     <ul class="services-list list-reset font-lato-500">
       <li class="services-list-item">

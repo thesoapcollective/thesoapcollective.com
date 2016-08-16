@@ -110,6 +110,10 @@ a {
   text-indent: 0;
 }
 
+.font-no-indent {
+  text-indent: 0;
+}
+
 .text-upper {
   text-transform: uppercase;
 }
@@ -135,6 +139,12 @@ a {
   height: 100%;
 }
 
+.is-max-width {
+  width: 100%;
+  max-width: $max-page-width;
+  margin: 0 auto;
+}
+
 .theme-light {
   color: #fff;
 }
@@ -158,7 +168,7 @@ a {
 // ==================================================
 // PAGE ELEMENTS
 // ==================================================
-.page-container {}
+.page-content {}
 
 .page-logo {
   width: 90px;
@@ -209,7 +219,6 @@ a {
 }
 
 .page-header {
-  max-width: $max-page-width;
   height: 72px;
   margin: 0 auto;
   position: relative;
@@ -268,16 +277,25 @@ a {
 }
 
 .page-footer {
-  width: 100%;
-  max-width: $max-page-width;
-  position: absolute;
-  bottom: $grid-size-half;
-  left: 50%;
-  z-index: 2;
+  height: $grid-size-double;
+  display: flex;
+  align-items: center;
   font-size: 0.67rem;
   text-align: center;
-  transform: translateX(-50%);
-  transition: color $slide-color-speed;
+
+  p {
+    width: 100%;
+  }
+
+  body.is-home & {
+    height: auto;
+    position: absolute;
+    bottom: $grid-size-half;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    transition: color $slide-color-speed;
+  }
 }
 
 .learn-more-btn {
@@ -297,11 +315,11 @@ a {
     opacity: 0.5;
   }
 
-  .slide[data-theme="light"] & {
+  .project-container[data-theme="light"] & {
     color: #fff;
   }
 
-  .slide[data-theme="dark"] & {
+  .project-container[data-theme="dark"] & {
     color: #000;
   }
 }
@@ -362,9 +380,80 @@ a {
   }
 }
 
+.black-section {
+  padding: 30px 0 $grid-size-half;
+  background: #000;
+  color: #939393;
+  text-align: center;
+}
+
+.heading-what-is-soap {
+  margin-bottom: 30px;
+  font-size: 1.33rem;
+}
+
+.pillars-list {
+  margin-bottom: $grid-size;
+}
+
+.pillars-list-item {
+  width: 25%;
+  padding: 0 $grid-size;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.heading-clients {
+  margin-bottom: $grid-size-half;
+}
+
+.clients-list {}
+
+.clients-list-item {
+  padding: $grid-size;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.client-logo {
+  @include text-overflow;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.client-logo-commonsense {
+  width: 182px;
+  height: 27px;
+  background-image: url('../images/clients/common_sense.png');
+  background-size: 182px 27px;
+}
+
+.client-logo-envoy {
+  width: 145px;
+  height: 36px;
+  background-image: url('../images/clients/envoy.png');
+  background-size: 145px 36px;
+}
+
+.client-logo-ethereum {
+  width: 143px;
+  height: 36px;
+  background-image: url('../images/clients/ethereum.png');
+  background-size: 143px 36px;
+}
+
+.client-logo-mightybell {
+  width: 154px;
+  height: 36px;
+  background-image: url('../images/clients/mightybell.png');
+  background-size: 154px 36px;
+}
+
+// ==================================================
+// SERVICES
+// ==================================================
 .services-container {
-  width: 100%;
-  max-width: $max-page-width;
   position: absolute;
   bottom: $grid-size-double + $grid-size-half;
   left: 50%;
@@ -480,6 +569,151 @@ a {
 }
 
 // ==================================================
+// PROJECTS
+// ==================================================
+.project-container {}
+
+.project-section {
+  padding: 125px 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+
+.project-title,
+.project-logo {
+  margin-bottom: 30px;
+}
+
+.project-logo {
+  display: inline-block;
+
+  a {
+    @include text-overflow;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: auto;
+  }
+}
+
+.project-logo-brooklynbrewery {
+  width: 205px;
+  height: 205px;
+
+  a {
+    width: 205px;
+    height: 205px;
+    background-image: url('../images/logos/brooklyn_brewery_logo.png');
+    background-size: 205px 205px;
+  }
+}
+
+.project-logo-ced {
+  width: 255px;
+  height: 255px;
+
+  a {
+    width: 255px;
+    height: 255px;
+    background-image: url('../images/logos/ced_logo.png');
+    background-size: 255px 255px;
+  }
+}
+
+.project-logo-phoodie {
+  width: 228px;
+  height: 198px;
+
+  a {
+    width: 228px;
+    height: 198px;
+    background-image: url('../images/logos/phoodie_logo.png');
+    background-size: 228px 198px;
+  }
+}
+
+.project-logo-profile {
+  width: 330px;
+  height: 100px;
+
+  a {
+    width: 330px;
+    height: 100px;
+    background-image: url('../images/logos/profile_logo.png');
+    background-size: 330px 100px;
+  }
+}
+
+.project-logo-nbu {
+  width: 338px;
+  height: 54px;
+
+  a {
+    width: 338px;
+    height: 54px;
+    background-image: url('../images/logos/nbu_logo.png');
+    background-size: 338px 54px;
+  }
+}
+
+.project-logo-role {
+  width: 255px;
+  height: 108px;
+
+  a {
+    width: 255px;
+    height: 108px;
+    background-image: url('../images/logos/role_logo.png');
+    background-size: 255px 108px;
+  }
+}
+
+.project-logo-weirdcatalog {
+  width: 255px;
+  height: 90px;
+
+  a {
+    width: 255px;
+    height: 90px;
+    background-image: url('../images/logos/wc_logo.png');
+    background-size: 255px 90px;
+  }
+}
+
+.project-logo-vrll {
+  width: 205px;
+  height: 205px;
+
+  a {
+    width: 205px;
+    height: 205px;
+    background-image: url('../images/logos/vrll_logo.png');
+    background-size: 205px 205px;
+  }
+}
+
+.project-title,
+.project-copy {
+  .project-container[data-theme="light"] & {
+    color: #fff;
+  }
+
+  .project-container[data-theme="dark"] & {
+    color: #000;
+  }
+}
+
+.project-title {
+  font-size: 2rem;
+}
+
+.project-copy {
+  font-size: 1.33rem;
+}
+
+// ==================================================
 // SLIDES
 // ==================================================
 .slides-background-container,
@@ -581,71 +815,6 @@ a {
 
   &.is-next {
     left: 50vw;
-  }
-}
-
-.slide-title,
-.slide-logo {
-  margin-bottom: 30px;
-}
-
-.slide-logo {
-  display: inline-block;
-
-  a {
-    @include text-overflow;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
-
-.slide-logo-nbu {
-  width: 338px;
-  height: 54px;
-
-  a {
-    width: 338px;
-    height: 54px;
-    background-image: url('../images/logos/nbu_logo.png');
-    background-size: 338px 54px;
-  }
-}
-
-.slide-logo-profile {
-  width: 330px;
-  height: 100px;
-
-  a {
-    width: 330px;
-    height: 100px;
-    background-image: url('../images/logos/profile_logo.png');
-    background-size: 330px 100px;
-  }
-}
-
-.slide-title {
-  font-size: 2rem;
-  transition: color $slide-color-speed;
-
-  .slide[data-theme="light"] & {
-    color: #fff;
-  }
-
-  .slide[data-theme="dark"] & {
-    color: #000;
-  }
-}
-
-.slide-copy {
-  transition: color $slide-color-speed;
-
-  .slide[data-theme="light"] & {
-    color: #fff;
-  }
-
-  .slide[data-theme="dark"] & {
-    color: #000;
   }
 }
 

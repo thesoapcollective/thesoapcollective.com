@@ -1,0 +1,43 @@
+---
+layout: page
+description: Portfolio of work by The Soap Collective, a next-generation creative agency. Using the latest immersive technology, we build elevated storytelling experiences for brands and consumers.
+---
+
+<article>
+  <section class="black-section">
+    <div class="is-max-width">
+      <h2 class="font-lato-300 heading-what-is-soap">What is a Soap Project?</h2>
+      <ul class="list-reset pillars-list">
+        <li class="pillars-list-item"><h3 class="font-futura-700 text-upper">Emotional</h3><p class="font-lato-300">We seek to build Joy Generators, experiences that spark wonderment, happiness, and inspiration.</p></li><!--
+        --><li class="pillars-list-item"><h3 class="font-futura-700 font-no-indent text-upper">Interactive</h3><p class="font-lato-300">We create things people can touch, play with, and become a part of. Our work is meant to engage people and get them involved.</p></li><!--
+        --><li class="pillars-list-item"><h3 class="font-futura-700 text-upper">Social</h3><p class="font-lato-300">Soap projects are built to share. We believe strongly in the power of connecting people through shared experiences.</p></li><!--
+        --><li class="pillars-list-item"><h3 class="font-futura-700 text-upper">High-End</h3><p class="font-lato-300">Quality is critical in everything we do. We focus on the tiny details, polishing every component to look and feel just right.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  {% for project in site.data.projects %}
+    <section class="project-section project-container" style="background-image:url('./images/slides/{{ project.background }}');background-position:{{ project.background_alignment }};" data-theme="{{ project.theme }}">
+      <h2 class="project-logo project-logo-{{ project.class }}"><a href="/work/{{ project.url }}">{{ project.title }}</a></h2>
+      <p class="project-copy font-lato-300">{{ project.description }}</p>
+      <a class="learn-more-btn font-futura-700 text-upper" href="/work/{{ project.url }}">Learn more
+        <div class="arrow-container" data-theme="{{ project.theme }}">
+          <div class="arrow-outlined"></div>
+          <div class="arrow-filled"></div>
+        </div>
+      </a>
+    </section>
+  {% endfor %}
+
+  <section class="black-section">
+    <div class="is-max-width">
+      <h2 class="font-futura-700 text-upper heading-clients">Clients</h2>
+      <ul class="list-reset clients-list">
+        <li class="clients-list-item"><a class="client-logo client-logo-envoy" href="https://envoy.co" target="_blank">Envoy</a></li><!--
+        --><li class="clients-list-item"><a class="client-logo client-logo-mightybell" href="https://mightybell.com" target="_blank">Mightybell</a></li><!--
+        --><li class="clients-list-item"><a class="client-logo client-logo-commonsense" href="https://www.commonsensemedia.org" target="_blank">Common Sense</a></li><!--
+        --><li class="clients-list-item"><a class="client-logo client-logo-ethereum" href="https://www.ethereum.org" target="_blank">Ethereum</a></li>
+      </ul>
+    </div>
+  </section>
+</article>

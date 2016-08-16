@@ -1,6 +1,9 @@
----
-layout: default
----
-<article class="page-content">
-  {{ content }}
-</article>
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="theme-dark">
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
