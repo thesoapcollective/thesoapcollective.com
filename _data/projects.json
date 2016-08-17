@@ -24,7 +24,11 @@
     "background": "vrll_slide.jpg",
     "background_alignment": "center center",
     "class": "vrll",
-    "url": "vr_lover_letters",
+    "url": "vr_love_letters",
+    "website": "http://www.vrloveletters.com",
+    "app_store_url": "https://itunes.apple.com/us/app/vr-love-letters/id1116574027",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.thesoapcollective.vrll",
+    "hero_image": "vrll_hero.jpg",
   },
   {
     "title": "Role",

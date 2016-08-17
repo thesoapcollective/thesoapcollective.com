@@ -118,6 +118,10 @@ a {
   text-transform: uppercase;
 }
 
+.text-center {
+  text-align: center;
+}
+
 // ==================================================
 // HELPERS
 // ==================================================
@@ -322,6 +326,36 @@ a {
   .project-container[data-theme="dark"] & {
     color: #000;
   }
+}
+
+.download-container {
+  font-size: 0;
+}
+
+.download-btn {
+  @include text-overflow;
+  width: 242px;
+  height: 72px;
+  margin-top: $grid-size-double;
+  margin-right: $grid-size;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  vertical-align: middle;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.download-btn-app-store {
+  background-image: url('../images/app_store_badge.svg');
+}
+
+.download-btn-google-play {
+  background-image: url('../images/google_play_badge.png');
 }
 
 .arrow-container {
@@ -711,6 +745,28 @@ a {
 
 .project-copy {
   font-size: 1.33rem;
+}
+
+.project-hero {
+  margin-top: $grid-size * 4;
+}
+
+.project-content-list {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.project-description {
+  max-width: 700px;
+  margin: ($grid-size * 4) 0;
+
+  p {
+    margin-top: $grid-size;
+  }
 }
 
 // ==================================================

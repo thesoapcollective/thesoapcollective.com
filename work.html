@@ -17,7 +17,7 @@ description: Portfolio of work by The Soap Collective, a next-generation creativ
   </section>
 
   {% for project in site.data.projects %}
-    <section class="project-section project-container" style="background-image:url('./images/slides/{{ project.background }}');background-position:{{ project.background_alignment }};" data-theme="{{ project.theme }}">
+    <section class="project-section project-container" style="background-image:url('../images/slides/{{ project.background }}');background-position:{{ project.background_alignment }};" data-theme="{{ project.theme }}">
       <h2 class="project-logo project-logo-{{ project.class }}"><a href="/work/{{ project.url }}">{{ project.title }}</a></h2>
       <p class="project-copy font-lato-300">{{ project.description }}</p>
       <a class="learn-more-btn font-futura-700 text-upper" href="/work/{{ project.url }}">Learn more
