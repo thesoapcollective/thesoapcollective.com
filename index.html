@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 
 <article class="slide-container full-w full-h">
@@ -17,19 +17,9 @@ layout: default
           <p class="project-copy font-lato-300">{{ slide.description }}</p>
 
           {% if i == 0 %}
-            <a class="learn-more-btn font-futura-700 text-upper" href="#">Watch reel
-              <div class="arrow-container" data-theme="{{ slide.theme }}">
-                <div class="arrow-outlined"></div>
-                <div class="arrow-filled"></div>
-              </div>
-            </a>
+            {% include learn_more_btn.html title="Watch reel" url="#" theme=slide.theme %}
           {% else %}
-            <a class="learn-more-btn font-futura-700 text-upper" href="/work/{{ slide.url }}">Learn more
-              <div class="arrow-container" data-theme="{{ slide.theme }}">
-                <div class="arrow-outlined"></div>
-                <div class="arrow-filled"></div>
-              </div>
-            </a>
+            {% include learn_more_btn.html title="Learn more" url=slide.url theme=slide.theme %}
           {% endif %}
         </div>
 
