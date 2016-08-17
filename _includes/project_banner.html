@@ -1,6 +1,12 @@
 {% assign project = include.project %}
 <section class="project-section project-container" style="background-image:url('/images/slides/{{ project.background }}');background-position:{{ project.background_alignment }};" data-theme="{{ project.theme }}">
-  <h2 class="project-logo project-logo-{{ project.class }}"><a href="/work/{{ project.url }}">{{ project.title }}</a></h2>
+  <h2 class="project-logo project-logo-{{ project.class }}">
+    {% if include.is_work_page %}
+      <a href="/work/{{ project.url }}">{{ project.title }}</a>
+    {% else %}
+      {{ project.title }}
+    {% endif %}
+  </h2>
   <p class="project-copy font-lato-300">{{ project.description }}</p>
   {% if include.is_work_page %}
     {% include learn_more_btn.html title="Learn more" url=project.url theme=project.theme %}

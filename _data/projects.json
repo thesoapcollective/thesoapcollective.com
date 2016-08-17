@@ -64,7 +64,8 @@
     "background": "weirdcatalog_slide.jpg",
     "background_alignment": "center center",
     "class": "weirdcatalog",
-    "url": "weirdcatalog",
+    "url": "weird_catalog",
+    "website": "http://www.weirdcatalog.com",
   },
   {
     "title": "CED",

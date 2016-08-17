@@ -621,13 +621,14 @@ a {
 }
 
 .project-logo {
+  @include text-overflow;
   display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   a {
     @include text-overflow;
     display: block;
-    background-repeat: no-repeat;
-    background-position: center center;
     pointer-events: auto;
   }
 }
@@ -635,96 +636,96 @@ a {
 .project-logo-brooklynbrewery {
   width: 205px;
   height: 205px;
+  background-image: url('../images/logos/brooklyn_brewery_logo.png');
+  background-size: 205px 205px;
 
   a {
     width: 205px;
     height: 205px;
-    background-image: url('../images/logos/brooklyn_brewery_logo.png');
-    background-size: 205px 205px;
   }
 }
 
 .project-logo-ced {
   width: 255px;
   height: 255px;
+  background-image: url('../images/logos/ced_logo.png');
+  background-size: 255px 255px;
 
   a {
     width: 255px;
     height: 255px;
-    background-image: url('../images/logos/ced_logo.png');
-    background-size: 255px 255px;
   }
 }
 
 .project-logo-phoodie {
   width: 228px;
   height: 198px;
+  background-image: url('../images/logos/phoodie_logo.png');
+  background-size: 228px 198px;
 
   a {
     width: 228px;
     height: 198px;
-    background-image: url('../images/logos/phoodie_logo.png');
-    background-size: 228px 198px;
   }
 }
 
 .project-logo-profile {
   width: 330px;
   height: 100px;
+  background-image: url('../images/logos/profile_logo.png');
+  background-size: 330px 100px;
 
   a {
     width: 330px;
     height: 100px;
-    background-image: url('../images/logos/profile_logo.png');
-    background-size: 330px 100px;
   }
 }
 
 .project-logo-nbu {
   width: 338px;
   height: 54px;
+  background-image: url('../images/logos/nbu_logo.png');
+  background-size: 338px 54px;
 
   a {
     width: 338px;
     height: 54px;
-    background-image: url('../images/logos/nbu_logo.png');
-    background-size: 338px 54px;
   }
 }
 
 .project-logo-role {
   width: 255px;
   height: 108px;
+  background-image: url('../images/logos/role_logo.png');
+  background-size: 255px 108px;
 
   a {
     width: 255px;
     height: 108px;
-    background-image: url('../images/logos/role_logo.png');
-    background-size: 255px 108px;
   }
 }
 
 .project-logo-weirdcatalog {
   width: 255px;
   height: 90px;
+  background-image: url('../images/logos/wc_logo.png');
+  background-size: 255px 90px;
 
   a {
     width: 255px;
     height: 90px;
-    background-image: url('../images/logos/wc_logo.png');
-    background-size: 255px 90px;
   }
 }
 
 .project-logo-vrll {
   width: 205px;
   height: 205px;
+  background-image: url('../images/logos/vrll_logo.png');
+  background-size: 205px 205px;
 
   a {
     width: 205px;
     height: 205px;
-    background-image: url('../images/logos/vrll_logo.png');
-    background-size: 205px 205px;
   }
 }
 
