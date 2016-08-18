@@ -4,6 +4,28 @@ $(document).ready(function() {
   $body = $('body');
   $slideNavList = $('.slide-nav-list');
 
+  checkForTouch();
+  setupSlideNav();
+  setupProjectImages();
+});
+
+var checkForTouch = function() {
+  var isTouch = 'ontouchstart' in window || 'onmsgesturechange' in window;
+  if (isTouch) {
+    $body.addClass('is-touch');
+  }
+};
+
+var setupProjectImages = function() {
+  $('.project-image a').magnificPopup({
+    type: 'image',
+    gallery: { enabled: true },
+    zoom: { enabled: true },
+  });
+  $('.project-image img').unveil(100);
+};
+
+var setupSlideNav = function() {
   $('.slide-nav-link').click(function(event) {
     event.preventDefault();
 
@@ -14,7 +36,7 @@ $(document).ready(function() {
       goToSlide(newIndex, currentIndex);
     }
   });
-});
+};
 
 var goToSlide = function(newIndex, currentIndex) {
   var currentSlideData = 'data-slide="' + currentIndex + '"'

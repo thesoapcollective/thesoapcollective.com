@@ -19,3 +19,12 @@ typekit_id: dhn8nfe
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

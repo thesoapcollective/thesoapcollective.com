@@ -75,5 +75,15 @@
     "background_alignment": "center center",
     "class": "ced",
     "url": "ced",
+    "website": "http://www.cednc.org/innovatorsreport",
+    "hero_image": "ced_hero.jpg",
+    "images": [
+      {"path": "ced/ced_01.jpg", "title": "2015 Funding in Life Science"},
+      {"path": "ced/ced_02.jpg", "title": "Investors Across the U.S."},
+      {"path": "ced/ced_03.jpg", "title": "Investors in California"},
+      {"path": "ced/ced_04.jpg", "title": "Company Exits"},
+      {"path": "ced/ced_05.jpg", "title": "Company Exit Detail View"},
+      {"path": "ced/ced_06.jpg", "title": "Innovators Report Introduction"}
+    ]
   },
 ]
