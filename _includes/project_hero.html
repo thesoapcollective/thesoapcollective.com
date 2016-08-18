@@ -1,0 +1,13 @@
+{% assign project = include.project %}
+
+<div class="project-hero is-max-width">
+  {% if project.youtube_id %}
+    <div class="video-container">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/{{ project.youtube_id }}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  {% endif %}
+
+  {% if project.hero_image %}
+    <img class="full-w" src="/images/work/{{ project.hero_image }}" alt="{{ project.title }} hero image" />
+  {% endif %}
+</div>

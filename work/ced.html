@@ -11,13 +11,7 @@ description: Evolving the infographic through meaningful interaction.
 
 <article>
   {% include project_banner.html project=project is_work_page=false %}
-
-  {% if project.hero_image %}
-    <div class="project-hero is-max-width">
-      <img class="full-w" src="/images/work/{{ project.hero_image }}" alt="{{ project.title }} hero image" />
-    </div>
-  {% endif %}
-
+  {% include project_hero.html project=project %}
   <ul class="list-reset project-content-list is-max-width">
     <li class="project-description text-center is-block">
       <h3 class="font-futura-700 font-futura-normal">Interactive Infographic Report</h3>
@@ -28,13 +22,6 @@ description: Evolving the infographic through meaningful interaction.
         <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
       {% endif %}
     </li>
-
-    <li class="project-description-spacer"></li>
-
-    {% for image in project.images %}
-      <li class="project-image project-grid-two">
-        <a href="/images/work/{{ image.path }}"><img src="/images/loading/rect_loading.png" data-src="/images/work/{{ image.path }}" alt="{{ image.title }}" /></a>
-      </li>
-    {% endfor %}
+    {% include project_images.html project=project has_spacer=true image_class="project-grid-two" %}
   </ul>
 </article>

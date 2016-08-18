@@ -7,6 +7,20 @@
     "background_alignment": "center center",
     "class": "nbu",
     "url": "never_bout_us",
+    "website": "http://www.camerongrey.com",
+    "youtube_id": "_dw-Q6seOOk",
+    "app_store_url": "https://itunes.apple.com/us/app/cameron-grey-never-bout-us-vr/id1104816970",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.thesoapcollective.CameronGreyNeverBoutUs",
+    "images": [
+      {"path": "nbu/NBU_01.png", "loading_image": "phone_loading_landscape.png", "title": "Cardboard Mode"},
+      {"path": "nbu/NBU_02.png", "loading_image": "phone_loading_landscape.png", "title": "Window Mode"},
+      {"path": "nbu/NBU_03.png", "loading_image": "phone_loading_landscape.png", "title": "Title Screen"},
+      {"path": "nbu/NBU_04.png", "loading_image": "phone_loading_landscape.png", "title": "Main Menu Screen"},
+      {"path": "nbu/NBU_05.png", "loading_image": "rect_loading.png", "title": "Press Kit"},
+      {"path": "nbu/NBU_06.png", "loading_image": "rect_loading.png", "title": "Press Kit: Polaroids"},
+      {"path": "nbu/NBU_07.png", "loading_image": "rect_loading.png", "title": "Press Kit: Google Cardboard"},
+      {"path": "nbu/NBU_08.png", "loading_image": "rect_loading.png", "title": "Press Kit: Instructions"}
+    ],
   },
   {
     "title": "Brooklyn Brewery",
@@ -78,12 +92,12 @@
     "website": "http://www.cednc.org/innovatorsreport",
     "hero_image": "ced_hero.jpg",
     "images": [
-      {"path": "ced/ced_01.jpg", "title": "2015 Funding in Life Science"},
-      {"path": "ced/ced_02.jpg", "title": "Investors Across the U.S."},
-      {"path": "ced/ced_03.jpg", "title": "Investors in California"},
-      {"path": "ced/ced_04.jpg", "title": "Company Exits"},
-      {"path": "ced/ced_05.jpg", "title": "Company Exit Detail View"},
-      {"path": "ced/ced_06.jpg", "title": "Innovators Report Introduction"}
+      {"path": "ced/ced_01.jpg", "loading_image": "rect_loading.png", "title": "2015 Funding in Life Science"},
+      {"path": "ced/ced_02.jpg", "loading_image": "rect_loading.png", "title": "Investors Across the U.S."},
+      {"path": "ced/ced_03.jpg", "loading_image": "rect_loading.png", "title": "Investors in California"},
+      {"path": "ced/ced_04.jpg", "loading_image": "rect_loading.png", "title": "Company Exits"},
+      {"path": "ced/ced_05.jpg", "loading_image": "rect_loading.png", "title": "Company Exit Detail View"},
+      {"path": "ced/ced_06.jpg", "loading_image": "rect_loading.png", "title": "Innovators Report Introduction"},
     ]
   },
 ]

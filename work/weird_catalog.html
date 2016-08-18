@@ -11,13 +11,7 @@ description: Celebrate the colorful, creative, and strange. Get inspired. Get we
 
 <article>
   {% include project_banner.html project=project is_work_page=false %}
-
-  {% if project.hero_image %}
-    <div class="project-hero is-max-width">
-      <img class="full-w" src="/images/work/{{ project.hero_image }}" alt="{{ project.title }} hero image" />
-    </div>
-  {% endif %}
-
+  {% include project_hero.html project=project %}
   <ul class="list-reset project-content-list is-max-width">
     <li class="project-description text-center is-block">
       <p class="font-lato-300">We consume an incredible ammount of media in our daily lives, but sharing and discovery can often be a problem. At The Soap Collective, we wanted to create a space where we could share our favorite media with the world.</p>

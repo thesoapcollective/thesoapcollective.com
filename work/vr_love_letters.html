@@ -11,13 +11,7 @@ description: Experience a place through the eyes of people who love it most. 360
 
 <article>
   {% include project_banner.html project=project is_work_page=false %}
-
-  {% if project.hero_image %}
-    <div class="project-hero is-max-width">
-      <img class="full-w" src="/images/work/{{ project.hero_image }}" alt="{{ project.title }} hero image" />
-    </div>
-  {% endif %}
-
+  {% include project_hero.html project=project %}
   <ul class="list-reset project-content-list is-max-width">
     <li class="project-description text-center is-block">
       <h3 class="font-futura-700 font-futura-normal">360 Tributes to the Places We Love</h3>
