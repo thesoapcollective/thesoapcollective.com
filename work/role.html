@@ -1,0 +1,29 @@
+---
+title: Role
+description: A storytelling party game. Group storytelling and adventure at your fingertips, everywhere you go.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "role" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description project-grid-three">
+      <h3 class="font-futura-700 font-futura-normal">A Storytelling Party Game</h3>
+      <p class="font-lato-300">It started with a question: How can we bring the limitless adventure of tabletop role playing to more people?</p>
+      <p class="font-lato-300">We knew it needed to be simple, clean, and easy to learn. The biggest barrier for entry with most tabletop games is the learning curve. We didn’t want people to have to master a giant rule book, collect special dice, or spend an hour filling out a character sheet.</p>
+      <p class="font-lato-300">The game needed to be something you could pick up and play at a party, on your lunch break, on the school yard, or at family game night. It needed to make the unfamiliar feel less intimidating and easier to master.</p>
+      <p class="font-lato-300">We asked ourselves, where is the core fun of tabletop gaming? We decided it’s in the stories. It’s in the fictional worlds we imagine, the characters we create, and the thrill of taking risks and doing the impossible.</p>
+      <p class="font-lato-300">We focused on that, gutted the rest, and put it on an iPhone. The result was Role: a game that anyone can carry with them and play any time, with anyone.</p>
+      {% if project.website %}
+        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
+      {% endif %}
+    </li>
+    {% include project_images.html project=project has_spacer=false image_class="project-grid-three project-grid-three-padding" %}
+  </ul>
+</article>

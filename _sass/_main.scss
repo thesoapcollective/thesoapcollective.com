@@ -800,17 +800,27 @@ a {
   }
 }
 
-.project-grid-two {
-  width: 50%;
-
+.project-grid-two,
+.project-grid-three {
   img {
     width: 100%;
   }
 }
 
-.project-grid-two-padding {
-  margin-bottom: $grid-size-double;
+.project-grid-two {
+  width: 50%;
+}
 
+.project-grid-three {
+  width: 33%;
+}
+
+.project-grid-two-padding,
+.project-grid-three-padding {
+  margin-bottom: $grid-size-double;
+}
+
+.project-grid-two-padding {
   &:nth-child(2),
   &:nth-child(3),
   &:nth-child(2n+5) {
@@ -822,6 +832,21 @@ a {
   &:nth-child(2n+4) {
     padding-left: 0;
     padding-right: 13px;
+  }
+}
+
+.project-grid-three-padding {
+  padding-left: 13px;
+  padding-right: 13px;
+
+  &:nth-child(3n+1) {
+    padding-left: 0;
+    padding-right: 26px;
+  }
+
+  &:nth-child(3n+3) {
+    padding-left: 26px;
+    padding-right: 0;
   }
 }
 

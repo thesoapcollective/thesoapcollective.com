@@ -1,0 +1,29 @@
+---
+title: Phoodie
+description: Don't just post your food, share it! A social network built exclusively for Foodies.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "phoodie" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description project-grid-three">
+      <h3 class="font-futura-700 font-futura-normal">A Social Network Built Exclusively for Foodies</h3>
+      <p class="font-lato-300">We collaborated with Phoodie to bring you a social media experience that pairs best with a good meal.</p>
+      <p class="font-lato-300">Phoodie was already a great idea, we just helped make it better. Coming on board early in the process, Soap helped Phoodie take their production prototype and make it consumer-ready.</p>
+      <p class="font-lato-300">We developed a scalable backend, mobile API, and worked closely with their team on app design touch-ups. We also designed and built the Phoodie web page!</p>
+      <p class="font-lato-300">Our partnership with Phoodie continues, with Soap stepping in to assist with development updates and feature releases.</p>
+      <p class="font-lato-300">Come dine with us! Let’s share in the Phoodie Life together:</p>
+      {% if project.website %}
+        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
+      {% endif %}
+    </li>
+    {% include project_images.html project=project has_spacer=false image_class="project-grid-three project-grid-three-padding" %}
+  </ul>
+</article>

@@ -52,6 +52,27 @@
     "background_alignment": "center top",
     "class": "role",
     "url": "role",
+    "website": "http://www.roleapp.com",
+    "youtube_id": "_h4W4kjlCmU",
+    "app_store_url": "https://itunes.apple.com/us/app/role-a-role-playing-party-game/id933599454",
+    "images": [
+      {"path": "role/Role_00_HomeScreen.png", "loading_image": "phone_loading.png", "title": "Home"},
+      {"path": "role/Role_01_Welcome.png", "loading_image": "phone_loading.png", "title": "Welcome"},
+      {"path": "role/Role_02_SelectChar.png", "loading_image": "phone_loading.png", "title": "Select Character"},
+      {"path": "role/Role_03_NameChar.png", "loading_image": "phone_loading.png", "title": "Name Character"},
+      {"path": "role/Role_04_Char1.png", "loading_image": "phone_loading.png", "title": "Character 1"},
+      {"path": "role/Role_05_Char2.png", "loading_image": "phone_loading.png", "title": "Character 2"},
+      {"path": "role/Role_06_CharArt.png", "loading_image": "phone_loading.png", "title": "Character Art"},
+      {"path": "role/Role_07_SelectAdv.png", "loading_image": "phone_loading.png", "title": "Select Adventure"},
+      {"path": "role/Role_08_CustomAdv.png", "loading_image": "phone_loading.png", "title": "Custom Adventure"},
+      {"path": "role/Role_09_ViewAdv.png", "loading_image": "phone_loading.png", "title": "View Adventure"},
+      {"path": "role/Role_10_AdvArt.png", "loading_image": "phone_loading.png", "title": "Adventure Art"},
+      {"path": "role/Role_11_Difficulty.png", "loading_image": "phone_loading.png", "title": "Select Difficulty"},
+      {"path": "role/Role_12_Rolling.png", "loading_image": "phone_loading.png", "title": "Rolling"},
+      {"path": "role/Role_13_Success.png", "loading_image": "phone_loading.png", "title": "Roll Success"},
+      {"path": "role/Role_14_LevelUp.png", "loading_image": "phone_loading.png", "title": "Level Up"},
+      {"path": "role/Role_15_CharPack.png", "loading_image": "phone_loading.png", "title": "Character Pack"}
+    ]
   },
   {
     "title": "Profile",
@@ -61,6 +82,30 @@
     "background_alignment": "center center",
     "class": "profile",
     "url": "profile",
+    "app_store_url": "https://itunes.apple.com/us/app/profile-soap-collective-interactive/id1076481308",
+    "images": [
+      {"path": "profile/Profile_00.png", "loading_image": "phone_loading.png", "title": "Home Day"},
+      {"path": "profile/Profile_01.png", "loading_image": "phone_loading.png", "title": "Home Description Day"},
+      {"path": "profile/Profile_02.png", "loading_image": "phone_loading.png", "title": "Ian Day"},
+      {"path": "profile/Profile_03.png", "loading_image": "phone_loading.png", "title": "Ian Description Day"},
+      {"path": "profile/Profile_04.png", "loading_image": "phone_loading.png", "title": "Logan Day"},
+      {"path": "profile/Profile_05.png", "loading_image": "phone_loading.png", "title": "Logan Description Day"},
+      {"path": "profile/Profile_06.png", "loading_image": "phone_loading.png", "title": "Jarreau Day"},
+      {"path": "profile/Profile_07.png", "loading_image": "phone_loading.png", "title": "Jarreau Description Day"},
+      {"path": "profile/Profile_08.png", "loading_image": "phone_loading.png", "title": "Role Day"},
+      {"path": "profile/Profile_09.png", "loading_image": "phone_loading.png", "title": "Weird Catalog Description Day"},
+      {"path": "profile/Profile_10.png", "loading_image": "phone_loading.png", "title": "Index Day"},
+      {"path": "profile/Profile_11.png", "loading_image": "phone_loading.png", "title": "Contact Day"},
+      {"path": "profile/Profile_12.png", "loading_image": "phone_loading.png", "title": "Home Night"},
+      {"path": "profile/Profile_13.png", "loading_image": "phone_loading.png", "title": "Home Description Night"},
+      {"path": "profile/Profile_14.png", "loading_image": "phone_loading.png", "title": "Jarreau Night"},
+      {"path": "profile/Profile_15.png", "loading_image": "phone_loading.png", "title": "Jarreau Description Night"},
+      {"path": "profile/Profile_16.png", "loading_image": "phone_loading.png", "title": "Ian Night"},
+      {"path": "profile/Profile_17.png", "loading_image": "phone_loading.png", "title": "Ian Description Night"},
+      {"path": "profile/Profile_18.png", "loading_image": "phone_loading.png", "title": "Logan Night"},
+      {"path": "profile/Profile_19.png", "loading_image": "phone_loading.png", "title": "Logan Description Night"},
+      {"path": "profile/Profile_20.png", "loading_image": "phone_loading.png", "title": "Role Night"}
+    ]
   },
   {
     "title": "Phoodie",
@@ -70,6 +115,18 @@
     "background_alignment": "center center",
     "class": "phoodie",
     "url": "phoodie",
+    "website": "https://www.phoodielife.com",
+    "app_store_url": "https://itunes.apple.com/us/app/phoodie/id990159611",
+    "images": [
+      {"path": "phoodie/Phoodie_00.png", "loading_image": "phone_loading.png", "title": "Feed"},
+      {"path": "phoodie/Phoodie_01.png", "loading_image": "phone_loading.png", "title": "Feed (cont.)"},
+      {"path": "phoodie/Phoodie_02.png", "loading_image": "phone_loading.png", "title": "Nearby Posts"},
+      {"path": "phoodie/Phoodie_03.png", "loading_image": "phone_loading.png", "title": "Profile"},
+      {"path": "phoodie/Phoodie_04.png", "loading_image": "phone_loading.png", "title": "Food Post"},
+      {"path": "phoodie/Phoodie_05.png", "loading_image": "phone_loading.png", "title": "Recipe Ingredients"},
+      {"path": "phoodie/Phoodie_06.png", "loading_image": "phone_loading.png", "title": "Recipe Steps"},
+      {"path": "phoodie/Phoodie_07.png", "loading_image": "phone_loading.png", "title": "New Post"}
+    ]
   },
   {
     "title": "Weird Catalog",
