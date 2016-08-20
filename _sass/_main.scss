@@ -122,6 +122,10 @@ a {
   text-align: center;
 }
 
+.section-heading {
+  font-size: 1.33rem;
+}
+
 // ==================================================
 // HELPERS
 // ==================================================
@@ -444,7 +448,6 @@ a {
 
 .heading-what-is-soap {
   margin-bottom: 30px;
-  font-size: 1.33rem;
 }
 
 .pillars-list {
@@ -518,8 +521,16 @@ a {
   transition: color $slide-color-speed;
 }
 
+.services-section {
+  text-align: center;
+}
+
 .services-list {
   margin-top: 30px;
+
+  .services-section & {
+    margin-top: 30px * 2;
+  }
 }
 
 .services-list-item {
@@ -527,6 +538,12 @@ a {
   padding-top: 36px + $grid-size;
   display: inline-block;
   position: relative;
+
+  .services-section & {
+    width: 33%;
+    margin-bottom: $grid-size-double;
+    padding-top: 72px + $grid-size;
+  }
 }
 
 .services-icon-small {
@@ -621,6 +638,39 @@ a {
   .theme-dark & {
     opacity: 1;
   }
+}
+
+.services-icon-large {
+  width: 72px;
+  height: 72px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-image: url('../images/icons_large.png');
+  background-repeat: no-repeat;
+  background-size: 360px 144px;
+  transform: translateX(-50%);
+}
+
+.services-icon-large-vr-black {
+  background-position: 0 -72px;
+}
+
+.services-icon-large-ux-black {
+  background-position: -72px -72px;
+}
+
+.services-icon-large-branding-black {
+  background-position: -144px -72px;
+}
+
+.services-icon-large-dev-black {
+  background-position: -216px -72px;
+}
+
+.services-icon-large-strategy-black {
+  background-position: -288px -72px;
 }
 
 // ==================================================
@@ -763,10 +813,6 @@ a {
 
 .project-title {
   font-size: 2rem;
-}
-
-.project-copy {
-  font-size: 1.33rem;
 }
 
 .project-hero {

@@ -8,7 +8,7 @@
       {{ project.title }}
     {% endif %}
   </h2>
-  <p class="project-copy font-lato-300">{{ project.description }}</p>
+  <p class="project-copy section-heading font-lato-300">{{ project.description }}</p>
   {% if include.is_work_page %}
     {% include learn_more_btn.html title="Learn more" url=project.url theme=project.theme %}
   {% else %}

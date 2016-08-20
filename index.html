@@ -14,7 +14,7 @@ layout: home
           {% else %}
             <h2 class="project-logo project-logo-{{ slide.class }}"><a href="/work/{{ slide.url }}">{{ slide.title }}</a></h2>
           {% endif %}
-          <p class="project-copy font-lato-300">{{ slide.description }}</p>
+          <p class="project-copy section-heading font-lato-300">{{ slide.description }}</p>
 
           {% if i == 0 %}
             {% include learn_more_btn.html title="Watch reel" url="#" theme=slide.theme %}
