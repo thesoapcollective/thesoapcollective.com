@@ -2,16 +2,6 @@
 <html>
   {% include head.html %}
   <body class="is-home theme-light" data-active-slide="0">
-    <div class="slides-background-container full-w full-h">
-      {% assign total = site.data.slides.size | minus: 1 %}
-      {% for i in (0..total) %}
-        {% assign slide = site.data.slides[i] %}
-        <div class="slide-background-container full-w full-h {% if i == 0 %}is-opaque{% endif %} {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}">
-          <div class="slide-background full-w full-h" style="background-image:url('/images/slides/{{ slide.background }}');"></div>
-          <div class="slide-gradient full-w" data-theme="{{ slide.theme }}"></div>
-        </div>
-      {% endfor %}
-    </div>
     {% include header.html %}
     {{ content }}
     {% include footer.html %}

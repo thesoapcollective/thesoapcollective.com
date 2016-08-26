@@ -2,36 +2,45 @@
 layout: home
 ---
 
-<article class="slide-container full-w full-h">
+<article class="slides-container full-w full-h">
   {% assign total = site.data.slides.size | minus: 1 %}
   {% for i in (0..total) %}
     {% assign slide = site.data.slides[i] %}
-    <section class="slide project-container full-w full-h {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
-      <div class="slide-content-container">
-        <div class="slide-content is-fadeable {% if i == 0 %}is-opaque{% endif %}">
-          {% if i == 0 %}
-            <h2 class="project-title font-futura-700 font-futura-normal">{{ slide.title }}</h2>
-          {% else %}
-            <h2 class="project-logo project-logo-{{ slide.class }}"><a href="/work/{{ slide.url }}">{{ slide.title }}</a></h2>
-          {% endif %}
-          <p class="project-copy section-heading font-lato-300">{{ slide.description }}</p>
+
+    <div class="slide-container">
+      <div class="slide-background-container full-w full-h {% if i == 0 %}is-opaque{% endif %} {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}">
+        <div class="slide-background full-w full-h" style="background-image:url('/images/slides/{{ slide.background }}');"></div>
+        <div class="slide-gradient full-w" data-theme="{{ slide.theme }}"></div>
+      </div>
+
+      <section class="slide project-container full-w full-h {% if i == 0 %}is-active{% else %}is-next{% endif %}" data-slide="{{ i }}" data-theme="{{ slide.theme }}">
+        <div class="slide-content-container">
+          <div class="slide-content is-fadeable {% if i == 0 %}is-opaque{% endif %}">
+            {% if i == 0 %}
+              <h2 class="project-title font-futura-700 font-futura-normal">{{ slide.title }}</h2>
+            {% else %}
+              <h2 class="project-logo project-logo-{{ slide.class }}"><a href="/work/{{ slide.url }}">{{ slide.title }}</a></h2>
+            {% endif %}
+            <p class="project-copy section-heading font-lato-300">{{ slide.description }}</p>
+
+            {% if i == 0 %}
+              {% include learn_more_btn.html title="Watch reel" url="#" theme=slide.theme %}
+            {% else %}
+              {% assign url = slide.url | prepend: "/work/" %}
+              {% include learn_more_btn.html title="Learn more" url=url theme=slide.theme %}
+            {% endif %}
+          </div>
 
           {% if i == 0 %}
-            {% include learn_more_btn.html title="Watch reel" url="#" theme=slide.theme %}
-          {% else %}
-            {% include learn_more_btn.html title="Learn more" url=slide.url theme=slide.theme %}
+            <ul class="slide-nav-list list-reset is-opaque is-fadeable-fast">
+              {% for i in (0..total) %}
+                <li class="slide-nav-list-item"><a class="slide-nav-link {% if i == 0 %}is-opaque{% endif %}" href="#"><span class="slide-nav-bar"></span></a></li>
+              {% endfor %}
+            </ul>
           {% endif %}
         </div>
-
-        {% if i == 0 %}
-          <ul class="slide-nav-list list-reset is-opaque is-fadeable-fast">
-            {% for i in (0..total) %}
-              <li class="slide-nav-list-item"><a class="slide-nav-link {% if i == 0 %}is-opaque{% endif %}" href="#"><span class="slide-nav-bar"></span></a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </div>
-    </section>
+      </section>
+    </div>
   {% endfor %}
 
   <section class="services-container is-max-width">

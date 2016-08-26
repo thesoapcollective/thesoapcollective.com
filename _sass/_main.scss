@@ -246,7 +246,6 @@ a {
 
 .nav-list {
   text-align: right;
-  font-size: 1rem;
 }
 
 .nav-list-item {
@@ -269,22 +268,28 @@ a {
 }
 
 .contact-btn {
-  padding: 12px;
-  border-width: 1px;
-  border-style: solid;
-  transition: border-color $slide-color-speed, opacity 0.2s;
-
   .theme-light & {
-    border-color: #fff;
+    a {
+      border-color: #fff;
+    }
   }
 
   .theme-dark & {
-    border-color: #000;
+    a {
+      border-color: #000;
+    }
   }
 
-  &:hover,
-  &:focus {
-    opacity: 0.5;
+  a {
+    padding: 12px 4px 12px 17px;
+    border-width: 1px;
+    border-style: solid;
+    transition: border-color $slide-color-speed, opacity 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -508,6 +513,18 @@ a {
   background-size: 154px 36px;
 }
 
+.soap-team {
+  margin-top: 40px;
+  p {
+    @include text-overflow;
+  }
+}
+
+.soap-team-description {
+  margin-top: $grid-size-double * 2;
+  padding: 0 95px;
+}
+
 // ==================================================
 // SERVICES
 // ==================================================
@@ -522,6 +539,7 @@ a {
 }
 
 .services-section {
+  margin-top: 54px;
   text-align: center;
 }
 
@@ -538,11 +556,16 @@ a {
   padding-top: 36px + $grid-size;
   display: inline-block;
   position: relative;
+  vertical-align: top;
 
   .services-section & {
     width: 33%;
     margin-bottom: $grid-size-double;
     padding-top: 72px + $grid-size;
+  }
+
+  .section-heading {
+    margin-bottom: $grid-size-half;
   }
 }
 
@@ -899,18 +922,13 @@ a {
 // ==================================================
 // SLIDES
 // ==================================================
-.slides-background-container,
 .slide-background-container,
 .slide-background,
-.slide-container,
+.slides-container,
 .slide {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.slides-background-container {
-  z-index: 0;
 }
 
 .slide-gradient {
@@ -947,7 +965,7 @@ a {
   background-size: cover;
 }
 
-.slide-container {
+.slides-container {
   z-index: 1;
 }
 
@@ -1005,7 +1023,7 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -$grid-size - $grid-size-double + $grid-size-half;
+  bottom: -$grid-size - $grid-size-double;
   font-size: 0;
   text-align: center;
   pointer-events: auto;
@@ -1014,7 +1032,7 @@ a {
 .slide-nav-list,
 .slide-nav-list-item,
 .slide-nav-link {
-  height: $grid-size;
+  height: $grid-size-double;
 }
 
 .slide-nav-list-item,
