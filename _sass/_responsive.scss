@@ -35,6 +35,10 @@ $responsive-max-logo-width: 220px;
 }
 
 @media only screen and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+
   body.is-home {
     color: #000;
 
@@ -55,16 +59,27 @@ $responsive-max-logo-width: 220px;
     .services-container {
       padding: $grid-size;
 
-      p {
-        font-size: 0.9rem;
-      }
-
       h3 {
         position: relative;
         right: -13px;
         text-indent: 0;
       }
     }
+  }
+
+  .is-max-width {
+    padding-left: $grid-size;
+    padding-right: $grid-size;
+  }
+
+  .section-heading {
+    font-size: 1.2rem;
+  }
+
+  .services-heading {
+    position: relative;
+    right: -7px;
+    text-indent: 0;
   }
 
   .page-nav,
@@ -100,7 +115,7 @@ $responsive-max-logo-width: 220px;
 
   .nav-list {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .nav-list-item {
@@ -172,11 +187,11 @@ $responsive-max-logo-width: 220px;
 
   .project-title {
     margin-bottom: $grid-size;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .project-copy {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .project-logo-brooklynbrewery {
@@ -264,6 +279,12 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .services-list {
+    .services-section & {
+      margin-top: $grid-size-double;
+    }
+  }
+
   .services-list-item {
     width: 50%;
     margin-bottom: $grid-size;
@@ -271,6 +292,12 @@ $responsive-max-logo-width: 220px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    .services-section & {
+      width: 100%;
+      margin-bottom: $grid-size-double;
+      padding-top: 72px + $grid-size;
     }
   }
 
@@ -280,5 +307,23 @@ $responsive-max-logo-width: 220px;
     padding-left: 0;
     padding-right: 0;
     display: block;
+  }
+
+  .services-section {
+    margin-top: $grid-size-double;
+  }
+
+  .soap-team {
+    margin-top: $grid-size;
+
+    img {
+      width: 170%;
+      position: relative;
+      left: -35%;
+    }
+  }
+
+  .soap-team-description {
+    margin-top: $grid-size-double;
   }
 }
