@@ -143,6 +143,14 @@ a {
   float: right;
 }
 
+.clearfix {
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
 .full-w {
   width: 100%;
 }
@@ -290,6 +298,22 @@ a {
     &:focus {
       opacity: 0.5;
     }
+  }
+}
+
+.email-btn {
+  width: 100%;
+  max-width: 380px;
+  margin: 40px auto 54px;
+  padding: 15px 4px 15px 17px;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color $slide-color-speed, opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
   }
 }
 
@@ -525,6 +549,71 @@ a {
   padding: 0 95px;
 }
 
+.office-map {
+  margin-top: 54px;
+
+  p {
+    margin-top: 14px;
+  }
+}
+
+.map-description {
+  margin-top: 44px;
+  padding: 0 95px;
+}
+
+.social-list {
+  margin-bottom: $grid-size-double;
+  text-align: center;
+  font-size: 0;
+}
+
+.social-list-item {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 54px;
+  height: 54px;
+  margin-right: $grid-size;
+
+  a {
+    @include text-overflow;
+    width: 54px;
+    height: 54px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url('../images/social_icons.png');
+    background-size: 216px 54px;
+    transition: opacity 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-icon-facebook a {
+  background-position: 0 0;
+}
+
+.social-icon-twitter a {
+  background-position: -54px 0;
+}
+
+.social-icon-medium a {
+  background-position: -108px 0;
+}
+
+.social-icon-soundcloud a {
+  background-position: -162px 0;
+}
+
 // ==================================================
 // SERVICES
 // ==================================================
@@ -728,14 +817,14 @@ a {
 }
 
 .project-logo-brooklynbrewery {
-  width: 205px;
-  height: 205px;
+  width: 254px;
+  height: 189px;
   background-image: url('../images/logos/brooklyn_brewery_logo.png');
-  background-size: 205px 205px;
+  background-size: 254px 189px;
 
   a {
-    width: 205px;
-    height: 205px;
+    width: 254px;
+    height: 189px;
   }
 }
 

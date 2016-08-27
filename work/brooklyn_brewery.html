@@ -1,0 +1,25 @@
+---
+title: Brooklyn Brewery
+description: A storytelling party game. Group storytelling and adventure at your fingertips, everywhere you go. A project by The Soap Collective, a next-generation creative agency.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "brooklyn_brewery" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description text-center is-block">
+      <p class="font-lato-300">Our friends at Brooklyn Brewery host dozens of tours every week. Their unique brewing process and high standard of quality attracts people from all over the world. Not everyone can make it out to Brooklyn, however. As such, we worked with Brooklyn Brewery to help tell their story in Virtual Reality.</p>
+      <p class="font-lato-300">As part of their global Beer Mansion event series, we created a 360 experience that allows people to visit the brewery no matter where they are in the world. In addition to making the 360 video available online, Brooklyn Brewery also set up special VR stations at each Beer Mansion tour stop.</p>
+      <p class="font-lato-300">When people can't come to the brewery, why not bring the brewery to them?</p>
+      {% if project.website %}
+        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
+      {% endif %}
+    </li>
+  </ul>
+</article>

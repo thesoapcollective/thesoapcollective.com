@@ -24,12 +24,14 @@
   },
   {
     "title": "Brooklyn Brewery",
-    "description": "Tour",
-    "theme": "dark",
+    "description": "Tour the Brewery in VR",
+    "theme": "light",
     "background": "brooklyn_brewery_slide.jpg",
     "background_alignment": "center center",
     "class": "brooklynbrewery",
     "url": "brooklyn_brewery",
+    "website": "http://brooklynbrewery.com",
+    "youtube_id": "-nVvx6DkOic",
   },
   {
     "title": "VR Love Letters",

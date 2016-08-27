@@ -15,8 +15,8 @@
   },
   {
     "title": "Brooklyn Brewery",
-    "description": "Tour",
-    "theme": "dark",
+    "description": "Tour the Brewery in VR",
+    "theme": "light",
     "background": "brooklyn_brewery_slide.jpg",
     "class": "brooklynbrewery",
     "url": "brooklyn_brewery",
