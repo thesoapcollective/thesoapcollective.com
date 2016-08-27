@@ -309,10 +309,6 @@ $responsive-max-logo-width: 220px;
     display: block;
   }
 
-  .services-section {
-    margin-top: $grid-size-double;
-  }
-
   .soap-team {
     margin-top: $grid-size;
 
@@ -323,7 +319,30 @@ $responsive-max-logo-width: 220px;
     }
   }
 
-  .soap-team-description {
+  .services-section,
+  .soap-team-description,
+  .office-map {
     margin-top: $grid-size-double;
+  }
+
+  .office-map {
+    &.is-max-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .float-l,
+    .float-r {
+      float: none;
+      text-align: center;
+    }
+
+    .float-r {
+      margin-top: 5px;
+    }
+  }
+
+  .email-btn {
+    max-width: 260px;
   }
 }
