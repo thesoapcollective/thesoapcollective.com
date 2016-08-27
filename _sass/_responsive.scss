@@ -1,4 +1,5 @@
 $responsive-max-page-width: $max-page-width - 1;
+$responsive-max-logo-width: 220px;
 
 @media only screen and (max-width:  $responsive-max-page-width) {
   .is-max-width {
@@ -46,8 +47,6 @@ $responsive-max-page-width: $max-page-width - 1;
     }
 
     .contact-btn {
-      text-indent: 0;
-
       a {
         border-color: #000;
       }
@@ -110,6 +109,7 @@ $responsive-max-page-width: $max-page-width - 1;
 
   .contact-btn {
     margin-top: $grid-size-half;
+    text-indent: 0;
   }
 
   .page-header {
@@ -123,6 +123,8 @@ $responsive-max-page-width: $max-page-width - 1;
   }
 
   .page-footer {
+    height: auto;
+    padding-top: $grid-size;
     padding-bottom: $grid-size;
   }
 
@@ -177,25 +179,88 @@ $responsive-max-page-width: $max-page-width - 1;
     font-size: 1rem;
   }
 
-  .project-logo-nbu {
-    width: 280px;
-    height: 44px;
-    background-size: 280px 44px;
+  .project-logo-brooklynbrewery {
+    $brooklynbrewery-height-r: $responsive-max-logo-width * $brooklynbrewery-height / $brooklynbrewery-width;
+    width: $responsive-max-logo-width;
+    height: $brooklynbrewery-height-r;
+    background-image: url('../images/logos/brooklyn_brewery_logo.png');
+    background-size: $responsive-max-logo-width $brooklynbrewery-height-r;
 
     a {
-      width: 280px;
-      height: 44px;
+      width: $responsive-max-logo-width;
+      height: $brooklynbrewery-height-r;
+    }
+  }
+
+  .project-logo-ced {
+    width: $responsive-max-logo-width;
+    height: $responsive-max-logo-width;
+    background-size: $responsive-max-logo-width $responsive-max-logo-width;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $responsive-max-logo-width;
+    }
+  }
+
+  .project-logo-phoodie {
+    $phoodie-height-r: $responsive-max-logo-width * $phoodie-height / $phoodie-width;
+    width: $responsive-max-logo-width;
+    height: $phoodie-height-r;
+    background-size: $responsive-max-logo-width $phoodie-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $phoodie-height-r;
     }
   }
 
   .project-logo-profile {
-    width: 280px;
-    height: 85px;
-    background-size: 280px 85px;
+    $profile-height-r: $responsive-max-logo-width * $profile-height / $profile-width;
+    width: $responsive-max-logo-width;
+    height: $profile-height-r;
+    background-size: $responsive-max-logo-width $profile-height-r;
 
     a {
-      width: 280px;
-      height: 85px;
+      width: $responsive-max-logo-width;
+      height: $profile-height-r;
+    }
+  }
+
+  .project-logo-nbu {
+    $nbu-height-r: $responsive-max-logo-width * $nbu-height / $nbu-width;
+    width: $responsive-max-logo-width;
+    height: $nbu-height-r;
+    background-size: $responsive-max-logo-width $nbu-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $nbu-height-r;
+    }
+  }
+
+  .project-logo-role {
+    $role-height-r: $responsive-max-logo-width * $role-height / $role-width;
+    width: $responsive-max-logo-width;
+    height: $role-height-r;
+    background-size: $responsive-max-logo-width $role-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $role-height-r;
+    }
+  }
+
+  .project-logo-weirdcatalog {
+    $weirdcatalog-height-r: $responsive-max-logo-width * $weirdcatalog-height / $weirdcatalog-width;
+    width: $responsive-max-logo-width;
+    height: $weirdcatalog-height-r;
+    background-image: url('../images/logos/wc_logo.png');
+    background-size: $responsive-max-logo-width $weirdcatalog-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $weirdcatalog-height-r;
     }
   }
 
@@ -203,5 +268,17 @@ $responsive-max-page-width: $max-page-width - 1;
     width: 50%;
     margin-bottom: $grid-size;
     padding-top: 36px + $grid-size-half;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .pillars-list-item {
+    width: 100%;
+    margin-bottom: $grid-size-double;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
   }
 }

@@ -816,99 +816,113 @@ a {
   }
 }
 
+$brooklynbrewery-width: 254px;
+$brooklynbrewery-height: 189px;
 .project-logo-brooklynbrewery {
-  width: 254px;
-  height: 189px;
+  width: $brooklynbrewery-width;
+  height: $brooklynbrewery-height;
   background-image: url('../images/logos/brooklyn_brewery_logo.png');
-  background-size: 254px 189px;
+  background-size: $brooklynbrewery-width $brooklynbrewery-height;
 
   a {
-    width: 254px;
-    height: 189px;
+    width: $brooklynbrewery-width;
+    height: $brooklynbrewery-height;
   }
 }
 
+$ced-width: 255px;
 .project-logo-ced {
-  width: 255px;
-  height: 255px;
+  width: $ced-width;
+  height: $ced-width;
   background-image: url('../images/logos/ced_logo.png');
-  background-size: 255px 255px;
+  background-size: $ced-width $ced-width;
 
   a {
-    width: 255px;
-    height: 255px;
+    width: $ced-width;
+    height: $ced-width;
   }
 }
 
+$phoodie-width: 228px;
+$phoodie-height: 198px;
 .project-logo-phoodie {
-  width: 228px;
-  height: 198px;
+  width: $phoodie-width;
+  height: $phoodie-height;
   background-image: url('../images/logos/phoodie_logo.png');
-  background-size: 228px 198px;
+  background-size: $phoodie-width $phoodie-height;
 
   a {
-    width: 228px;
-    height: 198px;
+    width: $phoodie-width;
+    height: $phoodie-height;
   }
 }
 
+$profile-width: 330px;
+$profile-height: 100px;
 .project-logo-profile {
-  width: 330px;
-  height: 100px;
+  width: $profile-width;
+  height: $profile-height;
   background-image: url('../images/logos/profile_logo.png');
-  background-size: 330px 100px;
+  background-size: $profile-width $profile-height;
 
   a {
-    width: 330px;
-    height: 100px;
+    width: $profile-width;
+    height: $profile-height;
   }
 }
 
+$nbu-width: 338px;
+$nbu-height: 54px;
 .project-logo-nbu {
-  width: 338px;
-  height: 54px;
+  width: $nbu-width;
+  height: $nbu-height;
   background-image: url('../images/logos/nbu_logo.png');
-  background-size: 338px 54px;
+  background-size: $nbu-width $nbu-height;
 
   a {
-    width: 338px;
-    height: 54px;
+    width: $nbu-width;
+    height: $nbu-height;
   }
 }
 
+$role-width: 255px;
+$role-height: 108px;
 .project-logo-role {
-  width: 255px;
-  height: 108px;
+  width: $role-width;
+  height: $role-height;
   background-image: url('../images/logos/role_logo.png');
-  background-size: 255px 108px;
+  background-size: $role-width $role-height;
 
   a {
-    width: 255px;
-    height: 108px;
+    width: $role-width;
+    height: $role-height;
   }
 }
 
+$weirdcatalog-width: 255px;
+$weirdcatalog-height: 90px;
 .project-logo-weirdcatalog {
-  width: 255px;
-  height: 90px;
+  width: $weirdcatalog-width;
+  height: $weirdcatalog-height;
   background-image: url('../images/logos/wc_logo.png');
-  background-size: 255px 90px;
+  background-size: $weirdcatalog-width $weirdcatalog-height;
 
   a {
-    width: 255px;
-    height: 90px;
+    width: $weirdcatalog-width;
+    height: $weirdcatalog-height;
   }
 }
 
+$vrll-width: 205px;
 .project-logo-vrll {
-  width: 205px;
-  height: 205px;
+  width: $vrll-width;
+  height: $vrll-width;
   background-image: url('../images/logos/vrll_logo.png');
-  background-size: 205px 205px;
+  background-size: $vrll-width $vrll-width;
 
   a {
-    width: 205px;
-    height: 205px;
+    width: $vrll-width;
+    height: $vrll-width;
   }
 }
 
