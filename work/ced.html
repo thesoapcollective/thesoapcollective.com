@@ -18,9 +18,7 @@ description: Evolving the infographic through meaningful interaction. A project 
       <p class="font-lato-300">CED is a North Carolina’s leading business development and innovation network. A non-profit focused on growing the Triangle economy, CED represents over 700 companies and 4,000 members.</p>
       <p class="font-lato-300">Twice per year, CED puts out their public “Innovators Report”, an infographic presenting relevant funding, deal, and exit information from their companies and members. As part of a global rebrand, they wanted to turn the Innovators Report into something more than just a basic document.</p>
       <p class="font-lato-300">We worked with CED to design, develop, and deploy the new interactive online Innovators Report. This report is a “live infographic” that allows users to interact with and sort data in real-time, allowing for more meaningful engagement with the information. The entire infographic is generated based on an editable database. This allows CED to update the data for each new report without relying on outside developer assistance.</p>
-      {% if project.website %}
-        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
-      {% endif %}
+      {% include project_website.html project=project %}
     </li>
     {% include project_images.html project=project has_spacer=true image_class="project-grid-two" %}
   </ul>

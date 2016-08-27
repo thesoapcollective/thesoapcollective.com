@@ -20,9 +20,7 @@ description: Don't just post your food, share it! A social network built exclusi
       <p class="font-lato-300">We developed a scalable backend, mobile API, and worked closely with their team on app design touch-ups. We also designed and built the Phoodie web page!</p>
       <p class="font-lato-300">Our partnership with Phoodie continues, with Soap stepping in to assist with development updates and feature releases.</p>
       <p class="font-lato-300">Come dine with us! Let’s share in the Phoodie Life together:</p>
-      {% if project.website %}
-        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
-      {% endif %}
+      {% include project_website.html project=project %}
     </li>
     {% include project_images.html project=project has_spacer=false image_class="project-grid-three project-grid-three-padding" %}
   </ul>

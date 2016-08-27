@@ -17,9 +17,7 @@ description: Celebrate the colorful, creative, and strange. Get inspired. Get we
       <p class="font-lato-300">We consume an incredible ammount of media in our daily lives, but sharing and discovery can often be a problem. At The Soap Collective, we wanted to create a space where we could share our favorite media with the world.</p>
       <p class="font-lato-300">Our goal was to inspire people to explore media that they may have ignored, or may have never heard of. We wanted it to be easy, seamless, and fun.</p>
       <p class="font-lato-300">Weird Catalog is a curated collection of high-quality games, movies, TV, music, books, comics, and internet stuff. Celebrate the colorful, creative, and strange.</p>
-      {% if project.website %}
-        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
-      {% endif %}
+      {% include project_website.html project=project %}
     </li>
   </ul>
 </article>

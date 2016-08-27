@@ -20,9 +20,7 @@ description: A storytelling party game. Group storytelling and adventure at your
       <p class="font-lato-300">The game needed to be something you could pick up and play at a party, on your lunch break, on the school yard, or at family game night. It needed to make the unfamiliar feel less intimidating and easier to master.</p>
       <p class="font-lato-300">We asked ourselves, where is the core fun of tabletop gaming? We decided it’s in the stories. It’s in the fictional worlds we imagine, the characters we create, and the thrill of taking risks and doing the impossible.</p>
       <p class="font-lato-300">We focused on that, gutted the rest, and put it on an iPhone. The result was Role: a game that anyone can carry with them and play any time, with anyone.</p>
-      {% if project.website %}
-        <p class="font-futura-700 font-futura-normal"><strong><a class="hover-underline" href="{{ project.website }}" target="_blank">{{ project.website }}</a></strong></p>
-      {% endif %}
+      {% include project_website.html project=project %}
     </li>
     {% include project_images.html project=project has_spacer=false image_class="project-grid-three project-grid-three-padding" %}
   </ul>

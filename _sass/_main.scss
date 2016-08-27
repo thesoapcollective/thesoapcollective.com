@@ -454,7 +454,7 @@ a {
 .video-container {
   height: 0;
   position: relative;
-  margin: 72px auto 0;
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 56.27%; // Should match youtube embed aspect ratio (480 / 853).
   overflow: hidden;
@@ -970,6 +970,10 @@ $vrll-width: 205px;
     margin-bottom: $grid-size * 4;
     display: block;
   }
+}
+
+.project-website {
+  word-wrap: break-word;
 }
 
 .project-grid-two,

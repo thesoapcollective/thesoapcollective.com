@@ -279,6 +279,53 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .project-hero {
+    margin-top: $grid-size-double;
+
+    &.is-max-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .project-content-list {
+    margin-top: $grid-size-double;
+    margin-bottom: $grid-size-double;
+
+    .float-l {
+      float: none;
+    }
+  }
+
+  .project-grid-two,
+  .project-grid-three {
+    width: 100%;
+    margin-bottom: $grid-size;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .project-description {
+    margin-bottom: $grid-size-double;
+
+    &.is-block {
+      margin-bottom: 0;
+    }
+
+    &.text-center {
+      text-align: left;
+    }
+  }
+
+  .project-description-spacer {
+    height: $grid-size-double;
+    display: block !important;
+  }
+
   .services-list {
     .services-section & {
       margin-top: $grid-size-double;
@@ -325,6 +372,10 @@ $responsive-max-logo-width: 220px;
     margin-top: $grid-size-double;
   }
 
+  .soap-team-description {
+    text-align: left;
+  }
+
   .office-map {
     &.is-max-width {
       padding-left: 0;
@@ -344,5 +395,12 @@ $responsive-max-logo-width: 220px;
 
   .email-btn {
     max-width: 260px;
+  }
+
+  .download-btn {
+    width: 200px;
+    height: 200px * 72px / 242px;
+    margin-top: $grid-size;
+    margin-right: 0;
   }
 }
