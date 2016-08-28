@@ -289,7 +289,8 @@ a {
   }
 
   a {
-    padding: 12px 4px 12px 17px;
+    padding: 12px 4px;
+    display: inline-block;
     border-width: 1px;
     border-style: solid;
     transition: border-color $slide-color-speed, opacity 0.2s;
@@ -448,6 +449,21 @@ a {
   .learn-more-btn:hover &,
   .learn-more-btn:focus & {
     opacity: 1;
+  }
+}
+
+.mobile-menu-arrow {
+  display: none;
+  top: $grid-size;
+  right: $grid-size;
+  transition: transform 0.5s;
+
+  .mobile-menu-closed & {
+    transform: rotate(90deg);
+  }
+
+  .mobile-menu-opened & {
+    transform: rotate(-90deg);
   }
 }
 

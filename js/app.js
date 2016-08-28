@@ -1,10 +1,12 @@
-var $body, $slideNavList;
+var $body, $pageHeader, $slideNavList;
 
 $(document).ready(function() {
   $body = $('body');
+  $pageHeader = $('.page-header');
   $slideNavList = $('.slide-nav-list');
 
   checkForTouch();
+  setupMobileMenu();
   setupSlideNav();
   setupProjectImages();
 });
@@ -14,6 +16,13 @@ var checkForTouch = function() {
   if (isTouch) {
     $body.addClass('is-touch');
   }
+};
+
+var setupMobileMenu = function() {
+  $('.mobile-menu-arrow').click(function(event) {
+    event.preventDefault();
+    $pageHeader.toggleClass('mobile-menu-closed mobile-menu-opened');
+  });
 };
 
 var setupProjectImages = function() {
