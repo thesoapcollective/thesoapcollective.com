@@ -1,4 +1,5 @@
 var $body, $pageHeader, $slideNavList;
+var isTouch = false;
 
 $(document).ready(function() {
   $body = $('body');
@@ -12,7 +13,7 @@ $(document).ready(function() {
 });
 
 var checkForTouch = function() {
-  var isTouch = 'ontouchstart' in window || 'onmsgesturechange' in window;
+  isTouch = 'ontouchstart' in window || 'onmsgesturechange' in window;
   if (isTouch) {
     $body.addClass('is-touch');
   }
@@ -26,12 +27,15 @@ var setupMobileMenu = function() {
 };
 
 var setupProjectImages = function() {
-  $('.project-image a').magnificPopup({
-    type: 'image',
-    gallery: { enabled: true },
-    zoom: { enabled: true },
-  });
   $('.project-image img').unveil(100);
+
+  if (!isTouch) {
+    $('.project-image a').magnificPopup({
+      type: 'image',
+      gallery: { enabled: true },
+      zoom: { enabled: true },
+    });
+  }
 };
 
 var setupSlideNav = function() {
