@@ -659,6 +659,8 @@ a {
 .services-list-item {
   width: 20%;
   padding-top: 36px + $grid-size;
+  padding-left: $grid-size-half;
+  padding-right: $grid-size-half;
   display: inline-block;
   position: relative;
   vertical-align: top;

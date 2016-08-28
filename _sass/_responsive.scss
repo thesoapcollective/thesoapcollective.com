@@ -16,6 +16,22 @@ $responsive-max-logo-width: 220px;
   }
 }
 
+@media only screen and (max-width: 1049px) {
+  .what-is-soap-heading {
+    margin-bottom: 12px;
+  }
+
+  .pillars-list {
+    margin-bottom: 0;
+  }
+
+  .pillars-list-item {
+    width: 50%;
+    padding-top: $grid-size;
+    padding-bottom: $grid-size;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .nav-list {
     font-size: 0.8rem;
@@ -31,6 +47,24 @@ $responsive-max-logo-width: 220px;
 
   .services-container {
     bottom: 60px;
+  }
+
+  .project-grid-three {
+    width: 50%;
+  }
+
+  .project-grid-three-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    &:nth-child(2),
+    &:nth-child(2n+2) {
+      padding-left: $grid-size-half !important;
+    }
+
+    &:nth-child(2n+1) {
+      padding-right: $grid-size-half !important;
+    }
   }
 }
 
@@ -352,6 +386,8 @@ $responsive-max-logo-width: 220px;
     width: 50%;
     margin-bottom: $grid-size;
     padding-top: 36px + $grid-size-half;
+    padding-left: 0;
+    padding-right: 0;
 
     &:last-child {
       margin-bottom: 0;
@@ -364,11 +400,22 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .what-is-soap-heading {
+    margin-bottom: 30px;
+  }
+
+  .pillars-list {
+    margin-bottom: $grid-size;
+  }
+
+  .font-no-indent {
+    text-indent: $font-futura-spacing;
+  }
+
   .pillars-list-item {
     width: 100%;
     margin-bottom: $grid-size-double;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     display: block;
   }
 
@@ -417,6 +464,12 @@ $responsive-max-logo-width: 220px;
     width: 200px;
     height: 200px * 72px / 242px;
     margin-top: $grid-size;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    &:last-child {
+      margin-right: auto;
+    }
   }
 }
