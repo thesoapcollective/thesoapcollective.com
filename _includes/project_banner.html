@@ -1,0 +1,24 @@
+{% assign project = include.project %}
+
+<section class="project-section project-container" style="background-image:url('/images/slides/{{ project.background }}');background-position:{{ project.background_alignment }};" data-theme="{{ project.theme }}">
+  <h2 class="project-logo project-logo-{{ project.class }}">
+    {% if include.is_work_page %}
+      <a href="/work/{{ project.url }}">{{ project.title }}</a>
+    {% else %}
+      {{ project.title }}
+    {% endif %}
+  </h2>
+  <p class="project-copy section-heading font-lato-300">{{ project.description }}</p>
+  {% if include.is_work_page %}
+    {% include learn_more_btn.html title="Learn more" url=project.url theme=project.theme %}
+  {% else %}
+    <div class="download-container">
+      {% if project.app_store_url %}
+        <a class="download-btn download-btn-app-store" href="{{ project.app_store_url }}" target="_blank">Download {{ project.title }} on the App Store!</a>
+      {% endif %}
+      {% if project.google_play_url %}
+        <a class="download-btn download-btn-google-play" href="{{ project.google_play_url }}" target="_blank">Download {{ project.title }} on Google Play!</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</section>

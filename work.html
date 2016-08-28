@@ -1,0 +1,34 @@
+---
+title: Portfolio
+description: Portfolio of work by The Soap Collective, a next-generation creative agency. Using the latest immersive technology, we build elevated storytelling experiences for brands and consumers.
+---
+
+<article>
+  <section class="black-section">
+    <div class="is-max-width">
+      <h2 class="font-lato-300 what-is-soap-heading section-heading">What is a Soap Project?</h2>
+      <ul class="list-reset pillars-list">
+        <li class="pillars-list-item"><h3 class="font-futura-700 text-upper">Emotional</h3><p class="font-lato-300">We seek to build Joy Generators, experiences that spark wonderment, happiness, and inspiration.</p></li><!--
+        --><li class="pillars-list-item"><h3 class="font-futura-700 font-no-indent text-upper">Interactive</h3><p class="font-lato-300">We create things people can touch, play with, and become a part of. Our work is meant to engage people and get them involved.</p></li><!--
+        --><li class="pillars-list-item"><h3 class="font-futura-700 text-upper">Social</h3><p class="font-lato-300">Soap projects are built to share. We believe strongly in the power of connecting people through shared experiences.</p></li><!--
+        --><li class="pillars-list-item"><h3 class="font-futura-700 text-upper">High-End</h3><p class="font-lato-300">Quality is critical in everything we do. We focus on the tiny details, polishing every component to look and feel just right.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  {% for project in site.data.projects %}
+    {% include project_banner.html project=project is_work_page=true %}
+  {% endfor %}
+
+  <section class="black-section">
+    <div class="is-max-width">
+      <h2 class="font-futura-700 text-upper clients-heading">Clients</h2>
+      <ul class="list-reset clients-list">
+        <li class="clients-list-item"><a class="client-logo client-logo-envoy" href="https://envoy.co" target="_blank">Envoy</a></li><!--
+        --><li class="clients-list-item"><a class="client-logo client-logo-mightybell" href="https://mightybell.com" target="_blank">Mightybell</a></li><!--
+        --><li class="clients-list-item"><a class="client-logo client-logo-commonsense" href="https://www.commonsensemedia.org" target="_blank">Common Sense</a></li><!--
+        --><li class="clients-list-item"><a class="client-logo client-logo-ethereum" href="https://www.ethereum.org" target="_blank">Ethereum</a></li>
+      </ul>
+    </div>
+  </section>
+</article>

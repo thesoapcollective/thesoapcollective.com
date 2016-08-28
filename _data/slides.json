@@ -1,0 +1,48 @@
+[
+  {
+    "title": "We build meaningful experiences that connect people and fuel emotion",
+    "description": "The Soap Collective is a next-generation creative agency. Using the latest immersive technology, we build elevated storytelling experiences for brands and consumers.",
+    "theme": "light",
+    "background": "mountains_slide.jpg",
+  },
+  {
+    "title": "Never Bout Us",
+    "description": "VR 360 Music Video Experience",
+    "theme": "light",
+    "background": "nbu_slide.jpg",
+    "class": "nbu",
+    "url": "never_bout_us",
+  },
+  {
+    "title": "Brooklyn Brewery",
+    "description": "Tour the Brewery in VR",
+    "theme": "light",
+    "background": "brooklyn_brewery_slide.jpg",
+    "class": "brooklynbrewery",
+    "url": "brooklyn_brewery",
+  },
+  {
+    "title": "VR Love Letters",
+    "description": "Experience a place through the eyes<br />of people who love it most.",
+    "theme": "light",
+    "background": "vrll_slide.jpg",
+    "class": "vrll",
+    "url": "vr_love_letters",
+  },
+  {
+    "title": "Role",
+    "description": "Group storytelling and adventure at<br />your fingertips, everywhere you go.",
+    "theme": "light",
+    "background": "role_slide.jpg",
+    "class": "role",
+    "url": "role",
+  },
+  {
+    "title": "Profile",
+    "description": "Interactive lookbook featuring the<br />Soap team’s favorite styles.",
+    "theme": "dark",
+    "background": "profile_slide.jpg",
+    "class": "profile",
+    "url": "profile",
+  },
+]
