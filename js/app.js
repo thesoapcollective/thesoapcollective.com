@@ -9,6 +9,7 @@ $(document).ready(function() {
   checkForTouch();
   setupMobileMenu();
   setupSlideNav();
+  setupReelButton();
   setupProjectImages();
 });
 
@@ -24,6 +25,14 @@ var setupMobileMenu = function() {
     event.preventDefault();
     $pageHeader.toggleClass('mobile-menu-closed mobile-menu-opened');
   });
+};
+
+var setupReelButton = function() {
+  if (!isTouch) {
+    $('.watch-reel-btn').magnificPopup({
+      type: "iframe"
+    });
+  }
 };
 
 var setupProjectImages = function() {

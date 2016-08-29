@@ -24,7 +24,7 @@ layout: home
             <p class="project-copy section-heading font-lato-300">{{ slide.description }}</p>
 
             {% if i == 0 %}
-              <!-- {% include learn_more_btn.html title="Watch reel" url="#" theme=slide.theme %} -->
+              {% include learn_more_btn.html title="Watch reel" url=site.reel_url theme=slide.theme is_reel_btn=true %}
             {% else %}
               {% assign url = slide.url | prepend: "/work/" %}
               {% include learn_more_btn.html title="Learn more" url=url theme=slide.theme %}
