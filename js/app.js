@@ -1,10 +1,12 @@
-var $body, $pageHeader, $slideNavList;
+var $body, $pageHeader, $slide, $slideNavList;
+var slideCount, slideTimeout;
 var isTouch = false;
 
 $(document).ready(function() {
   $body = $('body');
   $pageHeader = $('.page-header');
   $slideNavList = $('.slide-nav-list');
+  slideCount = $('.slide').length - 1;
 
   checkForTouch();
   setupMobileMenu();
@@ -58,9 +60,21 @@ var setupSlideNav = function() {
       goToSlide(newIndex, currentIndex);
     }
   });
+
+  startSlideTimer();
+};
+
+var startSlideTimer = function() {
+  slideTimeout = setTimeout(function() {
+    var currentIndex = $body.attr('data-active-slide');
+    var newIndex = currentIndex == slideCount ? 0 : parseInt(currentIndex) + 1;
+    goToSlide(newIndex, currentIndex);
+  }, 10000);
 };
 
 var goToSlide = function(newIndex, currentIndex) {
+  clearTimeout(slideTimeout);
+
   var currentSlideData = 'data-slide="' + currentIndex + '"'
   var $currentSlideBackground = $('.slide-background-container[' + currentSlideData + ']');
   var $currentSlideContent = $('.slide-content', '.slide[' + currentSlideData + ']');
@@ -113,6 +127,7 @@ var goToSlide = function(newIndex, currentIndex) {
         $slideNavList.addClass('is-opaque');
         $currentSlideContent.removeClass('is-opaque');
         $currentSlideBackground.removeClass('is-opaque');
+        startSlideTimer();
       }, 700); // wait for slide content to finish
     }, 300); // wait for slide background to start
   }, 250); // wait for slide nav
