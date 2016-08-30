@@ -65,6 +65,8 @@ var setupSlideNav = function() {
 };
 
 var startSlideTimer = function() {
+  if (!$body.hasClass('is-home')) { return; }
+
   slideTimeout = setTimeout(function() {
     var currentIndex = $body.attr('data-active-slide');
     var newIndex = currentIndex == slideCount ? 0 : parseInt(currentIndex) + 1;

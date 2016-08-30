@@ -2,6 +2,7 @@
   {
     "title": "Never Bout Us",
     "description": "VR 360 Music Video Experience",
+    "services": ["vr", "ux", "brand", "dev", "cs"],
     "theme": "light",
     "background": "nbu_slide.jpg",
     "background_alignment": "center center",
@@ -25,6 +26,7 @@
   {
     "title": "Brooklyn Brewery",
     "description": "Tour the Brewery in VR",
+    "services": ["vr", "cs"],
     "theme": "light",
     "background": "brooklyn_brewery_slide.jpg",
     "background_alignment": "center center",
@@ -36,6 +38,7 @@
   {
     "title": "VR Love Letters",
     "description": "Experience a place through the eyes<br />of people who love it most.",
+    "services": ["vr", "ux", "brand", "dev", "cs"],
     "theme": "light",
     "background": "vrll_slide.jpg",
     "background_alignment": "center center",
@@ -49,6 +52,7 @@
   {
     "title": "Role",
     "description": "Group storytelling and adventure at<br />your fingertips, everywhere you go.",
+    "services": ["ux", "brand", "dev", "cs"],
     "theme": "light",
     "background": "role_slide.jpg",
     "background_alignment": "center top",
@@ -79,6 +83,7 @@
   {
     "title": "Profile",
     "description": "Interactive lookbook featuring the<br />Soap team’s favorite styles.",
+    "services": ["ux", "brand", "dev"],
     "theme": "dark",
     "background": "profile_slide.jpg",
     "background_alignment": "center center",
@@ -112,6 +117,7 @@
   {
     "title": "Phoodie",
     "description": "Don't just post your food, share it!",
+    "services": ["ux", "dev"],
     "theme": "light",
     "background": "phoodie_slide.jpg",
     "background_alignment": "center center",
@@ -133,6 +139,7 @@
   {
     "title": "Weird Catalog",
     "description": "Celebrate the colorful, creative, and strange.<br />Get inspired. Get weird.",
+    "services": ["ux", "brand", "dev"],
     "theme": "light",
     "background": "weirdcatalog_slide.jpg",
     "background_alignment": "center center",
@@ -143,6 +150,7 @@
   {
     "title": "CED",
     "description": "Evolving the infographic through meaningful interaction.",
+    "services": ["ux", "dev"],
     "theme": "light",
     "background": "ced_slide.jpg",
     "background_alignment": "center center",

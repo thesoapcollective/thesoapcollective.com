@@ -1,0 +1,23 @@
+{% assign project = include.project %}
+
+<ul class="list-reset project-services-list">
+  {% for services in project.services %}
+    {% if services == "vr" %}
+      {% assign service_name = "Virtual Reality" %}
+      {% assign service_class = "services-icon-small-vr-black" %}
+    {% elsif services == "ux" %}
+      {% assign service_name = "Experience Design" %}
+      {% assign service_class = "services-icon-small-ux-black" %}
+    {% elsif services == "brand" %}
+      {% assign service_name = "Branding" %}
+      {% assign service_class = "services-icon-small-branding-black" %}
+    {% elsif services == "dev" %}
+      {% assign service_name = "Development" %}
+      {% assign service_class = "services-icon-small-dev-black" %}
+    {% elsif services == "cs" %}
+      {% assign service_name = "Content Strategy" %}
+      {% assign service_class = "services-icon-small-strategy-black" %}
+    {% endif %}
+    <li class="project-services-item services-icon-small {{ service_class }}" title="{{ service_name }}">{{ service_name }}</li>
+  {% endfor %}
+</ul>

@@ -1002,10 +1002,32 @@ $vrll-width: 205px;
     margin-bottom: $grid-size * 4;
     display: block;
   }
+
+  &.project-grid-two,
+  &.project-grid-three {
+    margin-bottom: $grid-size-double;
+  }
 }
 
 .project-website {
   word-wrap: break-word;
+}
+
+.project-services-list {
+  margin-top: 20px;
+  font-size: 0;
+}
+
+.project-services-item {
+  @include text-overflow;
+  margin-right: $grid-size-half;
+  position: static;
+  display: inline-block;
+  transform: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .project-grid-two,
