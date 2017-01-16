@@ -848,6 +848,34 @@ a {
   }
 }
 
+$atlas-width: 588px;
+$atlas-height: 70px;
+.project-logo-atlas {
+  width: $atlas-width;
+  height: $atlas-height;
+  background-image: url('../images/logos/atlas_logo.png');
+  background-size: $atlas-width $atlas-height;
+
+  a {
+    width: $atlas-width;
+    height: $atlas-height;
+  }
+}
+
+$beyondtokyo-width: 428px;
+$beyondtokyo-height: 70px;
+.project-logo-beyondtokyo {
+  width: $beyondtokyo-width;
+  height: $beyondtokyo-height;
+  background-image: url('../images/logos/beyond_tokyo_logo.png');
+  background-size: $beyondtokyo-width $beyondtokyo-height;
+
+  a {
+    width: $beyondtokyo-width;
+    height: $beyondtokyo-height;
+  }
+}
+
 $brooklynbrewery-width: 254px;
 $brooklynbrewery-height: 189px;
 .project-logo-brooklynbrewery {
@@ -862,44 +890,17 @@ $brooklynbrewery-height: 189px;
   }
 }
 
-$ced-width: 255px;
-.project-logo-ced {
-  width: $ced-width;
-  height: $ced-width;
-  background-image: url('../images/logos/ced_logo.png');
-  background-size: $ced-width $ced-width;
+$google-width: 304px;
+$google-height: 100px;
+.project-logo-google {
+  width: $google-width;
+  height: $google-height;
+  background-image: url('../images/logos/google_logo.png');
+  background-size: $google-width $google-height;
 
   a {
-    width: $ced-width;
-    height: $ced-width;
-  }
-}
-
-$phoodie-width: 228px;
-$phoodie-height: 198px;
-.project-logo-phoodie {
-  width: $phoodie-width;
-  height: $phoodie-height;
-  background-image: url('../images/logos/phoodie_logo.png');
-  background-size: $phoodie-width $phoodie-height;
-
-  a {
-    width: $phoodie-width;
-    height: $phoodie-height;
-  }
-}
-
-$profile-width: 330px;
-$profile-height: 100px;
-.project-logo-profile {
-  width: $profile-width;
-  height: $profile-height;
-  background-image: url('../images/logos/profile_logo.png');
-  background-size: $profile-width $profile-height;
-
-  a {
-    width: $profile-width;
-    height: $profile-height;
+    width: $google-width;
+    height: $google-height;
   }
 }
 
@@ -917,31 +918,17 @@ $nbu-height: 54px;
   }
 }
 
-$role-width: 255px;
-$role-height: 108px;
-.project-logo-role {
-  width: $role-width;
-  height: $role-height;
-  background-image: url('../images/logos/role_logo.png');
-  background-size: $role-width $role-height;
+$sunkist-width: 226px;
+$sunkist-height: 180px;
+.project-logo-sunkist {
+  width: $sunkist-width;
+  height: $sunkist-height;
+  background-image: url('../images/logos/sunkist_logo.png');
+  background-size: $sunkist-width $sunkist-height;
 
   a {
-    width: $role-width;
-    height: $role-height;
-  }
-}
-
-$weirdcatalog-width: 255px;
-$weirdcatalog-height: 90px;
-.project-logo-weirdcatalog {
-  width: $weirdcatalog-width;
-  height: $weirdcatalog-height;
-  background-image: url('../images/logos/wc_logo.png');
-  background-size: $weirdcatalog-width $weirdcatalog-height;
-
-  a {
-    width: $weirdcatalog-width;
-    height: $weirdcatalog-height;
+    width: $sunkist-width;
+    height: $sunkist-height;
   }
 }
 

@@ -1,0 +1,20 @@
+---
+title: Sunkist
+description: VR Cycling Concept. A project by The Soap Collective, a next-generation creative agency.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "sunkist" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description text-center is-block">
+      <p class="font-lato-300">More info coming soon...</p>
+    </li>
+  </ul>
+</article>

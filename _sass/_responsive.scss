@@ -298,11 +298,34 @@ $responsive-max-logo-width: 220px;
     display: block !important;
   }
 
+  .project-logo-atlas {
+    $atlas-height-r: $responsive-max-logo-width * $atlas-height / $atlas-width;
+    width: $responsive-max-logo-width;
+    height: $atlas-height-r;
+    background-size: $responsive-max-logo-width $atlas-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $atlas-height-r;
+    }
+  }
+
+  .project-logo-beyondtokyo {
+    $beyondtokyo-height-r: $responsive-max-logo-width * $beyondtokyo-height / $beyondtokyo-width;
+    width: $responsive-max-logo-width;
+    height: $beyondtokyo-height-r;
+    background-size: $responsive-max-logo-width $beyondtokyo-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $beyondtokyo-height-r;
+    }
+  }
+
   .project-logo-brooklynbrewery {
     $brooklynbrewery-height-r: $responsive-max-logo-width * $brooklynbrewery-height / $brooklynbrewery-width;
     width: $responsive-max-logo-width;
     height: $brooklynbrewery-height-r;
-    background-image: url('../images/logos/brooklyn_brewery_logo.png');
     background-size: $responsive-max-logo-width $brooklynbrewery-height-r;
 
     a {
@@ -311,38 +334,15 @@ $responsive-max-logo-width: 220px;
     }
   }
 
-  .project-logo-ced {
+  .project-logo-google {
+    $google-height-r: $responsive-max-logo-width * $google-height / $google-width;
     width: $responsive-max-logo-width;
-    height: $responsive-max-logo-width;
-    background-size: $responsive-max-logo-width $responsive-max-logo-width;
+    height: $google-height-r;
+    background-size: $responsive-max-logo-width $google-height-r;
 
     a {
       width: $responsive-max-logo-width;
-      height: $responsive-max-logo-width;
-    }
-  }
-
-  .project-logo-phoodie {
-    $phoodie-height-r: $responsive-max-logo-width * $phoodie-height / $phoodie-width;
-    width: $responsive-max-logo-width;
-    height: $phoodie-height-r;
-    background-size: $responsive-max-logo-width $phoodie-height-r;
-
-    a {
-      width: $responsive-max-logo-width;
-      height: $phoodie-height-r;
-    }
-  }
-
-  .project-logo-profile {
-    $profile-height-r: $responsive-max-logo-width * $profile-height / $profile-width;
-    width: $responsive-max-logo-width;
-    height: $profile-height-r;
-    background-size: $responsive-max-logo-width $profile-height-r;
-
-    a {
-      width: $responsive-max-logo-width;
-      height: $profile-height-r;
+      height: $google-height-r;
     }
   }
 
@@ -358,28 +358,15 @@ $responsive-max-logo-width: 220px;
     }
   }
 
-  .project-logo-role {
-    $role-height-r: $responsive-max-logo-width * $role-height / $role-width;
+  .project-logo-sunkist {
+    $sunkist-height-r: $responsive-max-logo-width * $sunkist-height / $sunkist-width;
     width: $responsive-max-logo-width;
-    height: $role-height-r;
-    background-size: $responsive-max-logo-width $role-height-r;
+    height: $sunkist-height-r;
+    background-size: $responsive-max-logo-width $sunkist-height-r;
 
     a {
       width: $responsive-max-logo-width;
-      height: $role-height-r;
-    }
-  }
-
-  .project-logo-weirdcatalog {
-    $weirdcatalog-height-r: $responsive-max-logo-width * $weirdcatalog-height / $weirdcatalog-width;
-    width: $responsive-max-logo-width;
-    height: $weirdcatalog-height-r;
-    background-image: url('../images/logos/wc_logo.png');
-    background-size: $responsive-max-logo-width $weirdcatalog-height-r;
-
-    a {
-      width: $responsive-max-logo-width;
-      height: $weirdcatalog-height-r;
+      height: $sunkist-height-r;
     }
   }
 
