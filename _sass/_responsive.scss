@@ -334,6 +334,18 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .project-logo-capitalone {
+    $capitalone-height-r: $responsive-max-logo-width * $capitalone-height / $capitalone-width;
+    width: $responsive-max-logo-width;
+    height: $capitalone-height-r;
+    background-size: $responsive-max-logo-width $capitalone-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $capitalone-height-r;
+    }
+  }
+
   .project-logo-google {
     $google-height-r: $responsive-max-logo-width * $google-height / $google-width;
     width: $responsive-max-logo-width;

@@ -9,6 +9,15 @@
     "url": "google",
   },
   {
+    "title": "Capital One",
+    "description": "Customer Story in VR",
+    "theme": "light",
+    "background": "capital_one_slide.jpg",
+    "background_alignment": "center center",
+    "class": "capitalone",
+    "url": "capital_one",
+  },
+  {
     "title": "Sunkist",
     "description": "VR Cycling Concept",
     "theme": "light",

@@ -890,6 +890,20 @@ $brooklynbrewery-height: 189px;
   }
 }
 
+$capitalone-width: 288px;
+$capitalone-height: 100px;
+.project-logo-capitalone {
+  width: $capitalone-width;
+  height: $capitalone-height;
+  background-image: url('../images/logos/capital_one_logo.png');
+  background-size: $capitalone-width $capitalone-height;
+
+  a {
+    width: $capitalone-width;
+    height: $capitalone-height;
+  }
+}
+
 $google-width: 304px;
 $google-height: 100px;
 .project-logo-google {
