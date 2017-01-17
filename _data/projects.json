@@ -43,6 +43,9 @@
     "background_alignment": "center center",
     "class": "atlas",
     "url": "atlas",
+    "images": [
+      {"path": "atlas_concept_01.jpg", "loading_image": "rect_loading.png", "title": "Atlas Concept Art"},
+    ],
   },
   {
     "title": "Never Bout Us",

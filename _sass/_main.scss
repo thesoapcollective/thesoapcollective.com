@@ -1057,12 +1057,22 @@ $vrll-width: 205px;
   &:nth-child(2n+5) {
     padding-left: 13px;
     padding-right: 0;
+
+    &.float-r {
+      padding-left: 0;
+      padding-right: 13px;
+    }
   }
 
   &:nth-child(1),
   &:nth-child(2n+4) {
     padding-left: 0;
     padding-right: 13px;
+
+    &.float-r {
+      padding-left: 0;
+      padding-right: 13px;
+    }
   }
 }
 
