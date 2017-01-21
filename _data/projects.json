@@ -28,7 +28,7 @@
   },
   {
     "title": "Beyond Tokyo",
-    "description": "Virtual travel and adventure in<br />a fantastical vision of Tokyo.",
+    "description": "Virtual travel and adventure in<br />a fantastical vision of Tokyo",
     "theme": "light",
     "background": "beyond_tokyo_slide.jpg",
     "background_alignment": "center center",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Atlas",
-    "description": "An interactive VR series set in the world beyond.",
+    "description": "An interactive VR series set in the world beyond",
     "theme": "light",
     "background": "atlas_slide.jpg",
     "background_alignment": "center center",
@@ -83,7 +83,7 @@
   },
   {
     "title": "VR Love Letters",
-    "description": "Experience a place through the eyes<br />of people who love it most.",
+    "description": "Experience a place through the eyes<br />of people who love it most",
     "theme": "light",
     "background": "vrll_slide.jpg",
     "background_alignment": "center center",
