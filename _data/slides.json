@@ -1,7 +1,7 @@
 [
   {
-    "title": "Premium VR Storytelling<br />for Consumers & Brands",
-    "description": "The Soap Collective is a next-generation creative agency. Using the latest immersive technology, we build elevated interactive storytelling experiences.",
+    "title": "Interactive VR Storytelling<br />for Consumers & Brands",
+    "description": "The Soap Collective is a virtual reality creative agency and content studio building premium interactive experiences.",
     "theme": "light",
     "background": "mountains_slide.jpg",
   },
@@ -39,7 +39,7 @@
   },
   {
     "title": "Atlas",
-    "description": "An episodic VR saga set in a world beyond imagination",
+    "description": "An interactive VR series set in the world beyond.",
     "theme": "light",
     "background": "atlas_slide.jpg",
     "class": "atlas",
