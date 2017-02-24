@@ -22,14 +22,6 @@
     "url": "capital_one",
   },
   {
-    "title": "Sunkist",
-    "description": "VR Cycling Concept",
-    "theme": "light",
-    "background": "sunkist_slide.jpg",
-    "class": "sunkist",
-    "url": "sunkist",
-  },
-  {
     "title": "Beyond Tokyo",
     "description": "Virtual travel and adventure in<br />a fantastical vision of Tokyo",
     "theme": "light",
