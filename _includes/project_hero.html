@@ -7,6 +7,12 @@
     </div>
   {% endif %}
 
+  {% if project.vimeo_id %}
+    <div class="video-container">
+      <iframe src="https://player.vimeo.com/video/{{ project.vimeo_id }}?title=0&amp;byline=0&amp;portrait=0" width="853" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  {% endif %}
+
   {% if project.hero_image %}
     <img class="full-w" src="/images/work/{{ project.hero_image }}" alt="{{ project.title }} hero image" />
   {% endif %}

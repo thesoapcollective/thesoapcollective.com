@@ -33,6 +33,8 @@
     "background": "atlas_slide.jpg",
     "background_alignment": "center center",
     "class": "atlas",
+    "website": "http://www.enteratlas.com",
+    "vimeo_id": "205636652",
     "url": "atlas",
     "images": [
       {"path": "atlas_concept_01.jpg", "loading_image": "rect_loading.png", "title": "Atlas Concept Art"},
