@@ -565,15 +565,8 @@ a {
   background-size: 154px 36px;
 }
 
-.soap-team {
-  margin-top: 40px;
-  p {
-    @include text-overflow;
-  }
-}
-
 .soap-team-description {
-  margin-top: $grid-size-double * 2;
+  margin-top: 54px;
   padding: 0 95px;
 }
 
