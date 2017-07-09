@@ -924,6 +924,20 @@ $nbu-height: 54px;
   }
 }
 
+$seeker-width: 200px;
+$seeker-height: 130px;
+.project-logo-seeker {
+  width: $seeker-width;
+  height: $seeker-height;
+  background-image: url('../images/logos/seeker_logo.png');
+  background-size: $seeker-width $seeker-height;
+
+  a {
+    width: $seeker-width;
+    height: $seeker-height;
+  }
+}
+
 $sunkist-width: 226px;
 $sunkist-height: 180px;
 .project-logo-sunkist {
@@ -935,6 +949,20 @@ $sunkist-height: 180px;
   a {
     width: $sunkist-width;
     height: $sunkist-height;
+  }
+}
+
+$unity-width: 180px;
+$unity-height: 225px;
+.project-logo-unity {
+  width: $unity-width;
+  height: $unity-height;
+  background-image: url('../images/logos/unity_logo.png');
+  background-size: $unity-width $unity-height;
+
+  a {
+    width: $unity-width;
+    height: $unity-height;
   }
 }
 

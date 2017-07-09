@@ -1,0 +1,27 @@
+---
+title: Seeker
+description: We’ve been privileged to assist Seeker in multiple VR productions, providing motion graphics, visual FX, and user-direction guidance.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "seeker" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description is-block">
+      <p class="font-lato-300">Our partners at Seeker believe in pushing education and discovery through immersive media experiences. From their website:</p>
+      <p class="font-lato-300">“We are focused on exploring science that helps map out the limits of our natural world and the limits of the human mind. We are educational, but never dull. We thrive on taking you to corners of the world you never knew existed and telling a story about the downfall of an ancient civilization, or a futuristic marvel in that place. We entertain and enlighten. We travel through time. In a world of political noise and confusion, we’ll surprise and delight you with the wonders of this amazing world that we inhabit – while always looking toward a bright future that holds new promise for us.”</p>
+      <p class="font-lato-300">We’ve been privileged to assist Seeker in multiple VR productions, providing motion graphics, visual FX, and user-direction guidance.</p>
+    </li>
+  </ul>
+  <div class="project-hero is-max-width">
+    <div class="video-container">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/JL-n8ac4_C0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</article>
