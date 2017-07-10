@@ -21,6 +21,41 @@
       {"path": "atlas/AtlasStills08.jpg", "loading_image": "rect_loading.png", "title": "Atlas Production Still"},
       {"path": "atlas/AtlasStills09.jpg", "loading_image": "rect_loading.png", "title": "Atlas Production Still"},
     ],
+    "gifs": [
+      {"path": "atlas/AtlasBikeTurnaround.gif", "loading_image": "rect_loading.png", "title": "Atlas Production Gif"},
+      {"path": "atlas/AtlasEnvironment.gif", "loading_image": "rect_loading.png", "title": "Atlas Production Gif"},
+      {"path": "atlas/AtlasStardoor.gif", "loading_image": "rect_loading.png", "title": "Atlas Production Gif"},
+    ]
+  },
+  {
+    "title": "Beyond Tokyo",
+    "description": "Virtual travel and adventure in<br />a fantastical vision of Tokyo",
+    "theme": "light",
+    "background": "beyond_tokyo_slide.jpg",
+    "background_alignment": "center center",
+    "class": "beyondtokyo",
+    "url": "beyond_tokyo",
+    "images": [
+      {"path": "beyondtokyo/BTScreenshots_00.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_01.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_02.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_03.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_04.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_05.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_06.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_07.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_08.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_09.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_10.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_11.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+      {"path": "beyondtokyo/BTScreenshots_12.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
+    ],
+    "gifs": [
+      {"path": "beyondtokyo/BTGif01.gif", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Gif"},
+      {"path": "beyondtokyo/BTGif02.gif", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Gif"},
+      {"path": "beyondtokyo/BTGif03.gif", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Gif"},
+      {"path": "beyondtokyo/BTGif04.gif", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Gif"},
+    ]
   },
   {
     "title": "Seeker",
@@ -58,15 +93,6 @@
     "background_alignment": "center center",
     "class": "capitalone",
     "url": "capital_one",
-  },
-  {
-    "title": "Beyond Tokyo",
-    "description": "Virtual travel and adventure in<br />a fantastical vision of Tokyo",
-    "theme": "light",
-    "background": "beyond_tokyo_slide.jpg",
-    "background_alignment": "center center",
-    "class": "beyondtokyo",
-    "url": "beyond_tokyo",
   },
   {
     "title": "Never Bout Us",

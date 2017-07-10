@@ -4,6 +4,14 @@
   <li class="project-description-spacer"></li>
 {% endif %}
 
+{% if project.gifs %}
+  {% for gif in project.gifs %}
+    <li class="project-image {{ include.gif_class }}">
+      <a href="/images/work/{{ gif.path }}"><img src="/images/loading/{{ gif.loading_image }}" data-src="/images/work/{{ gif.path }}" alt="{{ gif.title }}" /></a>
+    </li>
+  {% endfor %}
+{% endif %}
+
 {% for image in project.images %}
   <li class="project-image {{ include.image_class }}">
     <a href="/images/work/{{ image.path }}"><img src="/images/loading/{{ image.loading_image }}" data-src="/images/work/{{ image.path }}" alt="{{ image.title }}" /></a>

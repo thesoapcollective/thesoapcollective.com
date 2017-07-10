@@ -14,6 +14,14 @@
     "url": "atlas",
   },
   {
+    "title": "Beyond Tokyo, WiL + ANA",
+    "description": "Virtual travel and adventure in<br />a fantastical vision of Tokyo",
+    "theme": "light",
+    "background": "beyond_tokyo_slide.jpg",
+    "class": "beyondtokyo",
+    "url": "beyond_tokyo",
+  },
+  {
     "title": "Seeker",
     "description": "Visual FX Development for 360<br />Educational Experiences",
     "theme": "light",
@@ -36,13 +44,5 @@
     "background": "unity_slide.jpg",
     "class": "unity",
     "url": "unity",
-  },
-  {
-    "title": "Capital One",
-    "description": "Customer Story in VR",
-    "theme": "light",
-    "background": "capital_one_slide.jpg",
-    "class": "capitalone",
-    "url": "capital_one",
   },
 ]
