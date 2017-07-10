@@ -910,6 +910,34 @@ $google-height: 100px;
   }
 }
 
+$gpj-width: 302px;
+$gpj-height: 124px;
+.project-logo-gpj {
+  width: $gpj-width;
+  height: $gpj-height;
+  background-image: url('../images/logos/gpj_logo.png');
+  background-size: $gpj-width $gpj-height;
+
+  a {
+    width: $gpj-width;
+    height: $gpj-height;
+  }
+}
+
+$hyundai-width: 259px;
+$hyundai-height: 150px;
+.project-logo-hyundai {
+  width: $hyundai-width;
+  height: $hyundai-height;
+  background-image: url('../images/logos/hyundai_logo.png');
+  background-size: $hyundai-width $hyundai-height;
+
+  a {
+    width: $hyundai-width;
+    height: $hyundai-height;
+  }
+}
+
 $nbu-width: 338px;
 $nbu-height: 54px;
 .project-logo-nbu {
@@ -967,15 +995,16 @@ $unity-height: 225px;
 }
 
 $vrll-width: 205px;
+$vrll-height: $vrll-width;
 .project-logo-vrll {
   width: $vrll-width;
   height: $vrll-width;
   background-image: url('../images/logos/vrll_logo.png');
-  background-size: $vrll-width $vrll-width;
+  background-size: $vrll-width $vrll-height;
 
   a {
     width: $vrll-width;
-    height: $vrll-width;
+    height: $vrll-height;
   }
 }
 

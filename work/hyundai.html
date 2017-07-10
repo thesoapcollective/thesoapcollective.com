@@ -1,0 +1,20 @@
+---
+title: Hyundai
+description: With XR playing such a large role in emerging technology, the team at Hyundai reached out to us to give them an overview of its varied applications.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "hyundai" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description is-block">
+      <p class="font-lato-300">Hyundai prides themselves on staying at the forefront of innovation. With XR playing such a large role in emerging technology, the team at Hyundai reached out to us to give them an overview of its varied applications. We put together a crash course at our headquarters in San Francisco in which the team was able see how the technology is being applied across entertainment, education, phobia, physical therapy, and everything in between. They were then given the opportunity to demo various products for themselves and have their questions answered about how this new technology could be used to elevate the projects they are working on in their labs in Korea.</p>
+    </li>
+  </ul>
+</article>

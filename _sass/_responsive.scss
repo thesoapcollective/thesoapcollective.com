@@ -358,6 +358,30 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .project-logo-gpj {
+    $gpj-height-r: $responsive-max-logo-width * $gpj-height / $gpj-width;
+    width: $responsive-max-logo-width;
+    height: $gpj-height-r;
+    background-size: $responsive-max-logo-width $gpj-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $gpj-height-r;
+    }
+  }
+
+  .project-logo-hyundai {
+    $hyundai-height-r: $responsive-max-logo-width * $hyundai-height / $hyundai-width;
+    width: $responsive-max-logo-width;
+    height: $hyundai-height-r;
+    background-size: $responsive-max-logo-width $hyundai-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $hyundai-height-r;
+    }
+  }
+
   .project-logo-nbu {
     $nbu-height-r: $responsive-max-logo-width * $nbu-height / $nbu-width;
     width: $responsive-max-logo-width;
@@ -370,6 +394,18 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .project-logo-seeker {
+    $seeker-height-r: $responsive-max-logo-width * $seeker-height / $seeker-width;
+    width: $responsive-max-logo-width;
+    height: $seeker-height-r;
+    background-size: $responsive-max-logo-width $seeker-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $seeker-height-r;
+    }
+  }
+
   .project-logo-sunkist {
     $sunkist-height-r: $responsive-max-logo-width * $sunkist-height / $sunkist-width;
     width: $responsive-max-logo-width;
@@ -379,6 +415,30 @@ $responsive-max-logo-width: 220px;
     a {
       width: $responsive-max-logo-width;
       height: $sunkist-height-r;
+    }
+  }
+
+  .project-logo-unity {
+    $unity-height-r: $responsive-max-logo-width * $unity-height / $unity-width;
+    width: $responsive-max-logo-width;
+    height: $unity-height-r;
+    background-size: $responsive-max-logo-width $unity-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $unity-height-r;
+    }
+  }
+
+  .project-logo-vrll {
+    $vrll-height-r: $responsive-max-logo-width * $vrll-height / $vrll-width;
+    width: $responsive-max-logo-width;
+    height: $vrll-height-r;
+    background-size: $responsive-max-logo-width $vrll-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $vrll-height-r;
     }
   }
 

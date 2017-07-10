@@ -1,0 +1,22 @@
+---
+title: GPJ + Charles Schwab
+description: With XR playing such a large role in emerging technology, the team at Hyundai reached out to us to give them an overview of its varied applications.
+---
+
+{% for p in site.data.projects %}
+  {% if p.url == "gpj" %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+<article>
+  {% include project_banner.html project=project is_work_page=false %}
+  {% include project_hero.html project=project %}
+  <ul class="list-reset project-content-list is-max-width">
+    <li class="project-description is-block">
+      <p class="font-lato-300">We were brought in by our partners at George P. Johnson to create a "VR Cafe" installation for the Charles Schwab IMPACT 2016 conference. Taking place anually, IMPACT attracts thousands of attendees. Charles Schwab always features one "innovation" booth on the expo floor each year, a showpiece setup that allows attendees to experience technology from a hot up-and-coming industry. In 2016, that technology was VR.</p>
+      <p class="font-lato-300">The Soap Collective built a temporary "cafe" on the expo floor, featuring 3 high-end Oculus Rift/HTC Vive VR stations as well as a number of mobile VR "hangout" seats for waiting attendees. Our team curated a list of the best experiences currently available, and had the privilege of introducing hundreds of people to VR for the first time.</p>
+      <p class="font-lato-300">Check out our <a href="https://blog.thesoapcollective.com/notes-from-introducing-hundreds-of-people-to-vr-in-just-a-few-days-c4afa4dffc76" target="_blank"><strong>blog post</strong></a> about the event!</p>
+    </li>
+  </ul>
+</article>
