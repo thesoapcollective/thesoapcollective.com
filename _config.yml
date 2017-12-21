@@ -24,6 +24,9 @@ typekit_id: dhn8nfe
 markdown: kramdown
 permalink: pretty
 
+plugins:
+  - jekyll-redirect-from
+
 # Defaults
 defaults:
   -
