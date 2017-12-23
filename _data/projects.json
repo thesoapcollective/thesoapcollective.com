@@ -35,6 +35,7 @@
     "background_alignment": "center center",
     "class": "beyondtokyo",
     "url": "beyond_tokyo",
+    "website": "http://www.beyondtokyovr.com",
     "images": [
       {"path": "beyondtokyo/BTScreenshots_00.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
       {"path": "beyondtokyo/BTScreenshots_01.jpg", "loading_image": "rect_loading.png", "title": "Beyond Tokyo Production Still"},
