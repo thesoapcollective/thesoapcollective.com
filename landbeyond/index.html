@@ -1,0 +1,39 @@
+---
+layout: land_beyond
+title: Land Beyond
+description: Land Beyond is a futuristic open-world racing adventure game set in a vast expansive wilderness.
+---
+
+<div id="loginbox">
+	<input id="password" class="font-futura-400" type="password" placeholder="password" />
+	<button id="loginbutton" class="font-futura-700" type="button">Enter</button>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+<script type="text/javascript">
+	function loadPage(pwd) {
+		var hash = Sha1.hash(pwd);
+		var url = hash;
+		$.ajax({
+			url: url,
+			dataType: "html",
+			success: function(data) {
+				window.location = url;
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				$("#password").attr("placeholder", "wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+</script>
