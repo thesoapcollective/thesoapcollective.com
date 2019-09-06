@@ -394,6 +394,18 @@ $responsive-max-logo-width: 220px;
     }
   }
 
+  .project-logo-role {
+    $role-height-r: $responsive-max-logo-width * $role-height / $role-width;
+    width: $responsive-max-logo-width;
+    height: $role-height-r;
+    background-size: $responsive-max-logo-width $role-height-r;
+
+    a {
+      width: $responsive-max-logo-width;
+      height: $role-height-r;
+    }
+  }
+
   .project-logo-seeker {
     $seeker-height-r: $responsive-max-logo-width * $seeker-height / $seeker-width;
     width: $responsive-max-logo-width;

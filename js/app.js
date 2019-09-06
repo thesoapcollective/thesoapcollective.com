@@ -61,7 +61,7 @@ var setupSlideNav = function() {
     }
   });
 
-  startSlideTimer();
+  // startSlideTimer();
 };
 
 var startSlideTimer = function() {

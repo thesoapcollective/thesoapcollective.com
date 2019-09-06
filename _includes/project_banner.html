@@ -3,14 +3,22 @@
 <section class="project-section project-container" style="background-image:url('/images/slides/{{ project.background }}');background-position:{{ project.background_alignment }};" data-theme="{{ project.theme }}">
   <h2 class="project-logo project-logo-{{ project.class }}">
     {% if include.is_work_page %}
-      <a href="/work/{{ project.url }}">{{ project.title }}</a>
+      {% if project.class == 'role' %}
+        <a href="{{ project.website }}" target="_blank">{{ project.title }}</a>
+      {% else %}
+        <a href="/work/{{ project.url }}">{{ project.title }}</a>
+      {% endif %}
     {% else %}
       {{ project.title }}
     {% endif %}
   </h2>
   <p class="project-copy section-heading font-lato-300">{{ project.description }}</p>
   {% if include.is_work_page %}
-    {% include learn_more_btn.html title="Learn more" url=project.url theme=project.theme %}
+    {% if project.class == 'role' %}
+      {% include learn_more_btn.html title="Learn more" url=project.website theme=project.theme target_blank=true %}
+    {% else %}
+      {% include learn_more_btn.html title="Learn more" url=project.url theme=project.theme %}
+    {% endif %}
   {% else %}
     <div class="download-container">
       {% if project.app_store_url %}

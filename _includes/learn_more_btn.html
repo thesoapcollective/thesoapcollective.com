@@ -1,7 +1,11 @@
 {% if include.is_reel_btn %}
   <a class="learn-more-btn font-futura-700 text-upper watch-reel-btn" href="{{ include.url }}" target="_blank">{{ include.title }}
 {% else %}
-  <a class="learn-more-btn font-futura-700 text-upper" href="{{ include.url }}">{{ include.title }}
+  {% if include.target_blank %}
+    <a class="learn-more-btn font-futura-700 text-upper" href="{{ include.url }}" target="_blank">{{ include.title }}
+  {% else %}
+    <a class="learn-more-btn font-futura-700 text-upper" href="{{ include.url }}">{{ include.title }}
+  {% endif %}
 {% endif %}
   <div class="arrow-container" data-theme="{{ include.theme }}">
     <div class="arrow-outlined"></div>

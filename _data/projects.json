@@ -1,5 +1,15 @@
 [
   {
+    "title": "Role",
+    "description": "Group storytelling and adventure at<br />your fingertips, everywhere you go.",
+    "theme": "light",
+    "background": "role_slide.jpg",
+    "background_alignment": "center top",
+    "class": "role",
+    "url": "role",
+    "website": "http://www.roleapp.com",
+  },
+  {
     "title": "Atlas",
     "description": "An interactive VR series set in the world beyond",
     "theme": "light",

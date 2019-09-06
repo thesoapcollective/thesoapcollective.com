@@ -30,37 +30,8 @@ layout: home
               {% include learn_more_btn.html title="Learn more" url=url theme=slide.theme %}
             {% endif %}
           </div>
-
-          {% if i == 0 %}
-            <ul class="slide-nav-list list-reset is-opaque is-fadeable-fast">
-              {% for i in (0..total) %}
-                <li class="slide-nav-list-item"><a class="slide-nav-link {% if i == 0 %}is-opaque{% endif %}" href="#"><span class="slide-nav-bar"></span></a></li>
-              {% endfor %}
-            </ul>
-          {% endif %}
         </div>
       </section>
     </div>
   {% endfor %}
-
-  <section class="services-container is-max-width">
-    <h3 class="font-futura-700 text-upper">Our Services</h3>
-    <ul class="services-list list-reset font-lato-500">
-      <li class="services-list-item">
-        <div class="services-icon-small services-icon-small-vr-black is-fadeable"></div>
-        <div class="services-icon-small services-icon-small-vr-white is-fadeable"></div>
-        <p>Virtual Reality</p>
-      </li><!--
-      --><li class="services-list-item">
-        <div class="services-icon-small services-icon-small-ux-black is-fadeable"></div>
-        <div class="services-icon-small services-icon-small-ux-white is-fadeable"></div>
-        <p>Experience Design</p>
-      </li><!--
-      --><li class="services-list-item">
-        <div class="services-icon-small services-icon-small-strategy-black is-fadeable"></div>
-        <div class="services-icon-small services-icon-small-strategy-white is-fadeable"></div>
-        <p>Content Strategy</p>
-      </li>
-    </ul>
-  </section>
 </article>
